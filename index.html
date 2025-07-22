@@ -692,14 +692,16 @@
             }
     
             .story-text {
-                flex: 1;
+                flex: 2; /* Takes more space than the image */
             }
     
             .story-image {
                 flex: 1;
+                max-width: 400px; /* Controls the image size */
                 border-radius: 8px;
                 overflow: hidden;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-left: auto; /* Pushes image to right */
             }
     
             .story-image img {
@@ -741,10 +743,18 @@
                     flex-direction: column;
                 }
                 
-                .story-text, .story-image {
-                    flex: none;
-                    width: 100%;
+                .story-image {
+                    max-width: 100%;
+                    margin: 30px auto 0; /* Centers image on mobile */
+                    order: -1; /* Optionally move image above text on mobile */
                 }
+            }
+    
+            @media (max-width: 768px) {
+                .story-highlight {
+                    font-size: 1.1rem;
+                }
+            }  
         }
     </style>
 </head>
@@ -797,7 +807,7 @@
                     <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
                 </div>
                 <div class="story-image">
-                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="CHECCA team working on a kitchen installation">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working on a kitchen installation">
                 </div>
             </div>
         </div>
