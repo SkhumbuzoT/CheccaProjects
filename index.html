@@ -679,6 +679,72 @@
             .logo img {
                 height: 70px;
             }
+            .our-story {
+            background: white;
+            padding: 80px 0;
+            }
+    
+            .story-content {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+                margin-top: 50px;
+            }
+    
+            .story-text {
+                flex: 1;
+            }
+    
+            .story-image {
+                flex: 1;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+    
+            .story-image img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.5s ease;
+            }
+    
+            .story-image:hover img {
+                transform: scale(1.05);
+            }
+    
+            .story-highlight {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: var(--navy-blue);
+                position: relative;
+                display: inline-block;
+                padding: 0 10px;
+                margin: 30px 0;
+            }
+    
+            .story-highlight:before {
+                content: '';
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+                width: 100%;
+                height: 10px;
+                background: var(--yellow);
+                z-index: -1;
+                opacity: 0.5;
+            }
+    
+            /* Responsive adjustments for Our Story */
+            @media (max-width: 992px) {
+                .story-content {
+                    flex-direction: column;
+                }
+                
+                .story-text, .story-image {
+                    flex: none;
+                    width: 100%;
+                }
         }
     </style>
 </head>
@@ -718,6 +784,25 @@
         </div>
     </section>
 
+    <!-- Our Story Section -->
+    <section class="our-story" id="about">
+        <div class="container">
+            <h2 class="text-center animate">Our Story</h2>
+            <div class="story-content animate">
+                <div class="story-text">
+                    <p>CHECCA Home Interiors & Maintenance is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
+                    
+                    <p class="story-highlight">We believe every home deserves attention to detail — and that's exactly what we provide.</p>
+                    
+                    <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="CHECCA team working on a kitchen installation">
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Why Choose Us Section -->
     <section class="why-choose-us">
         <div class="container">
@@ -756,22 +841,22 @@
                 <div class="service-card animate">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                     <div class="service-content">
-                        <h3>Built-In Cabinets</h3>
-                        <p>Wardrobes, Kitchens, Offices</p>
+                        <h3>Tailor-made Cabinetry</h3>
+                        <p>Custom built-in solutions for kitchens, wardrobes, and living spaces designed specifically for your needs.</p>
                     </div>
                 </div>
                 <div class="service-card animate">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                     <div class="service-content">
-                        <h3>Kitchen Countertops</h3>
-                        <p>Granite, Quartz, Postform</p>
+                        <h3>Durable Countertop</h3>
+                        <p>Beautiful and resilient surfaces in granite, quartz, and other premium materials for your kitchen and bathrooms.</p>
                     </div>
                 </div>
                 <div class="service-card animate">
                     <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                     <div class="service-content">
-                        <h3>Home Repairs & Maintenance</h3>
-                        <p>Leaks, installations, and maintenance</p>
+                        <h3>Expert Maintenance</h3>
+                        <p>Comprehensive repair services for plumbing, electrical, carpentry and general home maintenance needs.</p>
                     </div>
                 </div>
             </div>
