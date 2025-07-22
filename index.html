@@ -686,22 +686,25 @@
     
             .story-content {
                 display: flex;
+                justify-content: space-between; /* This ensures items stay on opposite sides */
                 align-items: center;
                 gap: 50px;
                 margin-top: 50px;
             }
     
             .story-text {
-                flex: 2; /* Takes more space than the image */
+                flex: 1;
+                min-width: 0; /* Fixes flexbox overflow issues */
             }
     
             .story-image {
-                flex: 1;
-                max-width: 400px; /* Controls the image size */
+                width: 40%; /* Reduced width for smaller image */
+                max-width: 400px;
+                min-width: 300px; /* Minimum size before stacking */
                 border-radius: 8px;
                 overflow: hidden;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                margin-left: auto; /* Pushes image to right */
+                margin-left: 50px; /* Ensures gap on right */
             }
     
             .story-image img {
@@ -711,50 +714,18 @@
                 transition: transform 0.5s ease;
             }
     
-            .story-image:hover img {
-                transform: scale(1.05);
-            }
-    
-            .story-highlight {
-                font-size: 1.3rem;
-                font-weight: 600;
-                color: var(--navy-blue);
-                position: relative;
-                display: inline-block;
-                padding: 0 10px;
-                margin: 30px 0;
-            }
-    
-            .story-highlight:before {
-                content: '';
-                position: absolute;
-                bottom: 5px;
-                left: 0;
-                width: 100%;
-                height: 10px;
-                background: var(--yellow);
-                z-index: -1;
-                opacity: 0.5;
-            }
-    
-            /* Responsive adjustments for Our Story */
+            /* Mobile responsiveness */
             @media (max-width: 992px) {
                 .story-content {
                     flex-direction: column;
                 }
                 
                 .story-image {
+                    width: 100%;
                     max-width: 100%;
-                    margin: 30px auto 0; /* Centers image on mobile */
-                    order: -1; /* Optionally move image above text on mobile */
-                }
-            }
-    
-            @media (max-width: 768px) {
-                .story-highlight {
-                    font-size: 1.1rem;
-                }
-            }  
+                    margin: 30px 0 0 0;
+                    min-width: unset;
+                } 
         }
     </style>
 </head>
@@ -794,7 +765,7 @@
         </div>
     </section>
 
-    <!-- Our Story Section -->
+     <!-- Our Story Section -->
     <section class="our-story" id="about">
         <div class="container">
             <h2 class="text-center animate">Our Story</h2>
@@ -807,41 +778,12 @@
                     <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
                 </div>
                 <div class="story-image">
-                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working on a kitchen installation">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working">
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <div class="container">
-            <h2 class="text-center animate">Why Choose CHECCA?</h2>
-            <div class="features">
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Skilled Craftsmanship</h3>
-                    <p>Our team brings expertise and detail to every project.</p>
-                </div>
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h3>Custom-Fit Solutions</h3>
-                    <p>Everything we build or fix is made for your space.</p>
-                </div>
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                    <h3>Affordable, Honest Pricing</h3>
-                    <p>No surprises. Just value.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -906,6 +848,36 @@
         </div>
     </section>
 
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="text-center animate">Why Choose CHECCA?</h2>
+            <div class="features">
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Skilled Craftsmanship</h3>
+                    <p>Our team brings expertise and detail to every project.</p>
+                </div>
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Custom-Fit Solutions</h3>
+                    <p>Everything we build or fix is made for your space.</p>
+                </div>
+                <div class="feature-card animate">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Affordable, Honest Pricing</h3>
+                    <p>No surprises. Just value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
