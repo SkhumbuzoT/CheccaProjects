@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHECCA Trading & Projects | Home Improvement Specialists</title>
+    <link rel="icon" href="checcafavicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Global Styles */
@@ -121,7 +123,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 0;
+            padding: 25px 0;
             background: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
@@ -151,10 +153,11 @@
         .logo img {
             height: 90px;
             margin-right: 10px;
+            transition: all 0.3s ease;
         }
         
-        .logo span {
-            color: var(--red);
+        .logo:hover img {
+            transform: scale(1.05);
         }
         
         nav ul {
@@ -602,10 +605,10 @@
             
             nav {
                 position: fixed;
-                top: 80px;
+                top: 100px;
                 left: -100%;
                 width: 100%;
-                height: calc(100vh - 80px);
+                height: calc(100vh - 100px);
                 background: white;
                 transition: all 0.3s ease;
                 z-index: 999;
@@ -674,6 +677,57 @@
                 margin-right: 0;
                 margin-bottom: 15px;
             }
+            
+            .logo img {
+                height: 120px;
+            }
+            .our-story {
+            background: white;
+            padding: 80px 0;
+            }
+    
+            .story-content {
+                display: flex;
+                justify-content: space-between; /* This ensures items stay on opposite sides */
+                align-items: center;
+                gap: 50px;
+                margin-top: 50px;
+            }
+    
+            .story-text {
+                flex: 1;
+                min-width: 0; /* Fixes flexbox overflow issues */
+            }
+    
+            .story-image {
+                width: 40%; /* Reduced width for smaller image */
+                max-width: 400px;
+                min-width: 300px; /* Minimum size before stacking */
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-left: 50px; /* Ensures gap on right */
+            }
+    
+            .story-image img {
+                width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.5s ease;
+            }
+    
+            /* Mobile responsiveness */
+            @media (max-width: 992px) {
+                .story-content {
+                    flex-direction: column;
+                }
+                
+                .story-image {
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 30px 0 0 0;
+                    min-width: unset;
+                } 
         }
     </style>
 </head>
@@ -713,6 +767,89 @@
         </div>
     </section>
 
+     <!-- Our Story Section -->
+    <section class="our-story" id="about">
+        <div class="container">
+            <h2 class="text-center animate">Our Story</h2>
+            <div class="story-content animate">
+                <div class="story-text">
+                    <p>CHECCA Home Interiors & Maintenance is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
+                    
+                    <p class="story-highlight">We believe every home deserves attention to detail — and that's exactly what we provide.</p>
+                    
+                    <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="text-center animate">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Tailor-made Cabinetry</h3>
+                        <p>Custom built-in solutions for kitchens, wardrobes, and living spaces designed specifically for your needs.</p>
+                    </div>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Durable Countertop</h3>
+                        <p>Beautiful and resilient surfaces in granite, quartz, and other premium materials for your kitchen and bathrooms.</p>
+                    </div>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Expert Maintenance</h3>
+                        <p>Comprehensive repair services for plumbing, electrical, carpentry and general home maintenance needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-cta animate">
+                <a href="#contact" class="btn btn-accent"><i class="fas fa-calendar-alt"></i> Book a Home Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="text-center animate">Our Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Kitchen Transformation" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Kitchen Transformation</h3>
+                        <p>A complete kitchen makeover in Soweto with custom cabinets and quartz countertops.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Wardrobe" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Custom Wardrobe</h3>
+                        <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate">
+                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bathroom Renovation" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Bathroom Renovation</h3>
+                        <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Choose Us Section -->
     <section class="why-choose-us">
         <div class="container">
@@ -742,70 +879,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="text-center animate">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Built-In Cabinets</h3>
-                        <p>Wardrobes, Kitchens, Offices</p>
-                    </div>
-                </div>
-                <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Kitchen Countertops</h3>
-                        <p>Granite, Quartz, Postform</p>
-                    </div>
-                </div>
-                <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Home Repairs & Maintenance</h3>
-                        <p>Leaks, installations, and maintenance</p>
-                    </div>
-                </div>
-            </div>
-            <div class="services-cta animate">
-                <a href="#contact" class="btn btn-accent"><i class="fas fa-calendar-alt"></i> Book a Home Visit</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="text-center animate">Our Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Kitchen Transformation" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Kitchen Transformation</h3>
-                        <p>A complete kitchen makeover in Soweto with custom cabinets and quartz countertops.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Custom Wardrobe</h3>
-                        <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bathroom Renovation" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Bathroom Renovation</h3>
-                        <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
@@ -949,7 +1023,7 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
                     
@@ -1007,3 +1081,4 @@
     </script>
 </body>
 </html>
+
