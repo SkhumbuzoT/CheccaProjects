@@ -4,51 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHECCA Trading & Projects | Home Improvement Specialists</title>
+    <meta name="description" content="Professional home improvement services in Johannesburg - custom cabinetry, countertops, and reliable maintenance">
     <link rel="icon" href="checcafavicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Global Styles */
+        /* Enhanced Global Styles */
         :root {
+            /* Color System */
             --navy-blue: #001f3f;
             --red: #e74c3c;
             --yellow: #f1c40f;
             --green: #2ecc71;
-            --grey: #ecf0f1;
+            --grey: #f8f9fa;
             --dark-grey: #7f8c8d;
             --black: #2c3e50;
+            --white: #ffffff;
+            
+            /* Enhanced Spacing System */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+            --space-xxl: 6rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.2);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Enhanced Typography System */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
         }
         
         body {
-            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
             color: var(--black);
             overflow-x: hidden;
+            background-color: var(--white);
         }
         
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        h1, h2, h3, h4 {
-            margin-bottom: 20px;
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
             color: var(--navy-blue);
+            margin-bottom: var(--space-md);
         }
         
-        h2 {
-            font-size: 2.5rem;
+        h1 { 
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            letter-spacing: -0.02em; 
+        }
+        
+        h2 { 
+            font-size: 2.8rem; 
+            font-weight: 700; 
+            letter-spacing: -0.01em; 
             position: relative;
             display: inline-block;
         }
@@ -63,26 +90,72 @@
             background: var(--red);
         }
         
-        p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+        h3 { 
+            font-size: 2rem; 
+            font-weight: 600; 
         }
         
+        h4 { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        /* Enhanced Button System */
         .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-sm);
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            margin-right: 15px;
-            margin-bottom: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-right: var(--space-md);
+            margin-bottom: var(--space-md);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-primary {
             background: var(--navy-blue);
-            color: white;
-            border: 2px solid var(--navy-blue);
+            color: var(--white);
+            border-color: var(--navy-blue);
         }
         
         .btn-primary:hover {
@@ -91,20 +164,20 @@
         }
         
         .btn-secondary {
-            background: white;
+            background: var(--white);
             color: var(--navy-blue);
-            border: 2px solid var(--navy-blue);
+            border-color: var(--navy-blue);
         }
         
         .btn-secondary:hover {
             background: var(--navy-blue);
-            color: white;
+            color: var(--white);
         }
         
         .btn-accent {
             background: var(--red);
-            color: white;
-            border: 2px solid var(--red);
+            color: var(--white);
+            border-color: var(--red);
         }
         
         .btn-accent:hover {
@@ -112,8 +185,20 @@
             color: var(--red);
         }
         
+        /* Utility Classes */
         .text-center {
             text-align: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+        
+        section {
+            padding: var(--space-xxl) 0;
         }
         
         /* Header & Navigation */
@@ -122,16 +207,17 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 25px 0;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: var(--space-lg) 0;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
             z-index: 1000;
             transition: all 0.3s ease;
         }
         
         header.scrolled {
-            padding: 15px 0;
-            background: rgba(255, 255, 255, 0.95);
+            padding: var(--space-md) 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(5px);
         }
         
         .header-container {
@@ -140,6 +226,7 @@
             align-items: center;
         }
         
+        /* Enhanced Logo Styling */
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
@@ -150,13 +237,16 @@
         }
         
         .logo img {
-            height: 90px;
-            margin-right: 10px;
+            height: 75px;
+            width: auto;
+            margin-right: var(--space-sm);
             transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
         
         .logo:hover img {
             transform: scale(1.05);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
         }
         
         nav ul {
@@ -165,7 +255,7 @@
         }
         
         nav ul li {
-            margin-left: 30px;
+            margin-left: var(--space-xl);
         }
         
         nav ul li a {
@@ -174,6 +264,7 @@
             font-weight: 600;
             transition: color 0.3s ease;
             position: relative;
+            font-size: 1.1rem;
         }
         
         nav ul li a:after {
@@ -202,40 +293,105 @@
             font-size: 1.5rem;
             color: var(--navy-blue);
             cursor: pointer;
+            z-index: 1001;
         }
         
-        /* Hero Section */
+        /* Enhanced Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.8), rgba(46, 204, 113, 0.3)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
-            color: white;
+            color: var(--white);
             text-align: left;
             position: relative;
         }
         
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 31, 63, 0.3) 100%);
+        }
+        
         .hero-content {
-            max-width: 600px;
+            max-width: 700px;
             animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: white;
-            line-height: 1.2;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: var(--space-lg);
+            color: var(--white);
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            color: white;
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            margin-bottom: var(--space-xl);
+            color: var(--white);
         }
         
         .hero-btns {
             display: flex;
             flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        /* Our Story Section */
+        .our-story {
+            background: var(--white);
+        }
+        
+        .story-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .story-text {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .story-highlight {
+            font-weight: 600;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+            margin: var(--space-lg) 0;
+            padding-left: var(--space-lg);
+            border-left: 4px solid var(--red);
+        }
+        
+        .story-image {
+            width: 40%;
+            max-width: 400px;
+            min-width: 300px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-left: var(--space-xl);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .story-image:hover img {
+            transform: scale(1.05);
         }
         
         /* Why Choose Us Section */
@@ -247,73 +403,82 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-top: 50px;
+            margin-top: var(--space-xxl);
+            gap: var(--space-lg);
         }
         
         .feature-card {
-            flex: 0 0 calc(33.333% - 30px);
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 0 0 calc(33.333% - 20px);
+            background: var(--white);
+            padding: var(--space-xl) var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-lg);
         }
         
         .feature-icon {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: var(--space-md);
             color: var(--red);
         }
         
-        .feature-card h3 {
-            color: var(--navy-blue);
-        }
-        
-        /* Services Section */
+        /* Enhanced Services Section */
         .services {
-            background: white;
+            background: var(--white);
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
         }
         
         .service-card {
-            background: var(--grey);
-            border-radius: 8px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
         }
         
         .service-img {
-            height: 200px;
+            height: 220px;
             background-size: cover;
             background-position: center;
+            position: relative;
+        }
+        
+        .service-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 31, 63, 0.1) 100%);
         }
         
         .service-content {
-            padding: 25px;
+            padding: var(--space-xl);
+            position: relative;
         }
         
         .service-content h3 {
             color: var(--navy-blue);
+            margin-bottom: var(--space-md);
         }
         
         .service-content p {
@@ -321,34 +486,40 @@
         }
         
         .services-cta {
-            margin-top: 50px;
+            margin-top: var(--space-xxl);
             text-align: center;
         }
         
-        /* Portfolio Section */
+        /* Enhanced Portfolio Section */
         .portfolio {
             background: var(--grey);
         }
         
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
         }
         
         .portfolio-item {
             position: relative;
-            border-radius: 8px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
             height: 300px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-item:hover {
+            box-shadow: var(--shadow-lg);
         }
         
         .portfolio-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .portfolio-overlay {
@@ -356,9 +527,10 @@
             bottom: -100%;
             left: 0;
             width: 100%;
-            padding: 20px;
-            background: rgba(0, 31, 63, 0.9);
-            color: white;
+            padding: var(--space-xl);
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.95), rgba(46, 204, 113, 0.85));
+            backdrop-filter: blur(5px);
+            color: var(--white);
             transition: bottom 0.3s ease;
         }
         
@@ -371,8 +543,8 @@
         }
         
         .portfolio-overlay h3 {
-            color: white;
-            margin-bottom: 10px;
+            color: var(--white);
+            margin-bottom: var(--space-md);
             position: relative;
         }
         
@@ -388,28 +560,29 @@
         
         /* Testimonials Section */
         .testimonials {
-            background: white;
+            background: var(--white);
         }
         
         .testimonial-slider {
-            margin-top: 50px;
+            margin-top: var(--space-xxl);
             position: relative;
         }
         
         .testimonial {
             background: var(--grey);
-            padding: 40px;
-            border-radius: 8px;
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin: 0 15px;
+            box-shadow: var(--shadow-sm);
+            margin: 0 var(--space-md);
         }
         
         .testimonial-text {
             font-size: 1.2rem;
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: var(--space-md);
             position: relative;
+            line-height: 1.8;
         }
         
         .testimonial-text:before,
@@ -427,19 +600,121 @@
         
         .testimonial-rating {
             color: var(--yellow);
-            margin-bottom: 15px;
+            margin-bottom: var(--space-md);
+            font-size: 1.2rem;
+        }
+        
+        /* Enhanced Contact Form Section */
+        .contact-form-section {
+            background: var(--grey);
+            padding: var(--space-xxl) 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .contact-info {
+            background: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .contact-info h3 {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact-methods {
+            list-style: none;
+        }
+        
+        .contact-methods li {
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-methods i {
+            margin-right: var(--space-sm);
+            color: var(--red);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .modern-form {
+            background: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .form-group {
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-group label {
+            position: absolute;
+            left: var(--space-md);
+            top: var(--space-md);
+            color: var(--dark-grey);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            background: var(--white);
+            padding: 0 5px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--navy-blue);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 31, 63, 0.2);
+        }
+        
+        .form-group input:focus + label,
+        .form-group select:focus + label,
+        .form-group textarea:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group select:not([value=""]) + label,
+        .form-group textarea:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            font-size: 0.8rem;
+            color: var(--navy-blue);
+            background: var(--white);
         }
         
         /* CTA Section */
         .cta-section {
             background: var(--navy-blue);
-            color: white;
+            color: var(--white);
             text-align: center;
-            padding: 100px 0;
+            padding: var(--space-xxl) 0;
         }
         
         .cta-section h2 {
-            color: white;
+            color: var(--white);
         }
         
         .cta-section h2:after {
@@ -448,7 +723,7 @@
         
         .cta-section p {
             max-width: 700px;
-            margin: 0 auto 30px;
+            margin: 0 auto var(--space-xl);
             color: var(--grey);
         }
         
@@ -456,25 +731,26 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: var(--space-md);
         }
         
         /* Footer */
         footer {
             background: var(--black);
-            color: white;
-            padding: 60px 0 20px;
+            color: var(--white);
+            padding: var(--space-xxl) 0 var(--space-lg);
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
         }
         
         .footer-column h3 {
-            color: white;
-            margin-bottom: 25px;
+            color: var(--white);
+            margin-bottom: var(--space-lg);
             position: relative;
         }
         
@@ -493,7 +769,7 @@
         }
         
         .footer-links li {
-            margin-bottom: 15px;
+            margin-bottom: var(--space-md);
         }
         
         .footer-links a {
@@ -506,24 +782,9 @@
             color: var(--red);
         }
         
-        .contact-info {
-            list-style: none;
-        }
-        
-        .contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .contact-info i {
-            margin-right: 10px;
-            color: var(--red);
-        }
-        
         .social-links {
             display: flex;
-            margin-top: 20px;
+            margin-top: var(--space-lg);
         }
         
         .social-links a {
@@ -534,8 +795,8 @@
             height: 40px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            margin-right: 10px;
-            color: white;
+            margin-right: var(--space-sm);
+            color: var(--white);
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -547,7 +808,7 @@
         
         .footer-bottom {
             text-align: center;
-            padding-top: 20px;
+            padding-top: var(--space-lg);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--grey);
             font-size: 0.9rem;
@@ -568,12 +829,39 @@
         .animate {
             opacity: 0;
             transform: translateY(20px);
-            transition: all 0.6s ease;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .animate.show {
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        /* Enhanced Accessibility */
+        :focus-visible {
+            outline: 3px solid var(--red);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .btn {
+                border-width: 3px;
+            }
+            
+            .service-card, .feature-card {
+                border: 2px solid var(--dark-grey);
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01s !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01s !important;
+            }
         }
         
         /* Responsive Styles */
@@ -584,12 +872,17 @@
             
             .feature-card {
                 flex: 0 0 100%;
-                margin-bottom: 20px;
             }
             
-            .services-grid,
-            .portfolio-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .story-content {
+                flex-direction: column;
+            }
+            
+            .story-image {
+                width: 100%;
+                max-width: 100%;
+                margin: var(--space-xl) 0 0 0;
+                min-width: unset;
             }
             
             .footer-content {
@@ -599,7 +892,7 @@
         
         @media (max-width: 768px) {
             .header-container {
-                padding: 0 20px;
+                padding: 0 var(--space-md);
             }
             
             nav {
@@ -608,9 +901,10 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 100px);
-                background: white;
+                background: var(--white);
                 transition: all 0.3s ease;
                 z-index: 999;
+                overflow-y: auto;
             }
             
             nav.active {
@@ -619,11 +913,11 @@
             
             nav ul {
                 flex-direction: column;
-                padding: 20px;
+                padding: var(--space-lg);
             }
             
             nav ul li {
-                margin: 15px 0;
+                margin: var(--space-md) 0;
             }
             
             .mobile-menu-btn {
@@ -646,20 +940,19 @@
                 width: 100%;
                 margin-right: 0;
             }
+            
+            .logo img {
+                height: 60px;
+            }
         }
         
         @media (max-width: 576px) {
             section {
-                padding: 60px 0;
+                padding: var(--space-xl) 0;
             }
             
             h2 {
                 font-size: 2rem;
-            }
-            
-            .services-grid,
-            .portfolio-grid {
-                grid-template-columns: 1fr;
             }
             
             .footer-content {
@@ -674,59 +967,8 @@
             .btn {
                 width: 100%;
                 margin-right: 0;
-                margin-bottom: 15px;
+                margin-bottom: var(--space-md);
             }
-            
-            .logo img {
-                height: 120px;
-            }
-            .our-story {
-            background: white;
-            padding: 80px 0;
-            }
-    
-            .story-content {
-                display: flex;
-                justify-content: space-between; /* This ensures items stay on opposite sides */
-                align-items: center;
-                gap: 50px;
-                margin-top: 50px;
-            }
-    
-            .story-text {
-                flex: 1;
-                min-width: 0; /* Fixes flexbox overflow issues */
-            }
-    
-            .story-image {
-                width: 40%; /* Reduced width for smaller image */
-                max-width: 400px;
-                min-width: 300px; /* Minimum size before stacking */
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                margin-left: 50px; /* Ensures gap on right */
-            }
-    
-            .story-image img {
-                width: 100%;
-                height: auto;
-                display: block;
-                transition: transform 0.5s ease;
-            }
-    
-            /* Mobile responsiveness */
-            @media (max-width: 992px) {
-                .story-content {
-                    flex-direction: column;
-                }
-                
-                .story-image {
-                    width: 100%;
-                    max-width: 100%;
-                    margin: 30px 0 0 0;
-                    min-width: unset;
-                } 
         }
     </style>
 </head>
@@ -735,14 +977,15 @@
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="Checca.png" alt="CHECCA Logo">
+                <img src="Checca.png" alt="CHECCA Logo" loading="lazy">
             </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars"></i>
             </button>
             <nav id="mainNav">
                 <ul>
                     <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
@@ -757,7 +1000,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Smart Interiors & Reliable Maintenance</h1>
-                <p>Built-in Cabinets • Kitchen Countertops • Repairs You Can Trust</p>
+                <p class="lead-text">Built-in Cabinets • Kitchen Countertops • Repairs You Can Trust</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn btn-primary"><i class="fas fa-comment"></i> Get a Free Quote</a>
                     <a href="#portfolio" class="btn btn-secondary"><i class="fas fa-tools"></i> View Our Work</a>
@@ -766,7 +1009,7 @@
         </div>
     </section>
 
-     <!-- Our Story Section -->
+    <!-- Our Story Section -->
     <section class="our-story" id="about">
         <div class="container">
             <h2 class="text-center animate">Our Story</h2>
@@ -779,71 +1022,7 @@
                     <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
                 </div>
                 <div class="story-image">
-                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="text-center animate">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Tailor-made Cabinetry</h3>
-                        <p>Custom built-in solutions for kitchens, wardrobes, and living spaces designed specifically for your needs.</p>
-                    </div>
-                </div>
-                <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Durable Countertop</h3>
-                        <p>Beautiful and resilient surfaces in granite, quartz, and other premium materials for your kitchen and bathrooms.</p>
-                    </div>
-                </div>
-                <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
-                    <div class="service-content">
-                        <h3>Expert Maintenance</h3>
-                        <p>Comprehensive repair services for plumbing, electrical, carpentry and general home maintenance needs.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="services-cta animate">
-                <a href="#contact" class="btn btn-accent"><i class="fas fa-calendar-alt"></i> Book a Home Visit</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="text-center animate">Our Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Kitchen Transformation" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Kitchen Transformation</h3>
-                        <p>A complete kitchen makeover in Soweto with custom cabinets and quartz countertops.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Wardrobe" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Custom Wardrobe</h3>
-                        <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
-                    </div>
-                </div>
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bathroom Renovation" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Bathroom Renovation</h3>
-                        <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working" loading="lazy">
                 </div>
             </div>
         </div>
@@ -878,7 +1057,70 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="text-center animate">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Tailor-made Cabinetry</h3>
+                        <p>Custom built-in solutions for kitchens, wardrobes, and living spaces designed specifically for your needs.</p>
+                    </div>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Durable Countertops</h3>
+                        <p>Beautiful and resilient surfaces in granite, quartz, and other premium materials for your kitchen and bathrooms.</p>
+                    </div>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Expert Maintenance</h3>
+                        <p>Comprehensive repair services for plumbing, electrical, carpentry and general home maintenance needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="services-cta animate">
+                <a href="#contact" class="btn btn-accent"><i class="fas fa-calendar-alt"></i> Book a Home Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="text-center animate">Our Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item animate">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Kitchen Transformation" class="portfolio-img" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Kitchen Transformation</h3>
+                        <p>A complete kitchen makeover in Soweto with custom cabinets and quartz countertops.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Wardrobe" class="portfolio-img" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Custom Wardrobe</h3>
+                        <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
+                    </div>
+                </div>
+                <div class="portfolio-item animate">
+                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bathroom Renovation" class="portfolio-img" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Bathroom Renovation</h3>
+                        <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
@@ -927,8 +1169,73 @@
         </div>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="contact">
+        <div class="container">
+            <h2 class="text-center animate">Get in Touch</h2>
+            <div class="contact-grid animate">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-methods">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Johannesburg, South Africa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+27 12 345 6789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@checcaprojects.co.za</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon-Fri: 8AM - 5PM</span>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form class="modern-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value=""> </option>
+                                <option value="cabinetry">Custom Cabinetry</option>
+                                <option value="countertops">Countertops</option>
+                                <option value="maintenance">Maintenance</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                            <label for="service">Service Needed</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder=" " required></textarea>
+                            <label for="message">Project Details</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
-    <section class="cta-section" id="contact">
+    <section class="cta-section">
         <div class="container">
             <h2 class="animate">Let's build something great.</h2>
             <p class="animate">Get a quote or book your free consultation now.</p>
@@ -948,15 +1255,16 @@
                     <h3>CHECCA T&P</h3>
                     <p>Built to Last. Designed for Life.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
@@ -971,6 +1279,7 @@
                         <li><a href="#">Plumbing Repairs</a></li>
                         <li><a href="#">Electrical Work</a></li>
                         <li><a href="#">Painting Services</a></li>
+                        <li><a href="#">General Maintenance</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -998,6 +1307,18 @@
             mainNav.classList.toggle('active');
             mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-expanded', mainNav.classList.contains('active'));
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
         });
         
         // Header Scroll Effect
@@ -1026,11 +1347,8 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
-                    if (mainNav.classList.contains('active')) {
-                        mainNav.classList.remove('active');
-                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
+                    // Update URL without page reload
+                    history.pushState(null, null, targetId);
                 }
             });
         });
@@ -1056,7 +1374,17 @@
         showTestimonial(0);
         
         // Auto-rotate testimonials every 5 seconds
-        setInterval(nextTestimonial, 5000);
+        const testimonialInterval = setInterval(nextTestimonial, 5000);
+        
+        // Pause slider on hover
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        testimonialSlider.addEventListener('mouseenter', () => {
+            clearInterval(testimonialInterval);
+        });
+        
+        testimonialSlider.addEventListener('mouseleave', () => {
+            testimonialInterval = setInterval(nextTestimonial, 5000);
+        });
         
         // Scroll Animation
         const animateElements = document.querySelectorAll('.animate');
@@ -1075,8 +1403,46 @@
         // Initial check
         checkScroll();
         
-        // Check on scroll
-        window.addEventListener('scroll', checkScroll);
+        // Check on scroll with debounce
+        let isScrolling;
+        window.addEventListener('scroll', () => {
+            window.clearTimeout(isScrolling);
+            isScrolling = setTimeout(checkScroll, 50);
+        }, false);
+        
+        // Lazy loading for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            
+            const lazyLoad = (target) => {
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.style.opacity = 1;
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+                
+                io.observe(target);
+            };
+            
+            lazyImages.forEach(lazyLoad);
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('.modern-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to your server
+                // For demonstration, we'll just show an alert
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            });
+        }
     </script>
 </body>
 </html>
