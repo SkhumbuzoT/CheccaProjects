@@ -400,11 +400,10 @@
         }
         
         .features {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: var(--space-xxl);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--space-lg);
+            margin-top: var(--space-xxl);
         }
         
         .feature-card {
