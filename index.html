@@ -5,165 +5,986 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHECCA Trading & Projects | Home Improvement Specialists</title>
     <meta name="description" content="Professional home improvement services in Johannesburg - custom cabinetry, countertops, and reliable maintenance">
-    
-    <!-- Favicon in multiple resolutions -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#001f3f">
-    <meta name="msapplication-TileColor" content="#001f3f">
-    <meta name="theme-color" content="#ffffff">
-    
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="CHECCA Trading & Projects | Home Improvement Specialists">
-    <meta property="og:description" content="Professional home improvement services in Johannesburg - custom cabinetry, countertops, and reliable maintenance">
-    <meta property="og:image" content="https://yourdomain.com/images/social-share.jpg">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "CHECCA Trading & Projects",
-      "image": "https://yourdomain.com/images/logo.jpg",
-      "@id": "https://yourdomain.com",
-      "url": "https://yourdomain.com",
-      "telephone": "+27123456789",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Business Park",
-        "addressLocality": "Johannesburg",
-        "addressRegion": "Gauteng",
-        "postalCode": "2000",
-        "addressCountry": "ZA"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -26.2041,
-        "longitude": 28.0473
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "17:00"
-      },
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.facebook.com/yourpage",
-        "https://www.instagram.com/yourprofile",
-        "https://www.linkedin.com/company/yourcompany"
-      ]
-    }
-    </script>
-    
+    <link rel="icon" href="checcafavicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Swiper JS for testimonials -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    
     <style>
-        /* Minified CSS Variables */
-        :root{--navy-blue:#001f3f;--red:#e74c3c;--yellow:#f1c40f;--green:#2ecc71;--grey:#f8f9fa;--dark-grey:#7f8c8d;--black:#2c3e50;--white:#ffffff;--space-xs:.5rem;--space-sm:1rem;--space-md:1.5rem;--space-lg:2.5rem;--space-xl:4rem;--space-xxl:6rem;--shadow-sm:0 2px 8px rgba(0,0,0,0.1);--shadow-md:0 4px 12px rgba(0,0,0,0.15);--shadow-lg:0 8px 25px rgba(0,0,0,0.2);--radius-sm:4px;--radius-md:8px;--radius-lg:12px}
+        /* Enhanced Global Styles */
+        :root {
+            /* Color System */
+            --navy-blue: #001f3f;
+            --red: #e74c3c;
+            --yellow: #f1c40f;
+            --green: #2ecc71;
+            --grey: #f8f9fa;
+            --dark-grey: #7f8c8d;
+            --black: #2c3e50;
+            --white: #ffffff;
+            
+            /* Enhanced Spacing System */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+            --space-xxl: 6rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.2);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
         
-        *{margin:0;padding:0;box-sizing:border-box}html{font-size:16px;scroll-behavior:smooth}body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.7;color:var(--black);overflow-x:hidden;background-color:var(--white)}h1,h2,h3,h4,h5{font-weight:700;line-height:1.2;color:var(--navy-blue);margin-bottom:var(--space-md)}h1{font-size:3.5rem;font-weight:800;letter-spacing:-.02em}h2{font-size:2.8rem;font-weight:700;letter-spacing:-.01em;position:relative;display:inline-block}h2:after{content:'';position:absolute;bottom:-10px;left:0;width:80px;height:4px;background:var(--red)}h3{font-size:2rem;font-weight:600}h4{font-size:1.5rem;font-weight:600}p{margin-bottom:var(--space-md);font-size:1.125rem;line-height:1.7}.lead-text{font-size:1.25rem;font-weight:500;line-height:1.6}.text-center{text-align:center}.container{width:100%;max-width:1200px;margin:0 auto;padding:0 var(--space-lg)}section{padding:var(--space-xxl) 0}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Enhanced Typography System */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--black);
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        h1 { 
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            letter-spacing: -0.02em; 
+        }
+        
+        h2 { 
+            font-size: 2.8rem; 
+            font-weight: 700; 
+            letter-spacing: -0.01em; 
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--red);
+        }
+        
+        h3 { 
+            font-size: 2rem; 
+            font-weight: 600; 
+        }
+        
+        h4 { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
         
         /* Enhanced Button System */
-        .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-xs);padding:var(--space-md) var(--space-lg);border-radius:var(--radius-sm);text-decoration:none;font-weight:600;transition:all .3s cubic-bezier(.4,0,.2,1);margin-right:var(--space-md);margin-bottom:var(--space-md);position:relative;overflow:hidden;transform:translateY(0);border:2px solid transparent;cursor:pointer}.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent;transition:left .5s}.btn:hover::before{left:100%}.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}.btn-primary{background:var(--navy-blue);color:var(--white);border-color:var(--navy-blue)}.btn-primary:hover{background:transparent;color:var(--navy-blue)}.btn-secondary{background:var(--white);color:var(--navy-blue);border-color:var(--navy-blue)}.btn-secondary:hover{background:var(--navy-blue);color:var(--white)}.btn-accent{background:var(--red);color:var(--white);border-color:var(--red)}.btn-accent:hover{background:transparent;color:var(--red)}
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-right: var(--space-md);
+            margin-bottom: var(--space-md);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
         
-        /* Enhanced Header & Navigation */
-        header{position:fixed;top:0;left:0;width:100%;padding:var(--space-lg) 0;background:var(--white);box-shadow:var(--shadow-sm);z-index:1000;transition:all .3s ease}header.scrolled{padding:var(--space-md) 0;background:rgba(255,255,255,.98);backdrop-filter:blur(5px)}.header-container{display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.8rem;font-weight:700;color:var(--navy-blue);text-decoration:none;display:flex;align-items:center}.logo img{height:75px;width:auto;margin-right:var(--space-sm);transition:all .3s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}.logo:hover img{transform:scale(1.05);filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}nav ul{display:flex;list-style:none}nav ul li{margin-left:var(--space-xl)}nav ul li a{text-decoration:none;color:var(--navy-blue);font-weight:600;transition:color .3s ease;position:relative;font-size:1.1rem}nav ul li a:after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--red);transition:width .3s ease}nav ul li a:hover{color:var(--red)}nav ul li a:hover:after{width:100%}nav ul li a.active{color:var(--red)}nav ul li a.active:after{width:100%}.mobile-menu-btn{display:none;background:none;border:none;font-size:1.5rem;color:var(--navy-blue);cursor:pointer;z-index:1001}.mobile-cta{display:none}.header-phone{display:flex;align-items:center;gap:var(--space-sm);font-weight:600;color:var(--navy-blue);text-decoration:none;transition:color .3s ease}.header-phone:hover{color:var(--red)}.header-phone i{font-size:1.2rem}
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
         
-        /* Mobile Menu Overlay */
-        .mobile-menu-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:998;opacity:0;visibility:hidden;transition:all .3s ease}.mobile-menu-overlay.active{opacity:1;visibility:visible}
+        .btn:hover::before {
+            left: 100%;
+        }
         
-        /* Hero Section Improvements */
-        .hero{height:100vh;min-height:700px;background:linear-gradient(135deg,rgba(0,31,63,.8),rgba(46,204,113,.3)),url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;display:flex;align-items:center;color:var(--white);text-align:left;position:relative}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,transparent 0%,rgba(0,31,63,.3) 100%)}.hero-content{max-width:700px;animation:fadeInUp 1s ease;position:relative;z-index:2}.hero h1{font-size:clamp(2.5rem,5vw,4rem);text-shadow:0 2px 4px rgba(0,0,0,.3);margin-bottom:var(--space-lg);color:var(--white)}.hero p{font-size:clamp(1.1rem,2vw,1.4rem);text-shadow:0 1px 2px rgba(0,0,0,.3);margin-bottom:var(--space-xl);color:var(--white)}.hero-btns{display:flex;flex-wrap:wrap;gap:var(--space-md)}
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
         
-        /* Scroll Down Indicator */
-        .scroll-down{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:var(--white);font-size:1.5rem;animation:bounce 2s infinite;cursor:pointer;z-index:2}.scroll-down:hover{color:var(--red)}@keyframes bounce{0%,20%,50%,80%,100%{transform:translateY(0) translateX(-50%)}40%{transform:translateY(-20px) translateX(-50%)}60%{transform:translateY(-10px) translateX(-50%)}}
+        .btn-primary {
+            background: var(--navy-blue);
+            color: var(--white);
+            border-color: var(--navy-blue);
+        }
         
-        /* Tabbed About Section */
-        .tabs{display:flex;border-bottom:1px solid #ddd;margin-bottom:var(--space-lg)}.tab-btn{padding:var(--space-sm) var(--space-lg);background:none;border:none;cursor:pointer;font-size:1.1rem;font-weight:600;color:var(--dark-grey);position:relative;transition:all .3s ease}.tab-btn:after{content:'';position:absolute;bottom:-1px;left:0;width:0;height:3px;background:var(--red);transition:width .3s ease}.tab-btn.active{color:var(--navy-blue)}.tab-btn.active:after{width:100%}.tab-content{display:none;animation:fadeIn .5s ease}.tab-content.active{display:block}
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--navy-blue);
+        }
         
-        /* Why Choose Us - Mobile Slider */
-        .features{display:flex;justify-content:space-between;flex-wrap:wrap;margin-top:var(--space-xxl);gap:var(--space-lg)}.feature-card{flex:0 0 calc(33.333% - 20px);background:var(--white);padding:var(--space-xl) var(--space-lg);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);transition:all .4s cubic-bezier(.4,0,.2,1);text-align:center}.feature-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:var(--shadow-lg)}.feature-icon{font-size:3rem;margin-bottom:var(--space-md);color:var(--red)}.feature-tooltip{position:relative;display:inline-block}.feature-tooltip .tooltip-text{visibility:hidden;width:200px;background-color:var(--navy-blue);color:var(--white);text-align:center;border-radius:var(--radius-sm);padding:var(--space-sm);position:absolute;z-index:1;bottom:125%;left:50%;transform:translateX(-50%);opacity:0;transition:opacity .3s}.feature-tooltip:hover .tooltip-text{visibility:visible;opacity:1}
+        .btn-secondary {
+            background: var(--white);
+            color: var(--navy-blue);
+            border-color: var(--navy-blue);
+        }
         
-        /* Services Section Enhancements */
-        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:var(--space-xl);margin-top:var(--space-xxl)}.service-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:all .4s cubic-bezier(.4,0,.2,1);position:relative}.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}.service-img{height:220px;background-size:cover;background-position:center;position:relative}.service-img::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent 0%,rgba(0,31,63,.1) 100%)}.service-content{padding:var(--space-xl);position:relative}.service-content h3{color:var(--navy-blue);margin-bottom:var(--space-md)}.service-content p{color:var(--dark-grey)}.service-actions{display:flex;gap:var(--space-sm);margin-top:var(--space-md)}.service-quote{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.9);padding:5px 10px;border-radius:var(--radius-sm);font-size:.9rem;font-weight:600;color:var(--red);box-shadow:var(--shadow-sm)}.services-cta{margin-top:var(--space-xxl);text-align:center}
+        .btn-secondary:hover {
+            background: var(--navy-blue);
+            color: var(--white);
+        }
         
-        /* Portfolio with Filters */
-        .portfolio-filters{display:flex;justify-content:center;flex-wrap:wrap;gap:var(--space-sm);margin-bottom:var(--space-xl)}.filter-btn{padding:var(--space-sm) var(--space-md);background:var(--white);border:1px solid #ddd;border-radius:var(--radius-sm);cursor:pointer;transition:all .3s ease}.filter-btn.active,.filter-btn:hover{background:var(--navy-blue);color:var(--white);border-color:var(--navy-blue)}.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:var(--space-xl);margin-top:var(--space-xxl)}.portfolio-item{position:relative;border-radius:var(--radius-lg);overflow:hidden;height:300px;box-shadow:var(--shadow-md);transition:all .4s cubic-bezier(.4,0,.2,1)}.portfolio-item:hover{box-shadow:var(--shadow-lg)}.portfolio-img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.4,0,.2,1)}.portfolio-overlay{position:absolute;bottom:-100%;left:0;width:100%;padding:var(--space-xl);background:linear-gradient(135deg,rgba(0,31,63,.95),rgba(46,204,113,.85));backdrop-filter:blur(5px);color:var(--white);transition:bottom .3s ease}.portfolio-item:hover .portfolio-overlay{bottom:0}.portfolio-item:hover .portfolio-img{transform:scale(1.1)}.portfolio-overlay h3{color:var(--white);margin-bottom:var(--space-md);position:relative}.portfolio-overlay h3:after{content:'';position:absolute;bottom:-5px;left:0;width:50px;height:2px;background:var(--red)}
+        .btn-accent {
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
+        }
         
-        /* Lightbox Modal */
-        .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:9999;padding:var(--space-xl);overflow:auto}.lightbox-content{max-width:1200px;margin:auto;position:relative}.lightbox-img{width:100%;max-height:80vh;object-fit:contain}.close-lightbox{position:absolute;top:20px;right:30px;color:var(--white);font-size:3rem;font-weight:bold;cursor:pointer;transition:color .3s ease}.close-lightbox:hover{color:var(--red)}.before-after{position:relative;width:100%;overflow:hidden}.before-img,.after-img{width:100%;display:block}.before-after-slider{position:absolute;top:0;bottom:0;width:50%;left:50%;background-color:var(--red);cursor:ew-resize}.before-after-slider:before{content:'↔';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--white);font-size:1.5rem;text-shadow:0 0 5px rgba(0,0,0,.5)}
+        .btn-accent:hover {
+            background: transparent;
+            color: var(--red);
+        }
         
-        /* Enhanced Testimonials with Swiper */
-        .testimonial-slider{margin-top:var(--space-xxl);position:relative;padding:0 var(--space-xl)}.testimonial{background:var(--grey);padding:var(--space-xl);border-radius:var(--radius-lg);text-align:center;box-shadow:var(--shadow-sm);margin:0 var(--space-md);display:flex;flex-direction:column;align-items:center}.testimonial-content{display:flex;align-items:center;gap:var(--space-xl);text-align:left}.testimonial-avatar{width:100px;height:100px;border-radius:50%;object-fit:cover;border:3px solid var(--red);flex-shrink:0}.testimonial-text{font-size:1.2rem;font-style:italic;margin-bottom:var(--space-md);position:relative;line-height:1.8}.testimonial-text:before,.testimonial-text:after{content:'"';font-size:2rem;color:var(--red);opacity:.5}.testimonial-author{font-weight:700;color:var(--navy-blue)}.testimonial-rating{color:var(--yellow);margin-bottom:var(--space-md);font-size:1.2rem}.swiper-pagination-bullet{background:var(--dark-grey)}.swiper-pagination-bullet-active{background:var(--red)}.swiper-button-next,.swiper-button-prev{color:var(--red)}.swiper-button-next:after,.swiper-button-prev:after{font-size:1.5rem}
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
         
-        /* Enhanced Contact Form */
-        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--space-xl);margin-top:var(--space-xxl)}.contact-info{background:var(--white);padding:var(--space-xl);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}.contact-info h3{margin-bottom:var(--space-lg)}.contact-methods{list-style:none}.contact-methods li{margin-bottom:var(--space-md);display:flex;align-items:flex-start}.contact-methods i{margin-right:var(--space-sm);color:var(--red);font-size:1.2rem;margin-top:3px}.modern-form{background:var(--white);padding:var(--space-xl);border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)}.form-group{position:relative;margin-bottom:var(--space-lg)}.form-group input,.form-group select,.form-group textarea{width:100%;padding:var(--space-md);border:1px solid #ddd;border-radius:var(--radius-sm);font-size:1rem;transition:all .3s ease}.form-group textarea{min-height:150px;resize:vertical}.form-group label{position:absolute;left:var(--space-md);top:var(--space-md);color:var(--dark-grey);transition:all .3s ease;pointer-events:none;background:var(--white);padding:0 5px}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--navy-blue);outline:none;box-shadow:0 0 0 2px rgba(0,31,63,.2)}.form-group input:focus+label,.form-group select:focus+label,.form-group textarea:focus+label,.form-group input:not(:placeholder-shown)+label,.form-group select:not([value=""])+label,.form-group textarea:not(:placeholder-shown)+label{top:-10px;left:10px;font-size:.8rem;color:var(--navy-blue);background:var(--white)}.form-message{display:none;padding:var(--space-sm);margin-bottom:var(--space-md);border-radius:var(--radius-sm)}.form-message.success{display:block;background:#d4edda;color:#155724}.form-message.error{display:block;background:#f8d7da;color:#721c24}.g-recaptcha{margin-bottom:var(--space-lg)}.budget-selector{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-bottom:var(--space-md)}.budget-option{flex:1;min-width:100px}.budget-radio{display:none}.budget-label{display:block;padding:var(--space-sm);background:var(--grey);border-radius:var(--radius-sm);text-align:center;cursor:pointer;transition:all .3s ease}.budget-radio:checked+.budget-label{background:var(--navy-blue);color:var(--white)}
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+        
+        section {
+            padding: var(--space-xxl) 0;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-lg) 0;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: var(--space-md) 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(5px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Enhanced Logo Styling */
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 75px;
+            width: auto;
+            margin-right: var(--space-sm);
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+        
+        .logo:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: var(--space-xl);
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--navy-blue);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--red);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--navy-blue);
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Enhanced Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.8), rgba(46, 204, 113, 0.3)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: left;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 31, 63, 0.3) 100%);
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: var(--space-lg);
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            margin-bottom: var(--space-xl);
+            color: var(--white);
+        }
+        
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        /* Our Story Section */
+        .our-story {
+            background: var(--white);
+        }
+        
+        .story-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .story-text {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .story-highlight {
+            font-weight: 600;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+            margin: var(--space-lg) 0;
+            padding-left: var(--space-lg);
+            border-left: 4px solid var(--red);
+        }
+        
+        .story-image {
+            width: 40%;
+            max-width: 400px;
+            min-width: 300px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-left: var(--space-xl);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: var(--grey);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: var(--space-xxl);
+            gap: var(--space-lg);
+        }
+        
+        .feature-card {
+            flex: 0 0 calc(33.333% - 20px);
+            background: var(--white);
+            padding: var(--space-xl) var(--space-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            color: var(--red);
+        }
+        
+        /* Enhanced Services Section */
+        .services {
+            background: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .service-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 31, 63, 0.1) 100%);
+        }
+        
+        .service-content {
+            padding: var(--space-xl);
+            position: relative;
+        }
+        
+        .service-content h3 {
+            color: var(--navy-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-content p {
+            color: var(--dark-grey);
+        }
+        
+        .services-cta {
+            margin-top: var(--space-xxl);
+            text-align: center;
+        }
+        
+        /* Enhanced Portfolio Section */
+        .portfolio {
+            background: var(--grey);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 300px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding: var(--space-xl);
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.95), rgba(46, 204, 113, 0.85));
+            backdrop-filter: blur(5px);
+            color: var(--white);
+            transition: bottom 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            bottom: 0;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay h3 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            position: relative;
+        }
+        
+        .portfolio-overlay h3:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--red);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--white);
+        }
+        
+        .testimonial-slider {
+            margin-top: var(--space-xxl);
+            position: relative;
+        }
+        
+        .testimonial {
+            background: var(--grey);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            margin: 0 var(--space-md);
+        }
+        
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: var(--space-md);
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .testimonial-text:before,
+        .testimonial-text:after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--red);
+            opacity: 0.5;
+        }
+        
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--navy-blue);
+        }
+        
+        .testimonial-rating {
+            color: var(--yellow);
+            margin-bottom: var(--space-md);
+            font-size: 1.2rem;
+        }
+        
+        /* Enhanced Contact Form Section */
+        .contact-form-section {
+            background: var(--grey);
+            padding: var(--space-xxl) 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .contact-info {
+            background: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .contact-info h3 {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .contact-methods {
+            list-style: none;
+        }
+        
+        .contact-methods li {
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-methods i {
+            margin-right: var(--space-sm);
+            color: var(--red);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .modern-form {
+            background: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .form-group {
+            position: relative;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-group label {
+            position: absolute;
+            left: var(--space-md);
+            top: var(--space-md);
+            color: var(--dark-grey);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            background: var(--white);
+            padding: 0 5px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--navy-blue);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 31, 63, 0.2);
+        }
+        
+        .form-group input:focus + label,
+        .form-group select:focus + label,
+        .form-group textarea:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group select:not([value=""]) + label,
+        .form-group textarea:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            font-size: 0.8rem;
+            color: var(--navy-blue);
+            background: var(--white);
+        }
         
         /* CTA Section */
-        .cta-section{background:var(--navy-blue);color:var(--white);text-align:center;padding:var(--space-xxl) 0}.cta-section h2{color:var(--white)}.cta-section h2:after{background:var(--red)}.cta-section p{max-width:700px;margin:0 auto var(--space-xl);color:var(--grey)}.cta-btns{display:flex;justify-content:center;flex-wrap:wrap;gap:var(--space-md)}
+        .cta-section {
+            background: var(--navy-blue);
+            color: var(--white);
+            text-align: center;
+            padding: var(--space-xxl) 0;
+        }
         
-        /* Enhanced Footer */
-        footer{background:var(--black);color:var(--white);padding:var(--space-xxl) 0 var(--space-lg)}.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--space-xl);margin-bottom:var(--space-xl)}.footer-column h3{color:var(--white);margin-bottom:var(--space-lg);position:relative}.footer-column h3:after{content:'';position:absolute;bottom:-10px;left:0;width:50px;height:2px;background:var(--red)}.footer-links{list-style:none}.footer-links li{margin-bottom:var(--space-md)}.footer-links a{color:var(--grey);text-decoration:none;transition:color .3s ease}.footer-links a:hover{color:var(--red)}.social-links{display:flex;margin-top:var(--space-lg)}.social-links a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;margin-right:var(--space-sm);color:var(--white);text-decoration:none;transition:all .3s ease}.social-links a:hover{background:var(--red);transform:translateY(-3px)}.footer-bottom{text-align:center;padding-top:var(--space-lg);border-top:1px solid rgba(255,255,255,.1);color:var(--grey);font-size:.9rem}.back-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:var(--red);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;opacity:0;visibility:hidden;transition:all .3s ease;z-index:997}.back-to-top.visible{opacity:1;visibility:visible}.back-to-top:hover{background:var(--navy-blue);transform:translateY(-5px)}.trust-badges{display:flex;justify-content:center;gap:var(--space-lg);margin-top:var(--space-xl);flex-wrap:wrap}.trust-badge{max-width:120px;height:auto;filter:grayscale(100%);opacity:.7;transition:all .3s ease}.trust-badge:hover{filter:grayscale(0);opacity:1}
+        .cta-section h2 {
+            color: var(--white);
+        }
+        
+        .cta-section h2:after {
+            background: var(--red);
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+            color: var(--grey);
+        }
+        
+        .cta-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: var(--space-xxl) 0 var(--space-lg);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: var(--space-lg);
+            position: relative;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--red);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-links a {
+            color: var(--grey);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--red);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: var(--space-lg);
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: var(--space-sm);
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--red);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--grey);
+            font-size: 0.9rem;
+        }
         
         /* Animations */
-        @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.animate{opacity:0;transform:translateY(20px);transition:all .6s cubic-bezier(.4,0,.2,1)}.animate.show{opacity:1;transform:translateY(0)}
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         
-        /* Accessibility */
-        :focus-visible{outline:3px solid var(--red);outline-offset:2px;border-radius:var(--radius-sm)}
+        .animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         
-        /* High contrast mode */
-        @media (prefers-contrast:high){.btn{border-width:3px}.service-card,.feature-card{border:2px solid var(--dark-grey)}}
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
         
-        /* Reduced motion */
-        @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01s!important;animation-iteration-count:1!important;transition-duration:.01s!important}}
+        /* Enhanced Accessibility */
+        :focus-visible {
+            outline: 3px solid var(--red);
+            outline-offset: 2px;
+            border-radius: var(--radius-sm);
+        }
+        
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .btn {
+                border-width: 3px;
+            }
+            
+            .service-card, .feature-card {
+                border: 2px solid var(--dark-grey);
+            }
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01s !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01s !important;
+            }
+        }
         
         /* Responsive Styles */
-        @media (max-width:1200px){.testimonial-content{flex-direction:column;text-align:center}}
-        @media (max-width:992px){.features{flex-direction:column}.feature-card{flex:0 0 100%}.story-image{width:100%;max-width:100%;margin:var(--space-xl) 0 0 0;min-width:unset}.footer-content{grid-template-columns:repeat(2,1fr)}.header-phone{display:none}.mobile-cta{display:block}}
-        @media (max-width:768px){.header-container{padding:0 var(--space-md)}nav{position:fixed;top:100px;left:-100%;width:100%;height:calc(100vh - 100px);background:var(--white);transition:all .3s ease;z-index:999;overflow-y:auto}nav.active{left:0}nav ul{flex-direction:column;padding:var(--space-lg)}nav ul li{margin:var(--space-md) 0}.mobile-menu-btn{display:block}.hero h1{font-size:2.5rem}.hero p{font-size:1.1rem}.hero-btns{flex-direction:column}.btn{width:100%;margin-right:0}.logo img{height:60px}.portfolio-filters{flex-direction:column;align-items:center}.filter-btn{width:100%;text-align:center}.testimonial-slider{padding:0}}
-        @media (max-width:576px){section{padding:var(--space-xl) 0}h2{font-size:2rem}.footer-content{grid-template-columns:1fr}.cta-btns{flex-direction:column;align-items:center}.btn{width:100%;margin-right:0;margin-bottom:var(--space-md)}.tab-btn{width:100%;text-align:center}.contact-grid{grid-template-columns:1fr}}
+        @media (max-width: 992px) {
+            .features {
+                flex-direction: column;
+            }
+            
+            .feature-card {
+                flex: 0 0 100%;
+            }
+            
+            .story-content {
+                flex-direction: column;
+            }
+            
+            .story-image {
+                width: 100%;
+                max-width: 100%;
+                margin: var(--space-xl) 0 0 0;
+                min-width: unset;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 var(--space-md);
+            }
+            
+            nav {
+                position: fixed;
+                top: 100px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 100px);
+                background: var(--white);
+                transition: all 0.3s ease;
+                z-index: 999;
+                overflow-y: auto;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                padding: var(--space-lg);
+            }
+            
+            nav ul li {
+                margin: var(--space-md) 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .logo img {
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: var(--space-xl) 0;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: var(--space-md);
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header with enhanced navigation -->
+    <!-- Header -->
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
                 <img src="Checca.png" alt="CHECCA Logo" loading="lazy">
             </a>
-            
-            <div class="header-actions">
-                <a href="tel:+27123456789" class="header-phone">
-                    <i class="fas fa-phone"></i>
-                    <span>+27 12 345 6789</span>
-                </a>
-                
-                <a href="#contact" class="btn btn-accent mobile-cta">
-                    <i class="fas fa-calendar-alt"></i> Book Now
-                </a>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav id="mainNav">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -173,11 +994,8 @@
             </nav>
         </div>
     </header>
-    
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-    <!-- Hero Section with scroll indicator -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -189,57 +1007,28 @@
                 </div>
             </div>
         </div>
-        <a href="#about" class="scroll-down" aria-label="Scroll down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
     </section>
 
-    <!-- Tabbed About Section -->
+    <!-- Our Story Section -->
     <section class="our-story" id="about">
         <div class="container">
             <h2 class="text-center animate">Our Story</h2>
-            
-            <div class="tabs animate">
-                <button class="tab-btn active" data-tab="story">Our Story</button>
-                <button class="tab-btn" data-tab="mission">Our Mission</button>
-            </div>
-            
             <div class="story-content animate">
-                <div class="tab-content active" id="story-tab">
-                    <div class="story-text">
-                        <p>CHECCA Home Interiors & Maintenance is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
-                        
-                        <p class="story-highlight">We believe every home deserves attention to detail — and that's exactly what we provide.</p>
-                        
-                        <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
-                    </div>
-                    <div class="story-image">
-                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working" loading="lazy">
-                    </div>
+                <div class="story-text">
+                    <p>CHECCA Home Interiors & Maintenance is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
+                    
+                    <p class="story-highlight">We believe every home deserves attention to detail — and that's exactly what we provide.</p>
+                    
+                    <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
                 </div>
-                
-                <div class="tab-content" id="mission-tab">
-                    <div class="story-text">
-                        <p>At CHECCA, our mission is to transform houses into homes through exceptional craftsmanship and reliable service. We're committed to:</p>
-                        
-                        <ul style="margin-bottom: var(--space-md); padding-left: var(--space-lg);">
-                            <li style="margin-bottom: var(--space-sm);">Delivering quality workmanship that stands the test of time</li>
-                            <li style="margin-bottom: var(--space-sm);">Providing honest, transparent pricing with no hidden costs</li>
-                            <li style="margin-bottom: var(--space-sm);">Building lasting relationships with our clients based on trust</li>
-                            <li style="margin-bottom: var(--space-sm);">Supporting local suppliers and craftsmen</li>
-                        </ul>
-                        
-                        <p>We measure our success by the satisfaction of our clients and the quality of our work, not just the bottom line.</p>
-                    </div>
-                    <div class="story-image">
-                        <img src="https://images.unsplash.com/photo-1600566752220-7a53b8a0be4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA mission" loading="lazy">
-                    </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="CHECCA team working" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section with tooltips -->
+    <!-- Why Choose Us Section -->
     <section class="why-choose-us">
         <div class="container">
             <h2 class="text-center animate">Why Choose CHECCA?</h2>
@@ -250,10 +1039,6 @@
                     </div>
                     <h3>Skilled Craftsmanship</h3>
                     <p>Our team brings expertise and detail to every project.</p>
-                    <div class="feature-tooltip">
-                        <span class="tooltip-text">All our craftsmen have 10+ years experience and undergo regular training</span>
-                        <i class="fas fa-info-circle" style="color: var(--dark-grey); cursor: help;"></i>
-                    </div>
                 </div>
                 <div class="feature-card animate">
                     <div class="feature-icon">
@@ -261,10 +1046,6 @@
                     </div>
                     <h3>Custom-Fit Solutions</h3>
                     <p>Everything we build or fix is made for your space.</p>
-                    <div class="feature-tooltip">
-                        <span class="tooltip-text">We measure twice and cut once - precision is our promise</span>
-                        <i class="fas fa-info-circle" style="color: var(--dark-grey); cursor: help;"></i>
-                    </div>
                 </div>
                 <div class="feature-card animate">
                     <div class="feature-icon">
@@ -272,69 +1053,35 @@
                     </div>
                     <h3>Affordable, Honest Pricing</h3>
                     <p>No surprises. Just value.</p>
-                    <div class="feature-tooltip">
-                        <span class="tooltip-text">We provide detailed quotes upfront with no hidden costs</span>
-                        <i class="fas fa-info-circle" style="color: var(--dark-grey); cursor: help;"></i>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section with quick actions -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <h2 class="text-center animate">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
-                        <span class="service-quote">"Perfect fit for our awkward space!"</span>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                     <div class="service-content">
                         <h3>Tailor-made Cabinetry</h3>
                         <p>Custom built-in solutions for kitchens, wardrobes, and living spaces designed specifically for your needs.</p>
-                        <div class="service-actions">
-                            <a href="#contact" class="btn btn-primary" style="padding: var(--space-sm) var(--space-md); font-size: 0.9rem;">
-                                <i class="fas fa-comment"></i> Get Quote
-                            </a>
-                            <a href="#" class="btn btn-secondary" style="padding: var(--space-sm) var(--space-md); font-size: 0.9rem;">
-                                <i class="fas fa-images"></i> Gallery
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
-                        <span class="service-quote">"Stunning and durable!"</span>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                     <div class="service-content">
                         <h3>Durable Countertops</h3>
                         <p>Beautiful and resilient surfaces in granite, quartz, and other premium materials for your kitchen and bathrooms.</p>
-                        <div class="service-actions">
-                            <a href="#contact" class="btn btn-primary" style="padding: var(--space-sm) var(--space-md); font-size: 0.9rem;">
-                                <i class="fas fa-comment"></i> Get Quote
-                            </a>
-                            <a href="#" class="btn btn-secondary" style="padding: var(--space-sm) var(--space-md); font-size: 0.9rem;">
-                                <i class="fas fa-images"></i> Gallery
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <div class="service-card animate">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
-                        <span class="service-quote">"Fixed it right the first time!"</span>
-                    </div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
                     <div class="service-content">
                         <h3>Expert Maintenance</h3>
                         <p>Comprehensive repair services for plumbing, electrical, carpentry and general home maintenance needs.</p>
-                        <div class="service-actions">
-                            <a href="#contact" class="btn btn-primary" style="padding: var(--space-sm) var(--space-md); font-size: 0.9rem;">
-                                <i class="fas fa-comment"></i> Get Quote
-                            </a>
-                            <a href="tel:+27123456789" class="btn btn-accent" style="padding: var(--space-sm) var(--space-md); font-size: 0.9rem;">
-                                <i class="fas fa-phone"></i> Call Now
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -344,189 +1091,85 @@
         </div>
     </section>
 
-    <!-- Portfolio Section with filters -->
+    <!-- Portfolio Section -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="text-center animate">Our Projects</h2>
-            
-            <div class="portfolio-filters animate">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="kitchen">Kitchens</button>
-                <button class="filter-btn" data-filter="wardrobe">Wardrobes</button>
-                <button class="filter-btn" data-filter="bathroom">Bathrooms</button>
-                <button class="filter-btn" data-filter="maintenance">Maintenance</button>
-            </div>
-            
             <div class="portfolio-grid">
-                <div class="portfolio-item animate" data-category="kitchen">
+                <div class="portfolio-item animate">
                     <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Kitchen Transformation" class="portfolio-img" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Kitchen Transformation</h3>
                         <p>A complete kitchen makeover in Soweto with custom cabinets and quartz countertops.</p>
-                        <button class="btn btn-accent view-project" style="margin-top: var(--space-md); padding: var(--space-sm) var(--space-md);" data-image="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" data-title="Kitchen Transformation">
-                            <i class="fas fa-expand"></i> View Full Project
-                        </button>
                     </div>
                 </div>
-                <div class="portfolio-item animate" data-category="wardrobe">
+                <div class="portfolio-item animate">
                     <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Wardrobe" class="portfolio-img" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Custom Wardrobe</h3>
                         <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
-                        <button class="btn btn-accent view-project" style="margin-top: var(--space-md); padding: var(--space-sm) var(--space-md);" data-image="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-title="Custom Wardrobe">
-                            <i class="fas fa-expand"></i> View Full Project
-                        </button>
                     </div>
                 </div>
-                <div class="portfolio-item animate" data-category="bathroom">
+                <div class="portfolio-item animate">
                     <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bathroom Renovation" class="portfolio-img" loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Bathroom Renovation</h3>
                         <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
-                        <button class="btn btn-accent view-project" style="margin-top: var(--space-md); padding: var(--space-sm) var(--space-md);" data-image="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-title="Bathroom Renovation">
-                            <i class="fas fa-expand"></i> View Full Project
-                        </button>
-                    </div>
-                </div>
-                <div class="portfolio-item animate" data-category="kitchen">
-                    <img src="https://images.unsplash.com/photo-1556909211-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Modern Kitchen" class="portfolio-img" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Modern Kitchen</h3>
-                        <p>Contemporary kitchen design with custom cabinetry and stone countertops.</p>
-                        <button class="btn btn-accent view-project" style="margin-top: var(--space-md); padding: var(--space-sm) var(--space-md);" data-image="https://images.unsplash.com/photo-1556909211-d5b604d0c90d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-title="Modern Kitchen">
-                            <i class="fas fa-expand"></i> View Full Project
-                        </button>
-                    </div>
-                </div>
-                <div class="portfolio-item animate" data-category="maintenance">
-                    <img src="https://images.unsplash.com/photo-1600566752220-7a53b8a0be4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Plumbing Repair" class="portfolio-img" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Plumbing Repair</h3>
-                        <p>Complete pipe replacement and fixture installation in Randburg home.</p>
-                        <button class="btn btn-accent view-project" style="margin-top: var(--space-md); padding: var(--space-sm) var(--space-md);" data-image="https://images.unsplash.com/photo-1600566752220-7a53b8a0be4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-title="Plumbing Repair">
-                            <i class="fas fa-expand"></i> View Full Project
-                        </button>
-                    </div>
-                </div>
-                <div class="portfolio-item animate" data-category="wardrobe">
-                    <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Walk-in Closet" class="portfolio-img" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Walk-in Closet</h3>
-                        <p>Custom walk-in closet with lighting and premium finishes in Fourways.</p>
-                        <button class="btn btn-accent view-project" style="margin-top: var(--space-md); padding: var(--space-sm) var(--space-md);" data-image="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" data-title="Walk-in Closet">
-                            <i class="fas fa-expand"></i> View Full Project
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <div class="lightbox-content">
-            <h3 id="lightbox-title"></h3>
-            <img id="lightbox-img" class="lightbox-img" src="" alt="">
-            <!-- Before/After comparison could be added here -->
-        </div>
-    </div>
 
-    <!-- Testimonials Section with Swiper -->
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <h2 class="text-center animate">What Our Clients Say</h2>
-            
-            <div class="testimonial-slider swiper animate">
-                <div class="swiper-wrapper">
-                    <div class="testimonial swiper-slide">
-                        <div class="testimonial-content">
-                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Thandi" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="testimonial-text">
-                                    Checca revamped our kitchen beautifully and fixed our leaky bathroom too! Fast and friendly service with attention to detail.
-                                </div>
-                                <div class="testimonial-author">Thandi, Johannesburg</div>
-                            </div>
-                        </div>
+            <div class="testimonial-slider">
+                <div class="testimonial animate">
+                    <div class="testimonial-text">
+                        Checca revamped our kitchen beautifully and fixed our leaky bathroom too! Fast and friendly service with attention to detail.
                     </div>
-                    
-                    <div class="testimonial swiper-slide">
-                        <div class="testimonial-content">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="testimonial-text">
-                                    The team at CHECCA transformed our outdated kitchen into a modern, functional space. They were professional, on time, and within budget.
-                                </div>
-                                <div class="testimonial-author">James, Pretoria</div>
-                            </div>
-                        </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    
-                    <div class="testimonial swiper-slide">
-                        <div class="testimonial-content">
-                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Nomsa" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <div class="testimonial-text">
-                                    I've used CHECCA for multiple projects and they never disappoint. Quality workmanship and honest pricing every time.
-                                </div>
-                                <div class="testimonial-author">Nomsa, Soweto</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial swiper-slide">
-                        <div class="testimonial-content">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <div class="testimonial-text">
-                                    The custom wardrobe they built has completely transformed our bedroom. Perfect fit and excellent craftsmanship.
-                                </div>
-                                <div class="testimonial-author">David, Sandton</div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="testimonial-author">Thandi, Johannesburg</div>
                 </div>
-                
-                <!-- Add pagination -->
-                <div class="swiper-pagination"></div>
-                
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="testimonial animate" style="display: none;">
+                    <div class="testimonial-text">
+                        The team at CHECCA transformed our outdated kitchen into a modern, functional space. They were professional, on time, and within budget.
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-author">James, Pretoria</div>
+                </div>
+                <div class="testimonial animate" style="display: none;">
+                    <div class="testimonial-text">
+                        I've used CHECCA for multiple projects and they never disappoint. Quality workmanship and honest pricing every time.
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-author">Nomsa, Soweto</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section with enhanced fields -->
+    <!-- Contact Form Section -->
     <section class="contact-form-section" id="contact">
         <div class="container">
             <h2 class="text-center animate">Get in Touch</h2>
@@ -551,10 +1194,6 @@
                             <span>Mon-Fri: 8AM - 5PM</span>
                         </li>
                     </ul>
-                    
-                    <h3 style="margin-top: var(--space-xl);">Service Areas</h3>
-                    <p>We serve all major areas in Gauteng including Johannesburg, Pretoria, Sandton, Randburg, and surrounding areas.</p>
-                    
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -562,26 +1201,16 @@
                         <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
                 <div class="contact-form">
-                    <form class="modern-form" id="contactForm">
-                        <div id="form-message" class="form-message"></div>
-                        
+                    <form class="modern-form">
                         <div class="form-group">
                             <input type="text" id="name" placeholder=" " required>
                             <label for="name">Full Name</label>
                         </div>
-                        
                         <div class="form-group">
                             <input type="email" id="email" placeholder=" " required>
                             <label for="email">Email Address</label>
                         </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder=" ">
-                            <label for="phone">Phone Number</label>
-                        </div>
-                        
                         <div class="form-group">
                             <select id="service" required>
                                 <option value=""> </option>
@@ -592,48 +1221,10 @@
                             </select>
                             <label for="service">Service Needed</label>
                         </div>
-                        
-                        <div class="form-group">
-                            <h4>Project Budget (Optional)</h4>
-                            <div class="budget-selector">
-                                <div class="budget-option">
-                                    <input type="radio" id="budget1" name="budget" value="Under R10,000" class="budget-radio">
-                                    <label for="budget1" class="budget-label">Under R10k</label>
-                                </div>
-                                <div class="budget-option">
-                                    <input type="radio" id="budget2" name="budget" value="R10,000 - R30,000" class="budget-radio">
-                                    <label for="budget2" class="budget-label">R10k-R30k</label>
-                                </div>
-                                <div class="budget-option">
-                                    <input type="radio" id="budget3" name="budget" value="R30,000 - R50,000" class="budget-radio">
-                                    <label for="budget3" class="budget-label">R30k-R50k</label>
-                                </div>
-                                <div class="budget-option">
-                                    <input type="radio" id="budget4" name="budget" value="Over R50,000" class="budget-radio">
-                                    <label for="budget4" class="budget-label">Over R50k</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <select id="timeframe" required>
-                                <option value=""> </option>
-                                <option value="urgent">Urgent (Within 1 week)</option>
-                                <option value="1-2 weeks">1-2 weeks</option>
-                                <option value="2-4 weeks">2-4 weeks</option>
-                                <option value="flexible">Flexible timing</option>
-                            </select>
-                            <label for="timeframe">Preferred Timeframe</label>
-                        </div>
-                        
                         <div class="form-group">
                             <textarea id="message" placeholder=" " required></textarea>
                             <label for="message">Project Details</label>
                         </div>
-                        
-                        <!-- reCAPTCHA -->
-                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                        
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-paper-plane"></i> Send Message
                         </button>
@@ -656,7 +1247,7 @@
         </div>
     </section>
 
-    <!-- Footer with trust badges -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -701,54 +1292,22 @@
                     </ul>
                 </div>
             </div>
-            
-            <!-- Trust Badges -->
-            <div class="trust-badges">
-                <img src="https://via.placeholder.com/120x60?text=NHBRC" alt="NHBRC Registered" class="trust-badge">
-                <img src="https://via.placeholder.com/120x60?text=BEE+Level+1" alt="BEE Level 1" class="trust-badge">
-                <img src="https://via.placeholder.com/120x60?text=5-Star+Reviews" alt="5-Star Reviews" class="trust-badge">
-                <img src="https://via.placeholder.com/120x60?text=10+Years+Exp" alt="10+ Years Experience" class="trust-badge">
-            </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2023 CHECCA Trading & Projects. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-    
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
     <script>
-        // Mobile Menu Toggle with Overlay
+        // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
-        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
         
         mobileMenuBtn.addEventListener('click', () => {
             mainNav.classList.toggle('active');
-            mobileMenuOverlay.classList.toggle('active');
             mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             mobileMenuBtn.setAttribute('aria-expanded', mainNav.classList.contains('active'));
-            
-            // Toggle body scroll
-            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        // Close mobile menu when clicking on overlay
-        mobileMenuOverlay.addEventListener('click', () => {
-            mainNav.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
         });
         
         // Close mobile menu when clicking on a link
@@ -756,16 +1315,15 @@
             link.addEventListener('click', () => {
                 if (mainNav.classList.contains('active')) {
                     mainNav.classList.remove('active');
-                    mobileMenuOverlay.classList.remove('active');
                     mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                     mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                    document.body.style.overflow = '';
                 }
             });
         });
         
         // Header Scroll Effect
         const header = document.getElementById('header');
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 header.classList.add('scrolled');
@@ -795,116 +1353,42 @@
             });
         });
         
-        // Tabbed About Section
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.getAttribute('data-tab');
-                
-                // Remove active class from all buttons and tabs
-                document.querySelectorAll('.tab-btn').forEach(tb => tb.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding tab
-                btn.classList.add('active');
-                document.getElementById(`${tabId}-tab`).classList.add('active');
+        // Testimonial Slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => {
+                testimonial.style.display = 'none';
             });
+            
+            testimonials[index].style.display = 'block';
+        }
+        
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+        
+        // Show first testimonial
+        showTestimonial(0);
+        
+        // Auto-rotate testimonials every 5 seconds
+        const testimonialInterval = setInterval(nextTestimonial, 5000);
+        
+        // Pause slider on hover
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        testimonialSlider.addEventListener('mouseenter', () => {
+            clearInterval(testimonialInterval);
         });
         
-        // Portfolio Filtering
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const filterValue = btn.getAttribute('data-filter');
-                
-                // Update active button
-                filterBtns.forEach(fb => fb.classList.remove('active'));
-                btn.classList.add('active');
-                
-                // Filter items
-                const portfolioItems = document.querySelectorAll('.portfolio-item');
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
-        // Lightbox for Portfolio
-        const viewProjectBtns = document.querySelectorAll('.view-project');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxTitle = document.getElementById('lightbox-title');
-        const closeLightbox = document.querySelector('.close-lightbox');
-        
-        viewProjectBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const imgSrc = btn.getAttribute('data-image');
-                const title = btn.getAttribute('data-title');
-                
-                lightboxImg.src = imgSrc;
-                lightboxImg.alt = title;
-                lightboxTitle.textContent = title;
-                lightbox.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            });
-        });
-        
-        closeLightbox.addEventListener('click', () => {
-            lightbox.style.display = 'none';
-            document.body.style.overflow = '';
-        });
-        
-        // Close lightbox when clicking outside
-        window.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-                document.body.style.overflow = '';
-            }
-        });
-        
-        // Testimonial Slider with Swiper
-        const testimonialSwiper = new Swiper('.testimonial-slider', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
-                992: {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                }
-            }
-        });
-        
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
+        testimonialSlider.addEventListener('mouseleave', () => {
+            testimonialInterval = setInterval(nextTestimonial, 5000);
         });
         
         // Scroll Animation
         const animateElements = document.querySelectorAll('.animate');
+        
         function checkScroll() {
             animateElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
@@ -926,74 +1410,6 @@
             isScrolling = setTimeout(checkScroll, 50);
         }, false);
         
-        // Form Validation and Submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Simple validation
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const service = document.getElementById('service').value;
-                const message = document.getElementById('message').value.trim();
-                
-                const formMessage = document.getElementById('form-message');
-                formMessage.textContent = '';
-                formMessage.className = 'form-message';
-                
-                if (!name || !email || !service || !message) {
-                    formMessage.textContent = 'Please fill in all required fields.';
-                    formMessage.classList.add('error');
-                    return;
-                }
-                
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                    formMessage.textContent = 'Please enter a valid email address.';
-                    formMessage.classList.add('error');
-                    return;
-                }
-                
-                // Here you would typically send the form data to your server
-                // For demonstration, we'll just show a success message
-                formMessage.textContent = 'Thank you for your message! We will contact you soon.';
-                formMessage.classList.add('success');
-                
-                // Reset form
-                this.reset();
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formMessage.textContent = '';
-                    formMessage.className = 'form-message';
-                }, 5000);
-            });
-        }
-        
-        // Set active nav link based on scroll position
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav ul li a');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (pageYOffset >= (sectionTop - 150)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-        
         // Lazy loading for images
         document.addEventListener('DOMContentLoaded', function() {
             const lazyImages = document.querySelectorAll('img[loading="lazy"]');
@@ -1014,6 +1430,19 @@
             
             lazyImages.forEach(lazyLoad);
         });
+        
+        // Form submission
+        const contactForm = document.querySelector('.modern-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to your server
+                // For demonstration, we'll just show an alert
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            });
+        }
     </script>
 </body>
 </html>
