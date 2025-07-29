@@ -1,0 +1,96 @@
+{
+  "name": "Google Salons without Website",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://maps.googleapis.com/maps/api/place/nearbysearch/json",
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "location",
+              "value": "-26.2041,28.0473"
+            },
+            {
+              "name": "radius",
+              "value": "5000"
+            },
+            {
+              "name": "type",
+              "value": "beauty_salon"
+            },
+            {
+              "name": "keyword",
+              "value": "salon"
+            },
+            {
+              "name": "key",
+              "value": "YOUR_GOOGLE_API_KEY"
+            }
+          ]
+        }
+      },
+      "id": "NearbySearch",
+      "name": "Nearby Search",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [300, 200]
+    },
+    {
+      "parameters": {
+        "functionCode": "return items[0].json.results.filter(item => !item.hasOwnProperty('website')).map(item => ({ json: item }));"
+      },
+      "id": "FilterNoWebsite",
+      "name": "Filter: No Website",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [500, 200]
+    },
+    {
+      "parameters": {
+        "url": "https://maps.googleapis.com/maps/api/place/details/json",
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "place_id",
+              "value": "={{$json.place_id}}"
+            },
+            {
+              "name": "fields",
+              "value": "name,formatted_address,formatted_phone_number,website,rating,user_ratings_total"
+            },
+            {
+              "name": "key",
+              "value": "YOUR_GOOGLE_API_KEY"
+            }
+          ]
+        }
+      },
+      "id": "PlaceDetails",
+      "name": "Get Place Details",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [700, 200]
+    },
+    {
+      "parameters": {
+        "functionCode": "return items.map(item => {\n  const result = item.json.result;\n  return {\n    json: {\n      name: result.name,\n      address: result.formatted_address,\n      phone: result.formatted_phone_number || 'N/A',\n      rating: result.rating,\n      reviews: result.user_ratings_total,\n      place_id: result.place_id,\n      maps_link: `https://www.google.com/maps/place/?q=place_id:${result.place_id}`\n    }\n  };\n});"
+      },
+      "id": "Clean Output",
+      "name": "Format Output",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [900, 200]
+    }
+  ],
+  "connections": {
+    "Nearby Search": {
+      "main": [["Filter: No Website"]]
+    },
+    "Filter: No Website": {
+      "main": [["Get Place Details"]]
+    },
+    "Get Place Details": {
+      "main": [["Format Output"]]
+    }
+  }
+}
