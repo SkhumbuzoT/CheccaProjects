@@ -402,23 +402,56 @@
         .features {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-lg);
-            margin-top: var(--space-xxl);
+            gap: 2rem;
+            margin-top: 2.5rem;
         }
-        
         .feature-card {
-            /* Remove this line if present: flex: 0 0 calc(33.333% - 20px); */
             background: var(--white);
-            padding: var(--space-xl) var(--space-lg);
+            padding: 2rem 1.5rem;
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-sm);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 220px;
         }
-                
         .feature-card:hover {
-            transform: translateY(-8px) scale(1.02);
             box-shadow: var(--shadow-lg);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .feature-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--red);
+        }
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .feature-card p {
+            color: var(--dark-grey);
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        /* Responsive for tablets and mobile */
+        @media (max-width: 992px) {
+            .features {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .feature-card {
+                min-height: unset;
+            }
         }
         
         .feature-icon {
@@ -1044,38 +1077,29 @@ document.addEventListener("DOMContentLoaded", function() {
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <div class="container">
-            <h2 class="text-center animate">Why Choose CHECCA?</h2>
-            <div class="features">
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Skilled Craftsmanship</h3>
-                    <p>Our team brings expertise and detail to every project.</p>
-                </div>
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h3>Custom-Fit Solutions</h3>
-                    <p>Everything we build or fix is made for your space.</p>
-                </div>
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h3>Integrity</h3>
-                    <p>Do the right thing even when no one is watching</p>
-                </div>
-                <div class="feature-card animate">
-                    <div class="feature-icon">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                    <h3>Affordable Pricing</h3>
-                    <p>No surprises. Just value.</p>
-                </div>
+    <section class="why-choose-us" id="why-checca">
+    <div class="container">
+        <h2 class="text-center animate">Why Choose CHECCA?</h2>
+        <div class="features">
+            <div class="feature-card animate">
+                <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                <h3>Skilled Craftsmanship</h3>
+                <p>Our team brings expertise and attention to detail to every project.</p>
+            </div>
+            <div class="feature-card animate">
+                <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+                <h3>Custom-Fit Solutions</h3>
+                <p>Everything we build or fix is tailored for your space.</p>
+            </div>
+            <div class="feature-card animate">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Integrity</h3>
+                <p>We do the right thing—even when no one is watching.</p>
+            </div>
+            <div class="feature-card animate">
+                <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <h3>Affordable Pricing</h3>
+                <p>No surprises. Just honest value.</p>
             </div>
         </div>
     </section>
