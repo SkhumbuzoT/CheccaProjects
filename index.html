@@ -971,6 +971,22 @@
         }
     </style>
 </head>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    mobileMenuBtn.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+    });
+    mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+            }
+        });
+    });
+});
+</script>
 <body>
     <!-- Header -->
     <header id="header">
