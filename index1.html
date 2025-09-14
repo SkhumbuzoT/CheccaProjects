@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECCA Trading & Projects | Home Improvement Specialists Johannesburg</title>
+    <meta name="description" content="Professional home improvement services in Johannesburg - custom cabinetry, countertops, and reliable maintenance. Local craftsmen with quality guarantees.">
+    <meta name="keywords" content="kitchen cabinets suppliers South Africa, built in wardrobes Johannesburg, quartz countertop installation South Africa, handyman services near me South Africa, built in cabinets manufacturers South Africa">
+    <link rel="icon" href="checcafavicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Enhanced Global Styles */
+        :root {
+            /* Color System */
+            --navy-blue: #001f3f;
+            --red: #e74c3c;
+            --yellow: #f1c40f;
+            --green: #2ecc71;
+            --grey: #f8f9fa;
+            --dark-grey: #7f8c8d;
+            --black: #2c3e50;
+            --white: #ffffff;
+            
+            /* Enhanced Spacing System */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+            --space-xxl: 6rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.2);
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Enhanced Typography System */
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--black);
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        h1 { 
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            letter-spacing: -0.02em; 
+        }
+        
+        h2 { 
+            font-size: 2.8rem; 
+            font-weight: 700; 
+            letter-spacing: -0.01em; 
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--red);
+        }
+        
+        h3 { 
+            font-size: 2rem; 
+            font-weight: 600; 
+        }
+        
+        h4 { 
+            font-size: 1.5rem; 
+            font-weight: 600; 
+        }
+        
+        p {
+            margin-bottom: var(--space-md);
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+        
+        .lead-text {
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        /* Enhanced Button System */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-right: var(--space-md);
+            margin-bottom: var(--space-md);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary {
+            background: var(--navy-blue);
+            color: var(--white);
+            border-color: var(--navy-blue);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--navy-blue);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--navy-blue);
+            border-color: var(--navy-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--navy-blue);
+            color: var(--white);
+        }
+        
+        .btn-accent {
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
+        }
+        
+        .btn-accent:hover {
+            background: transparent;
+            color: var(--red);
+        }
+        
+        /* WhatsApp Button */
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+            border-color: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background: transparent;
+            color: #25D366;
+        }
+        
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+        
+        section {
+            padding: var(--space-xxl) 0;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: var(--space-lg) 0;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: var(--space-md) 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(5px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        /* Enhanced Logo Styling */
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 75px;
+            width: auto;
+            margin-right: var(--space-sm);
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+        
+        .logo:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: var(--space-xl);
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--navy-blue);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--red);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--navy-blue);
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Enhanced Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(0, 31, 63, 0.8), rgba(46, 204, 113, 0.3)), 
+                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: left;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 31, 63, 0.3) 100%);
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: var(--space-lg);
+            color: var(--white);
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            margin-bottom: var(--space-xl);
+            color: var(--white);
+        }
+        
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+        
+        /* Our Story Section */
+        .our-story {
+            background: var(--white);
+        }
+        
+        .story-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .story-text {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .story-highlight {
+            font-weight: 600;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+            margin: var(--space-lg) 0;
+            padding-left: var(--space-lg);
+            border-left: 4px solid var(--red);
+        }
+        
+        .story-image {
+            width: 40%;
+            max-width: 400px;
+            min-width: 300px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin-left: var(--space-xl);
+        }
+        
+        .story-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .story-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: var(--grey);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+        .feature-card {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 220px;
+        }
+        .feature-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .feature-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--red);
+        }
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--navy-blue);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .feature-card p {
+            color: var(--dark-grey);
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        /* Responsive for tablets and mobile */
+        @media (max-width: 992px) {
+            .features {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .feature-card {
+                min-height: unset;
+            }
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            color: var(--red);
+        }
+        
+        /* Enhanced Services Section */
+        .services {
+            background: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .service-img::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 31, 63, 0.1) 100%);
+        }
+        
+        .service-content {
+            padding: var(--space-xl);
+            position: relative;
+        }
+        
+        .service-content h3 {
+            color: var(--navy-blue);
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-content p {
+            color: var(--dark-grey);
+        }
+        
+        .service-features {
+            margin: var(--space-md) 0;
+            padding-left: var(--space-md);
+        }
+        
+        .service-features li {
+            margin-bottom: var(--space-xs);
+            position: relative;
+            padding-left: var(--space-md);
+        }
+        
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: bold;
+        }
+        
+        .services-cta {
+            margin-top: var(--space-xxl);
+            text-align: center;
+        }
+        
+        /* Enhanced Portfolio Section */
+        .portfolio {
+            background: var(--grey);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 300px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-item:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 31, 63, 0.9));
+            padding: var(--space-xl);
+            color: var(--white);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay h3 {
+            color: var(--white);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .portfolio-overlay p {
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Enhanced Testimonials Section */
+        .testimonials {
+            background: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+            position: relative;
+            padding: var(--space-md) 0;
+        }
+        
+        .testimonial-text:before,
+        .testimonial-text:after {
+            content: """;
+            font-size: 4rem;
+            color: var(--red);
+            opacity: 0.2;
+            position: absolute;
+            line-height: 1;
+        }
+        
+        .testimonial-text:before {
+            top: 0;
+            left: 0;
+        }
+        
+        .testimonial-text:after {
+            content: """;
+            bottom: -1.5rem;
+            right: 0;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: var(--space-md);
+            object-fit: cover;
+        }
+        
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--navy-blue);
+        }
+        
+        .testimonial-role {
+            color: var(--dark-grey);
+            font-size: 0.9rem;
+        }
+        
+        /* Enhanced Contact Section */
+        .contact {
+            background: var(--grey);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xxl);
+            margin-top: var(--space-xxl);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xl);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--red);
+            min-width: 30px;
+        }
+        
+        .contact-details h3 {
+            margin-bottom: var(--space-xs);
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 600;
+            color: var(--navy-blue);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: var(--space-md);
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--navy-blue);
+            box-shadow: 0 0 0 3px rgba(0, 31, 63, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Enhanced Footer */
+        footer {
+            background: var(--navy-blue);
+            color: var(--white);
+            padding: var(--space-xxl) 0 var(--space-xl);
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-xl);
+        }
+        
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: var(--space-lg);
+            position: relative;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--red);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .footer-links i {
+            font-size: 0.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--red);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: var(--space-xxl);
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .header-container {
+                padding: 0 var(--space-md);
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: var(--space-xxl) var(--space-xl);
+                box-shadow: var(--shadow-lg);
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                right: 0;
+            }
+            
+            nav ul li {
+                margin: var(--space-md) 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .story-content {
+                flex-direction: column;
+            }
+            
+            .story-image {
+                width: 100%;
+                max-width: 100%;
+                margin: var(--space-xl) 0 0;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --space-xxl: 4rem;
+                --space-xl: 2rem;
+            }
+            
+            section {
+                padding: var(--space-xl) 0;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            h3 {
+                font-size: 1.5rem;
+            }
+            
+            .hero {
+                min-height: 600px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="checca-logo.png" alt="CHECCA Trading & Projects Logo">
+                CHECCA
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Space with Expert Craftsmanship</h1>
+                <p class="lead-text">Custom cabinetry, premium countertops, and reliable home repairs in Johannesburg and Pretoria. Quality guaranteed with 5-year workmanship warranty.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-phone-alt"></i> Get a Free Quote
+                    </a>
+                    <a href="https://wa.me/27123456789?text=Hi%20CHECCA,%20I'd%20like%20to%20inquire%20about%20your%20services" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story" id="about">
+        <div class="container">
+            <h2 class="text-center">Our Story</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Founded in Johannesburg, CHECCA Trading & Projects has been providing top-quality home improvement solutions to South African homeowners for over a decade. We take pride in our craftsmanship and commitment to excellence.</p>
+                    <p class="story-highlight">We believe that your home should be both beautiful and functional, designed to fit your unique lifestyle.</p>
+                    <p>Our team of certified craftsmen and installers bring years of experience to every project, ensuring results that exceed expectations. We use only premium materials and the latest techniques to deliver lasting value.</p>
+                    <a href="#contact" class="btn btn-secondary">Meet Our Team</a>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1605348532761-68d1866bea43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="CHECCA Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="text-center">Why Choose CHECCA</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Quality Guaranteed</h3>
+                    <p>5-year workmanship warranty on all our installations and repairs</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rand-sign"></i>
+                    </div>
+                    <h3>Fair Pricing</h3>
+                    <p>Transparent quotes with no hidden costs. Quality service at fair prices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Local Experts</h3>
+                    <p>Johannesburg-based team with extensive local experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>On Time</h3>
+                    <p>We respect your time and complete projects within agreed timelines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <div class="services-grid">
+                <!-- Built-in Cabinets Service -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Built-in Cabinets</h3>
+                        <p>Custom-built storage that fits your life — wardrobes, kitchens, media walls and office units, made to measure.</p>
+                        <h4>What we do:</h4>
+                        <ul class="service-features">
+                            <li>Free design consultation & 3D layout</li>
+                            <li>Custom materials: melamine, solid timber, veneers</li>
+                            <li>Soft-close drawers, integrated lighting</li>
+                            <li>On-site install by our certified team</li>
+                        </ul>
+                        <p><strong>Typical lead time:</strong> 2–5 weeks from sign-off</p>
+                        <a href="#contact" class="btn btn-accent">Book your free measure</a>
+                    </div>
+                </div>
+                
+                <!-- Kitchen Countertops Service -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Kitchen Countertops</h3>
+                        <p>Granite, quartz and marble finishes — precision templating and expert installation.</p>
+                        <h4>Services:</h4>
+                        <ul class="service-features">
+                            <li>Supply & installation (new & replacement)</li>
+                            <li>Polishing, resealing and repair</li>
+                            <li>Edge profiles and integrated drainers</li>
+                        </ul>
+                        <h4>Why choose us:</h4>
+                        <p>Local templating, factory precision, warranty on workmanship</p>
+                        <a href="#contact" class="btn btn-accent">Request countertop quote</a>
+                    </div>
+                </div>
+                
+                <!-- Home Repairs & Maintenance Service -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Home Repairs & Maintenance</h3>
+                        <p>Reliable repairs — plumbing, carpentry, small electrical and general maintenance.</p>
+                        <h4>Common jobs:</h4>
+                        <ul class="service-features">
+                            <li>Leak repairs, tap replacements, drain unblocking</li>
+                            <li>Door hanging, skirting, ceiling patching</li>
+                            <li>Electrical touchups, switch & socket replacements</li>
+                        </ul>
+                        <p><strong>Quick response:</strong> Book an inspection — we'll give an honest fixed-price estimate</p>
+                        <a href="#contact" class="btn btn-accent">Book a handyman visit</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <p>Not sure what you need? We offer free consultations to assess your requirements.</p>
+                <a href="https://wa.me/27123456789?text=Hi%20CHECCA,%20I%20need%20advice%20on%20a%20home%20project" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat with us for advice
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="text-center">Our Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1554995203-988a4a5e456f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Wardrobe Johannesburg" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Custom Wardrobe</h3>
+                        <p>Sandton, Johannesburg</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Kitchen Renovation Pretoria" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Kitchen Renovation</h3>
+                        <p>Pretoria East</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Quartz Countertop Installation" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Quartz Countertop</h3>
+                        <p>Fourways, Johannesburg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center">What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>CHECCA transformed our kitchen with custom cabinets that maximized our space. Their team was professional, clean, and delivered ahead of schedule. The quality is exceptional!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah M." class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Sarah M.</div>
+                            <div class="testimonial-role">Fourways, Johannesburg</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>We needed emergency plumbing repairs and CHECCA responded within hours. Honest pricing and quality workmanship. They've become our go-to for all home maintenance needs.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David T." class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">David T.</div>
+                            <div class="testimonial-role">Pretoria</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>The built-in wardrobe they created for our bedroom is stunning! The attention to detail and quality materials make it worth every rand. Highly recommend their cabinetry services.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Lerato K." class="testimonial-avatar">
+                        <div>
+                            <div class="testimonial-name">Lerato K.</div>
+                            <div class="testimonial-role">Sandton</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="text-center">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Our Location</h3>
+                            <p>Based in Johannesburg, serving Gauteng area including Pretoria and surrounding regions</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+27 123 456 789</p>
+                            <p>Mon-Fri: 8am-5pm | Sat: 9am-1pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>WhatsApp</h3>
+                            <p>+27 123 456 789</p>
+                            <p>Quick responses during business hours</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>info@checca.co.za</p>
+                            <p>Send us your project details for a quote</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Request a Quote</h3>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="cabinets">Built-in Cabinets</option>
+                                <option value="countertops">Kitchen Countertops</option>
+                                <option value="repairs">Home Repairs & Maintenance</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>CHECCA</h3>
+                    <p>Quality home improvements and repairs in Johannesburg and Pretoria. Trusted by homeowners since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Built-in Cabinets</a></li>
+                        <li><a href="#services">Kitchen Countertops</a></li>
+                        <li><a href="#services">Home Repairs</a></li>
+                        <li><a href="#services">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Areas We Serve</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Johannesburg</a></li>
+                        <li><a href="#">Pretoria</a></li>
+                        <li><a href="#">Sandton</a></li>
+                        <li><a href="#">Fourways</a></li>
+                        <li><a href="#">Midrand</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 CHECCA Trading & Projects. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Form submission
+        const quoteForm = document.getElementById('quoteForm');
+        if (quoteForm) {
+            quoteForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your inquiry! We will contact you shortly.');
+                quoteForm.reset();
+            });
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
