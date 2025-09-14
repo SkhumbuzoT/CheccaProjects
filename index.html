@@ -460,7 +460,7 @@
             color: var(--red);
         }
         
-        /* Enhanced Services Section */
+       /* Services Section with Icons */
         .services {
             background: var(--white);
         }
@@ -479,6 +479,11 @@
             box-shadow: var(--shadow-sm);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: var(--space-xl);
         }
         
         .service-card:hover {
@@ -486,40 +491,87 @@
             box-shadow: var(--shadow-lg);
         }
         
-        .service-img {
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
+        .service-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, var(--navy-blue), #003366);
+            color: var(--white);
+            font-size: 3.5rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
         }
         
-        .service-img::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, transparent 0%, rgba(0, 31, 63, 0.1) 100%);
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--red), #e67e22);
         }
         
         .service-content {
-            padding: var(--space-xl);
             position: relative;
         }
         
         .service-content h3 {
             color: var(--navy-blue);
             margin-bottom: var(--space-md);
+            font-size: 1.8rem;
         }
         
         .service-content p {
             color: var(--dark-grey);
+            margin-bottom: var(--space-md);
+        }
+        
+        .service-features {
+            text-align: left;
+            margin: var(--space-md) 0;
+            padding-left: var(--space-md);
+        }
+        
+        .service-features li {
+            margin-bottom: var(--space-xs);
+            position: relative;
+            padding-left: var(--space-md);
+        }
+        
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+            font-weight: bold;
         }
         
         .services-cta {
             margin-top: var(--space-xxl);
             text-align: center;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card {
+                padding: var(--space-lg);
+            }
+            
+            .service-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 2.8rem;
+            }
         }
         
         /* Enhanced Portfolio Section */
