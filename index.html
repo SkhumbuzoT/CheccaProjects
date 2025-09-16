@@ -3,20 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHECCA Trading & Projects</title>
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons via CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- SEO Metadata -->
+    <meta name="description" content="Checca Trading - Elevating South African living with premium interior solutions and luxury real estate offerings." />
+    <meta name="keywords" content="luxury interiors, South African design, premium real estate, high-end furniture, interior design" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.checcatrading.co.za/">
+    <meta property="og:title" content="Checca Trading - Elevating South African Living">
+    <meta property="og:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
+    <meta property="og:image" content="https://www.checcatrading.co.za/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.checcatrading.co.za/">
+    <meta property="twitter:title" content="Checca Trading - Elevating South African Living">
+    <meta property="twitter:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
+    <meta property="twitter:image" content="https://www.checcatrading.co.za/assets/twitter-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png">
+    
+    <title>Checca Trading - Elevating South African Living</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        /* Custom styles to match the original design */
-        .slide-transition {
-            transition: transform 0.5s ease-in-out;
+        /* ======================
+           Base Styles & Variables
+        ====================== */
+        :root {
+            /* Color Palette */
+            --black: #000000;
+            --gold: #D4AF37;
+            --cream: #F5F2EC;
+            --charcoal: #1C1C1C;
+            --white: #ffffff;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 8rem;
+            
+            /* Transitions */
+            --transition: all 0.3s ease;
         }
-        .testimonial-transition {
-            transition: transform 0.5s ease-in-out;
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </style>
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--cream);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--charcoal);
+            letter-spacing: -0.01em;
+        }
+    <style> 
 </head>
 <body class="min-h-screen bg-white">
     <!-- Header -->
