@@ -1,918 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Metadata -->
-    <meta name="description" content="Checca Trading - Elevating South African living with premium interior solutions and luxury real estate offerings." />
-    <meta name="keywords" content="luxury interiors, South African design, premium real estate, high-end furniture, interior design" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.checcatrading.co.za/">
-    <meta property="og:title" content="Checca Trading - Elevating South African Living">
-    <meta property="og:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
-    <meta property="og:image" content="https://www.checcatrading.co.za/assets/og-image.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.checcatrading.co.za/">
-    <meta property="twitter:title" content="Checca Trading - Elevating South African Living">
-    <meta property="twitter:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
-    <meta property="twitter:image" content="https://www.checcatrading.co.za/assets/twitter-image.jpg">
+  <!-- SEO Metadata -->
+  <meta name="description" content="Checca Trading - Elevating South African living with premium interior solutions and luxury real estate offerings." />
+  <meta name="keywords" content="luxury interiors, South African design, premium real estate, high-end furniture, interior design" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png">
-    
-    <title>Checca Trading - Elevating South African Living</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* ======================
-           Base Styles & Variables
-        ====================== */
-        :root {
-            /* Color Palette */
-            --black: #000000;
-            --gold: #D4AF37;
-            --cream: #F5F2EC;
-            --charcoal: #1C1C1C;
-            --white: #ffffff;
-            
-            /* Spacing */
-            --spacing-xs: 0.5rem;
-            --spacing-sm: 1rem;
-            --spacing-md: 2rem;
-            --spacing-lg: 4rem;
-            --spacing-xl: 8rem;
-            
-            /* Transitions */
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--charcoal);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-color: var(--cream);
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            color: var(--charcoal);
-            letter-spacing: -0.01em;
-        }
-        
-        /* ======================
-           Layout Components
-        ====================== */
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 var(--spacing-md);
-        }
-        
-        .section {
-            padding: var(--spacing-xl) 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: var(--spacing-lg);
-        }
-        
-        .section-title h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: var(--spacing-sm);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 2px;
-            background: var(--gold);
-        }
-        
-        .section-title p {
-            font-size: 1.1rem;
-            color: var(--charcoal);
-            max-width: 700px;
-            margin: var(--spacing-md) auto 0;
-            opacity: 0.8;
-        }
-        
-        /* ======================
-           Header & Navigation
-        ====================== */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            z-index: 1000;
-            transition: var(--transition);
-            padding: var(--spacing-sm) 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        header.scrolled {
-            padding: var(--spacing-xs) 0;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: var(--black);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-        
-        .logo span {
-            color: var(--gold);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: var(--spacing-md);
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--charcoal);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            position: relative;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        nav ul li a:hover {
-            color: var(--gold);
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--gold);
-            transition: var(--transition);
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--charcoal);
-            cursor: pointer;
-            z-index: 1001;
-        }
-        
-        /* ======================
-           Hero Section
-        ====================== */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/hero-bg.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 var(--spacing-md);
-        }
-        
-        .hero-content {
-            max-width: 900px;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            margin-bottom: var(--spacing-md);
-            color: var(--white);
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: clamp(1rem, 2.5vw, 1.3rem);
-            margin-bottom: var(--spacing-lg);
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--black);
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background: var(--gold);
-            color: var(--black);
-        }
-        
-        /* ======================
-           About Section
-        ====================== */
-        .about-container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            height: 500px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            background-image: url('/assets/checca2.png');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            color: #555;
-        }
-        
-        .story-highlight {
-            font-style: italic;
-            font-size: 1.3rem !important;
-            color: #2c5530 !important;
-            border-left: 4px solid #2c5530;
-            padding-left: 20px;
-            margin: 30px 0 !important;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #2c5530;
-            position: relative;
-            display: inline-block;
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 70px;
-            height: 4px;
-            background-color: #2c5530;
-        }
-        
-        @media (max-width: 768px) {
-            .about-container {
-                flex-direction: column;
-            }
-            
-            .about-image {
-                order: -1;
-                height: 350px;
-            }
-        }
-        
-        /* ======================
-           Collections Section
-        ====================== */
-        .collections-section {
-            background: var(--cream);
-        }
-        
-        .collections-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: var(--spacing-md);
-        }
-        
-        .collection-item {
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        
-        .collection-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .collection-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .collection-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-            padding: var(--spacing-md);
-            color: var(--white);
-            opacity: 0;
-            transition: var(--transition);
-            transform: translateY(20px);
-        }
-        
-        .collection-item:hover .collection-overlay {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .collection-overlay h3 {
-            color: var(--white);
-            margin-bottom: var(--spacing-xs);
-        }
-        
-        .view-all {
-            text-align: center;
-            margin-top: var(--spacing-lg);
-        }
-        
-        /* ======================
-           Contact Section
-        ====================== */
-        .contact-section {
-            background: var(--charcoal);
-            color: var(--white);
-        }
-        
-        .contact-section .section-title h2 {
-            color: var(--white);
-        }
-        
-        .contact-section .section-title p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-lg);
-        }
-        
-        .contact-info h3 {
-            color: var(--white);
-            margin-bottom: var(--spacing-md);
-            font-size: 1.5rem;
-        }
-        
-        .contact-info p {
-            margin-bottom: var(--spacing-md);
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-        }
-        
-        .contact-info i {
-            color: var(--gold);
-            width: 20px;
-        }
-        
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: var(--spacing-sm);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            transition: var(--transition);
-        }
-        
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-        
-        .contact-form textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .contact-form button {
-            background: var(--gold);
-            color: var(--black);
-            border: none;
-        }
-        
-        .contact-form button:hover {
-            background: var(--white);
-        }
-        
-        /* ======================
-           Footer
-        ====================== */
-        footer {
-            background: var(--black);
-            color: var(--white);
-            padding: var(--spacing-lg) 0 var(--spacing-md);
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .footer-logo span {
-            color: var(--gold);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-md);
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .footer-links a {
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .footer-links a:hover {
-            color: var(--gold);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-sm);
-            margin-bottom: var(--spacing-md);
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .social-links a:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-        
-        .copyright {
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-        
-        /* ======================
-           Responsive Design
-        ====================== */
-        @media (max-width: 1024px) {
-            .about-container,
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-md);
-            }
-            
-            .about-image {
-                height: 400px;
-                order: -1;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .section {
-                padding: var(--spacing-lg) 0;
-            }
-            
-            nav ul {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: var(--white);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                z-index: 1000;
-                gap: var(--spacing-md);
-            }
-            
-            nav ul.show {
-                display: flex;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .collections-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: var(--spacing-sm);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero {
-                height: 80vh;
-            }
-            
-            .about-image {
-                height: 300px;
-            }
-            
-            .collection-item {
-                height: 300px;
-            }
-        }
-    </style>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.checcatrading.co.za/">
+  <meta property="og:title" content="Checca Trading - Elevating South African Living">
+  <meta property="og:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
+  <meta property="og:image" content="https://www.checcatrading.co.za/assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.checcatrading.co.za/">
+  <meta property="twitter:title" content="Checca Trading - Elevating South African Living">
+  <meta property="twitter:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
+  <meta property="twitter:image" content="https://www.checcatrading.co.za/assets/twitter-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png">
+
+  <title>Checca Trading - Elevating South African Living</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #000;
+      --gold: #D4AF37;
+      --cream: #F5F2EC;
+      --charcoal: #1C1C1C;
+      --white: #fff;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --spacing-xl: 6rem;
+      --transition: all 0.3s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--charcoal);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4,h5 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--charcoal);
+    }
+
+    /* Header */
+    header {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      z-index: 1000;
+      transition: var(--transition);
+      padding: 0.8rem 0;
+    }
+    header.scrolled { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .header-container {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 var(--spacing-md);
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .logo span { color: var(--gold); }
+    nav ul { display: flex; list-style: none; gap: var(--spacing-md); }
+    nav ul li a {
+      text-decoration: none; color: var(--charcoal); font-weight: 500;
+      font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;
+      position: relative; transition: var(--transition);
+    }
+    nav ul li a:hover { color: var(--gold); }
+    nav ul li a::after {
+      content: ''; position: absolute; bottom: -5px; left: 0;
+      width: 0; height: 1px; background: var(--gold); transition: var(--transition);
+    }
+    nav ul li a:hover::after { width: 100%; }
+    .mobile-menu-btn { display: none; }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('assets/hero-bg.jpg') center/cover;
+      display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
+      padding: 0 var(--spacing-md);
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem,6vw,4rem);
+      margin-bottom: var(--spacing-md);
+    }
+    .hero p {
+      max-width: 600px; margin: 0 auto var(--spacing-lg);
+      font-size: 1.1rem; opacity: 0.9;
+    }
+    .btn {
+      display: inline-block; padding: 1rem 2.5rem;
+      background: var(--black); color: var(--white);
+      text-decoration: none; font-weight: 500; text-transform: uppercase;
+      transition: var(--transition); cursor: pointer;
+    }
+    .btn:hover { background: var(--gold); color: var(--black); }
+
+    /* Sections */
+    .section { padding: var(--spacing-xl) 0; }
+    .section-title { text-align: center; margin-bottom: var(--spacing-lg); }
+    .section-title h2 {
+      font-size: clamp(2rem,4vw,3rem); margin-bottom: 1rem; position: relative;
+    }
+    .section-title h2::after {
+      content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+      width: 60px; height: 3px; background: var(--gold);
+    }
+    .section-title p { max-width: 700px; margin: 1rem auto 0; color: #555; }
+
+    /* About */
+    .about-container {
+      display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
+    }
+    .about-text { flex: 1; min-width: 300px; }
+    .about-text p { margin-bottom: 1rem; font-size: 1.05rem; }
+    .story-highlight {
+      font-style: italic; font-size: 1.2rem; color: var(--gold);
+      border-left: 3px solid var(--gold); padding-left: 1rem; margin: 2rem 0;
+    }
+    .about-image {
+      flex: 1; min-width: 300px; height: 450px; border-radius: 10px;
+      background: url('/assets/checca2.png') center/cover; box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: var(--white); padding: 2rem; border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      transition: var(--transition);
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .service-icon {
+      width: 48px; height: 48px; margin-bottom: 1rem;
+    }
+    .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .service-card ul { list-style: none; margin-bottom: 1.5rem; }
+    .service-card ul li { margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
+    .service-card ul li svg { width: 18px; height: 18px; stroke: var(--gold); }
+
+    /* Why Choose Us */
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 2rem;
+      margin-top: var(--spacing-lg);
+    }
+    .feature-card {
+      text-align: center; padding: 2rem; background: var(--white); border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: var(--transition);
+    }
+    .feature-card:hover { transform: translateY(-4px); }
+    .feature-icon svg { width: 40px; height: 40px; stroke: var(--gold); margin-bottom: 1rem; }
+
+    /* Portfolio */
+    .collections-grid {
+      display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1.5rem;
+    }
+    .collection-item { position: relative; height: 360px; overflow: hidden; }
+    .collection-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+    .collection-item:hover img { transform: scale(1.05); }
+    .collection-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(212,175,55,0.9); color: var(--black);
+      padding: 1rem; transform: translateY(100%); transition: var(--transition);
+    }
+    .collection-item:hover .collection-overlay { transform: translateY(0); }
+    .collection-overlay h3 { margin-bottom: 0.3rem; }
+
+    /* Contact */
+    .contact-section { background: var(--charcoal); color: var(--white); }
+    .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .contact-info h3 { margin-bottom: 1rem; }
+    .contact-info p { margin-bottom: 0.8rem; }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 1rem; margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.2); background: transparent; color: var(--white);
+    }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold); }
+    .contact-form textarea { min-height: 150px; }
+    .whatsapp-btn {
+      display: inline-block; margin-top: 1rem; background: var(--gold); color: var(--black);
+      padding: 0.8rem 1.5rem; text-decoration: none; font-weight: 500;
+    }
+    .whatsapp-btn:hover { background: var(--white); }
+
+    /* Footer */
+    footer { background: var(--black); color: var(--white); padding: var(--spacing-lg) 0 var(--spacing-md); text-align: center; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 1rem; }
+    .footer-logo span { color: var(--gold); }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
+    .footer-links a { color: var(--white); text-decoration: none; transition: var(--transition); }
+    .footer-links a:hover { color: var(--gold); }
+    .copyright { font-size: 0.9rem; opacity: 0.7; }
+
+    @media (max-width: 768px) {
+      nav ul { display: none; }
+      .mobile-menu-btn { display: block; font-size: 1.5rem; background: none; border: none; }
+      .contact-container { grid-template-columns: 1fr; }
+      .about-container { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">CHECCA <span>PROJECTS</span></a>
-            <nav aria-label="Primary">
-                <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#collections">Collections</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container">
+      <a href="#" class="logo">CHECCA <span>PROJECTS</span></a>
+      <nav>
+        <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu">☰</button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#collections">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1>Bespoke Cabinetry & Luxury Interiors</h1>
+      <p>Handcrafted in South Africa with precision, passion, and timeless elegance.</p>
+      <a href="#contact" class="btn">Book a Consultation</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="section-title"><h2>Our Story</h2></div>
+    <div class="container about-container">
+      <div class="about-text">
+        <p>CHECCA Projects is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
+        <p class="story-highlight">We believe every home deserves attention to detail — and that's exactly what we provide.</p>
+        <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
+      </div>
+      <div class="about-image"></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="section-title"><h2>Our Services</h2></div>
+    <div class="container services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Home icon -->
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9v9a3 3 0 0 1-3 3h-12a3 3 0 0 1-3-3z"/></svg>
         </div>
-    </header>
+        <h3>Cabinetry & Interiors</h3>
+        <ul>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Custom Kitchens</li>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Bathroom Vanities</li>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Bedroom Storage</li>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Premium Countertops</li>
+        </ul>
+        <a href="#contact" class="btn">Book a Free Design Consultation</a>
+      </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Elevating South African Living</h1>
-            <p>Discover premium interior solutions and luxury real estate offerings that transform spaces and inspire living.</p>
-            <a href="#collections" class="btn">View Our Collection</a>
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Hammer icon -->
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 18l9-9 4 4-9 9H2z"/><path d="M13 7l3-3 4 4-3 3z"/></svg>
         </div>
-    </section>
+        <h3>General Works & Maintenance</h3>
+        <ul>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Plumbing & Electrical</li>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Carpentry & Framework</li>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Billboard Installations</li>
+          <li><svg fill="none" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Maintenance Contracts</li>
+        </ul>
+        <a href="#contact" class="btn">Book a Site Visit</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
-            <h2 class="text-center animate">Our Story</h2>
-            <div class="about-container">
-                
-                    <p>CHECCA Projects is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
-                    
-                    <p class="story-highlight">We believe every home deserves attention to detail — and that's exactly what we provide.</p>
-                    
-                    <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
-                </div>
-            </div>
+  <!-- Why Choose Us -->
+  <section id="why" class="section">
+    <div class="section-title"><h2>Why Choose CHECCA?</h2></div>
+    <div class="container features">
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/></svg></div>
+        <h3>Skilled Craftsmanship</h3>
+        <p>Our team brings expertise and attention to detail to every project.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></div>
+        <h3>Custom-Fit Solutions</h3>
+        <p>Everything we build or fix is tailored for your space.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Integrity</h3>
+        <p>We do the right thing — even when no one is watching.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18"/></svg></div>
+        <h3>Transparent Value</h3>
+        <p>No surprises. Just honest, clear pricing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="collections" class="section">
+    <div class="section-title">
+      <h2>Our Portfolio</h2>
+      <p>Explore our curated selection of premium interior solutions and luxury properties</p>
+    </div>
+    <div class="container collections-grid">
+      <div class="collection-item">
+        <img src="/assets/checca2.png" alt="Luxury Interior Design">
+        <div class="collection-overlay">
+          <h3>Kitchen Transformation</h3>
+          <p>A complete kitchen makeover in Kyalami with custom cabinets and quartz countertops.</p>
         </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Our Services</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Two specialized divisions serving different needs with the same commitment to excellence
-            </p>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Cabinetry Services -->
-                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border border-amber-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center mr-4">
-                            <i data-lucide="home" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Cabinetry & Interiors</h3>
-                    </div>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Custom Kitchens</h4>
-                                <p class="text-gray-600">Bespoke cabinetry, countertops, and pantry solutions</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Bathroom Vanities</h4>
-                                <p class="text-gray-600">Moisture-resistant cabinets and storage solutions</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Bedroom Storage</h4>
-                                <p class="text-gray-600">Wardrobes, wall units, and bedside cabinets</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Premium Countertops</h4>
-                                <p class="text-gray-600">Granite, quartz, laminate, and wood finishes</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="w-full bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
-                        Book a Free Design Consultation
-                    </button>
-                </div>
-
-                <!-- General Works Services -->
-                <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-2xl border border-gray-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <i data-lucide="hammer" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">General Works & Maintenance</h3>
-                    </div>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Plumbing & Electrical</h4>
-                                <p class="text-gray-600">Licensed professionals for all installations and repairs</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Carpentry & Framework</h4>
-                                <p class="text-gray-600">Structural work, frames, and custom carpentry</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Billboard Installations</h4>
-                                <p class="text-gray-600">Industrial-grade billboard frame construction</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Maintenance Contracts</h4>
-                                <p class="text-gray-600">Ongoing support for offices and institutions</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
-                        Book a Site Visit
-                    </button>
-                </div>
-            </div>
+      </div>
+      <div class="collection-item">
+        <img src="/assets/checca2.png" alt="Premium Furniture">
+        <div class="collection-overlay">
+          <h3>Custom Wardrobe</h3>
+          <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
         </div>
-    </section>
+      </div>
+      <div class="collection-item">
+        <img src="/assets/checca2.png" alt="Luxury Real Estate">
+        <div class="collection-overlay">
+          <h3>Bathroom Renovation</h3>
+          <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="#contact" class="btn">View All</a>
+    </div>
+  </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us" id="why-checca">
+  <!-- Contact -->
+  <section id="contact" class="section contact-section">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>Reach out to discuss how we can transform your space</p>
+    </div>
+    <div class="container contact-container">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p>Johannesburg, South Africa</p>
+        <p>+27 12 345 6789</p>
+        <p>info@checcaprojects.co.za</p>
+        <a href="https://wa.me/27123456789" class="whatsapp-btn">Chat on WhatsApp</a>
+      </div>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
     <div class="container">
-        <h2 class="text-center animate">Why Choose CHECCA?</h2>
-        <div class="features">
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-tools"></i></div>
-                <h3>Skilled Craftsmanship</h3>
-                <p>Our team brings expertise and attention to detail to every project.</p>
-            </div>
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
-                <h3>Custom-Fit Solutions</h3>
-                <p>Everything we build or fix is tailored for your space.</p>
-            </div>
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Integrity</h3>
-                <p>We do the right thing—even when no one is watching.</p>
-            </div>
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                <h3>Affordable Pricing</h3>
-                <p>No surprises. Just honest value.</p>
-            </div>
-        </div>
-    </section>
+      <div class="footer-logo">CHECCA <span>PROJECTS</span></div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#collections">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="copyright">&copy; 2025 Checca Projects. All Rights Reserved.</div>
+    </div>
+  </footer>
 
-    <!-- Portfolio Section -->
-    <section id="collections" class="section collections-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
-                <p>Explore our curated selection of premium interior solutions and luxury properties</p>
-            </div>
-            <div class="collections-grid">
-                <div class="collection-item">
-                    <img src="/assets/checca2.png" alt="Luxury Interior Design">
-                    <div class="collection-overlay">
-                        <h3>Kitchen Transformation</h3>
-                        <p>A complete kitchen makeover in Kyalami with custom cabinets and quartz countertops.</p>
-                    </div>
-                </div>
-                <div class="collection-item">
-                    <img src="/assets/checca2.png" alt="Premium Furniture">
-                    <div class="collection-overlay">
-                        <h3>Custom Wardrobe</h3>
-                        <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
-                    </div>
-                </div>
-                <div class="collection-item">
-                    <img src="/assets/checca2.png" alt="Luxury Real Estate">
-                    <div class="collection-overlay">
-                        <h3>Bathroom Renovation</h3>
-                        <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="view-all">
-                <a href="#" class="btn">View All</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Reach out to discuss how we can transform your space</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
-                    <p><i class="fas fa-phone"></i> +27 12 345 6789</p>
-                    <p><i class="fas fa-envelope"></i> info@checcaprojects.co.za</p>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-logo">CHECCA <span>PROJECTS</span></div>
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#collections">Collections</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-            </div>
-            <div class="copyright">
-                &copy; 2025 Checca Projects. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const nav = document.querySelector('nav ul');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !isExpanded);
-                nav.classList.toggle('show');
-                
-                // Change icon
-                const icon = this.querySelector('i');
-                if (nav.classList.contains('show')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-            
-            // Header scroll effect
-            window.addEventListener('scroll', function() {
-                const header = document.getElementById('header');
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        const headerHeight = document.getElementById('header').offsetHeight;
-                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                        
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (nav.classList.contains('show')) {
-                            mobileMenuBtn.click();
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if(window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      });
+    });
+  </script>
 </body>
 </html>
