@@ -3,1236 +3,451 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHECCA Trading & Projects | Home Improvement Specialists</title>
-    <meta name="description" content="Professional home improvement services in Johannesburg - custom cabinetry, countertops, and reliable maintenance">
-    <link rel="icon" href="checcafavicon.png" type="image/png">
+    <title>Checca Projects | Elevating South African Living</title>
+    <meta name="description" content="Checca Projects delivers high-quality residential, commercial, and infrastructure projects with innovative solutions and professional project management.">
+    <meta property="og:title" content="Checca Projects">
+    <meta property="og:description" content="Professional construction services for residential, commercial, and infrastructure projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.checcatrading.co.za/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="android-chrome-512x512.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Enhanced Global Styles */
-        :root {
-            /* Color System */
-            --navy-blue: #001f3f;
-            --red: #e74c3c;
-            --yellow: #f1c40f;
-            --green: #2ecc71;
-            --grey: #f8f9fa;
-            --dark-grey: #7f8c8d;
-            --black: #2c3e50;
-            --white: #ffffff;
-            
-            /* Enhanced Spacing System */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 1.5rem;
-            --space-lg: 2.5rem;
-            --space-xl: 4rem;
-            --space-xxl: 6rem;
-            
-            /* Shadows */
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
-            --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.2);
-            
-            /* Border Radius */
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
+        /* Custom CSS for elements Tailwind can't handle easily */
+        .hero-image {
+            background-image: linear-gradient(rgba(47, 72, 88, 0.7), rgba(47, 72, 88, 0.7)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        /* Enhanced Typography System */
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: var(--black);
-            overflow-x: hidden;
-            background-color: var(--white);
-        }
-        
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--navy-blue);
-            margin-bottom: var(--space-md);
-        }
-        
-        h1 { 
-            font-size: 3.5rem; 
-            font-weight: 800; 
-            letter-spacing: -0.02em; 
-        }
-        
-        h2 { 
-            font-size: 2.8rem; 
-            font-weight: 700; 
-            letter-spacing: -0.01em; 
-            position: relative;
-            display: inline-block;
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background: var(--red);
-        }
-        
-        h3 { 
-            font-size: 2rem; 
-            font-weight: 600; 
-        }
-        
-        h4 { 
-            font-size: 1.5rem; 
-            font-weight: 600; 
-        }
-        
-        p {
-            margin-bottom: var(--space-md);
-            font-size: 1.125rem;
-            line-height: 1.7;
-        }
-        
-        .lead-text {
-            font-size: 1.25rem;
-            font-weight: 500;
-            line-height: 1.6;
-        }
-        
-        /* Enhanced Button System */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-xs);
-            padding: var(--space-md) var(--space-lg);
-            border-radius: var(--radius-sm);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-right: var(--space-md);
-            margin-bottom: var(--space-md);
-            position: relative;
-            overflow: hidden;
-            transform: translateY(0);
-            border: 2px solid transparent;
-            cursor: pointer;
-        }
-        
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .btn:hover::before {
-            left: 100%;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .btn-primary {
-            background: var(--navy-blue);
-            color: var(--white);
-            border-color: var(--navy-blue);
-        }
-        
-        .btn-primary:hover {
-            background: transparent;
-            color: var(--navy-blue);
-        }
-        
-        .btn-secondary {
-            background: var(--white);
-            color: var(--navy-blue);
-            border-color: var(--navy-blue);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--navy-blue);
-            color: var(--white);
-        }
-        
-        .btn-accent {
-            background: var(--red);
-            color: var(--white);
-            border-color: var(--red);
-        }
-        
-        .btn-accent:hover {
-            background: transparent;
-            color: var(--red);
-        }
-        
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--space-lg);
-        }
-        
-        section {
-            padding: var(--space-xxl) 0;
-        }
-        
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: var(--space-lg) 0;
-            background: var(--white);
-            box-shadow: var(--shadow-sm);
-            z-index: 1000;
+        .project-card {
             transition: all 0.3s ease;
         }
         
-        header.scrolled {
-            padding: var(--space-md) 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(5px);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        /* Enhanced Logo Styling */
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--navy-blue);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 75px;
-            width: auto;
-            margin-right: var(--space-sm);
-            transition: all 0.3s ease;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-        }
-        
-        .logo:hover img {
-            transform: scale(1.05);
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: var(--space-xl);
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--navy-blue);
-            font-weight: 600;
-            transition: color 0.3s ease;
-            position: relative;
-            font-size: 1.1rem;
-        }
-        
-        nav ul li a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--red);
-            transition: width 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: var(--red);
-        }
-        
-        nav ul li a:hover:after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--navy-blue);
-            cursor: pointer;
-            z-index: 1001;
-        }
-        
-        /* Enhanced Hero Section */
-        .hero {
-            height: 100vh;
-            min-height: 700px;
-            background: linear-gradient(135deg, rgba(0, 31, 63, 0.8), rgba(46, 204, 113, 0.3)), 
-                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            color: var(--white);
-            text-align: left;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 31, 63, 0.3) 100%);
-        }
-        
-        .hero-content {
-            max-width: 700px;
-            animation: fadeInUp 1s ease;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-            margin-bottom: var(--space-lg);
-            color: var(--white);
-        }
-        
-        .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-            margin-bottom: var(--space-xl);
-            color: var(--white);
-        }
-        
-        .hero-btns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-md);
-        }
-        
-        /* Our Story Section */
-        .our-story {
-            background: var(--white);
-        }
-        
-        .story-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: var(--space-xl);
-            margin-top: var(--space-xxl);
-        }
-        
-        .story-text {
-            flex: 1;
-            min-width: 0;
-        }
-        
-        .story-highlight {
-            font-weight: 600;
-            color: var(--navy-blue);
-            font-size: 1.3rem;
-            margin: var(--space-lg) 0;
-            padding-left: var(--space-lg);
-            border-left: 4px solid var(--red);
-        }
-        
-        .story-image {
-            width: 40%;
-            max-width: 400px;
-            min-width: 300px;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            margin-left: var(--space-xl);
-        }
-        
-        .story-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        
-        .story-image:hover img {
-            transform: scale(1.05);
-        }
-        
-        /* Why Choose Us Section */
-        .why-choose-us {
-            background: var(--grey);
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 2.5rem;
-        }
-        .feature-card {
-            background: var(--white);
-            padding: 2rem 1.5rem;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-            transition: box-shadow 0.3s, transform 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 220px;
-        }
-        .feature-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px) scale(1.03);
-        }
-        .feature-icon {
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
-            color: var(--red);
-        }
-        .feature-card h3 {
-            margin-bottom: 0.5rem;
-            color: var(--navy-blue);
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-        .feature-card p {
-            color: var(--dark-grey);
-            font-size: 1rem;
-            margin-bottom: 0;
-        }
-        /* Responsive for tablets and mobile */
-        @media (max-width: 992px) {
-            .features {
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-            }
-        }
-        @media (max-width: 600px) {
-            .features {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            .feature-card {
-                min-height: unset;
-            }
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: var(--space-md);
-            color: var(--red);
-        }
-        
-       /* Services Section with Icons */
-        .services {
-            background: var(--white);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-xl);
-            margin-top: var(--space-xxl);
-        }
-        
-        .service-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: var(--space-xl);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
         .service-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--space-lg);
-            background: linear-gradient(135deg, var(--navy-blue), #003366);
-            color: var(--white);
-            font-size: 3.5rem;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-md);
+            font-size: 2.5rem;
+            color: #F9A825;
+            margin-bottom: 1rem;
         }
         
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, var(--red), #e67e22);
-        }
-        
-        .service-content {
-            position: relative;
-        }
-        
-        .service-content h3 {
-            color: var(--navy-blue);
-            margin-bottom: var(--space-md);
-            font-size: 1.8rem;
-        }
-        
-        .service-content p {
-            color: var(--dark-grey);
-            margin-bottom: var(--space-md);
-        }
-        
-        .service-features {
-            text-align: left;
-            margin: var(--space-md) 0;
-            padding-left: var(--space-md);
-        }
-        
-        .service-features li {
-            margin-bottom: var(--space-xs);
-            position: relative;
-            padding-left: var(--space-md);
-        }
-        
-        .service-features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--green);
-            font-weight: bold;
-        }
-        
-        .services-cta {
-            margin-top: var(--space-xxl);
-            text-align: center;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-card {
-                padding: var(--space-lg);
-            }
-            
-            .service-icon {
-                width: 100px;
-                height: 100px;
-                font-size: 2.8rem;
-            }
-        }
-        
-        /* Enhanced Portfolio Section */
-        .portfolio {
-            background: var(--grey);
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--space-xl);
-            margin-top: var(--space-xxl);
-        }
-        
-        .portfolio-item {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            height: 300px;
-            box-shadow: var(--shadow-md);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .portfolio-item:hover {
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .portfolio-img {
+        .map-container {
+            height: 400px;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .portfolio-overlay {
-            position: absolute;
-            bottom: -100%;
-            left: 0;
-            width: 100%;
-            padding: var(--space-xl);
-            background: linear-gradient(135deg, rgba(0, 31, 63, 0.95), rgba(46, 204, 113, 0.85));
-            backdrop-filter: blur(5px);
-            color: var(--white);
-            transition: bottom 0.3s ease;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            bottom: 0;
-        }
-        
-        .portfolio-item:hover .portfolio-img {
-            transform: scale(1.1);
-        }
-        
-        .portfolio-overlay h3 {
-            color: var(--white);
-            margin-bottom: var(--space-md);
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
             position: relative;
         }
         
-        .portfolio-overlay h3:after {
-            content: '';
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
             position: absolute;
-            bottom: -5px;
+            top: 0;
             left: 0;
-            width: 50px;
+            width: 24px;
             height: 2px;
-            background: var(--red);
+            background: #FFFFFF;
+            transform: rotate(0);
+            transition: all 0.5s;
         }
         
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--white);
+        .hamburger-middle {
+            transform: translateY(7px);
         }
         
-        .testimonial-slider {
-            margin-top: var(--space-xxl);
-            position: relative;
+        .hamburger-bottom {
+            transform: translateY(14px);
         }
         
-        .testimonial {
-            background: var(--grey);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            margin: 0 var(--space-md);
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translate(6px);
         }
         
-        .testimonial-text {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-bottom: var(--space-md);
-            position: relative;
-            line-height: 1.8;
+        .open .hamburger-middle {
+            display: none;
         }
         
-        .testimonial-text:before,
-        .testimonial-text:after {
-            content: '"';
-            font-size: 2rem;
-            color: var(--red);
-            opacity: 0.5;
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translate(-6px);
         }
         
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--navy-blue);
+        /* Animation for stats */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        .testimonial-rating {
-            color: var(--yellow);
-            margin-bottom: var(--space-md);
-            font-size: 1.2rem;
-        }
-        
-        /* Enhanced Contact Form Section */
-        .contact-form-section {
-            background: var(--grey);
-            padding: var(--space-xxl) 0;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-xl);
-            margin-top: var(--space-xxl);
-        }
-        
-        .contact-info {
-            background: var(--white);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .contact-info h3 {
-            margin-bottom: var(--space-lg);
-        }
-        
-        .contact-methods {
-            list-style: none;
-        }
-        
-        .contact-methods li {
-            margin-bottom: var(--space-md);
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .contact-methods i {
-            margin-right: var(--space-sm);
-            color: var(--red);
-            font-size: 1.2rem;
-            margin-top: 3px;
-        }
-        
-        .modern-form {
-            background: var(--white);
-            padding: var(--space-xl);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .form-group {
-            position: relative;
-            margin-bottom: var(--space-lg);
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: var(--space-md);
-            border: 1px solid #ddd;
-            border-radius: var(--radius-sm);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .form-group label {
-            position: absolute;
-            left: var(--space-md);
-            top: var(--space-md);
-            color: var(--dark-grey);
-            transition: all 0.3s ease;
-            pointer-events: none;
-            background: var(--white);
-            padding: 0 5px;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--navy-blue);
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(0, 31, 63, 0.2);
-        }
-        
-        .form-group input:focus + label,
-        .form-group select:focus + label,
-        .form-group textarea:focus + label,
-        .form-group input:not(:placeholder-shown) + label,
-        .form-group select:not([value=""]) + label,
-        .form-group textarea:not(:placeholder-shown) + label {
-            top: -10px;
-            left: 10px;
-            font-size: 0.8rem;
-            color: var(--navy-blue);
-            background: var(--white);
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: var(--navy-blue);
-            color: var(--white);
-            text-align: center;
-            padding: var(--space-xxl) 0;
-        }
-        
-        .cta-section h2 {
-            color: var(--white);
-        }
-        
-        .cta-section h2:after {
-            background: var(--red);
-        }
-        
-        .cta-section p {
-            max-width: 700px;
-            margin: 0 auto var(--space-xl);
-            color: var(--grey);
-        }
-        
-        .cta-btns {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: var(--space-md);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--black);
-            color: var(--white);
-            padding: var(--space-xxl) 0 var(--space-lg);
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--space-xl);
-            margin-bottom: var(--space-xl);
-        }
-        
-        .footer-column h3 {
-            color: var(--white);
-            margin-bottom: var(--space-lg);
-            position: relative;
-        }
-        
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--red);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: var(--space-md);
-        }
-        
-        .footer-links a {
-            color: var(--grey);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--red);
-        }
-        
-        .social-links {
-            display: flex;
-            margin-top: var(--space-lg);
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            margin-right: var(--space-sm);
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: var(--red);
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--grey);
-            font-size: 0.9rem;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .animate.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Enhanced Accessibility */
-        :focus-visible {
-            outline: 3px solid var(--red);
-            outline-offset: 2px;
-            border-radius: var(--radius-sm);
-        }
-        
-        /* High contrast mode support */
-        @media (prefers-contrast: high) {
-            .btn {
-                border-width: 3px;
-            }
-            
-            .service-card, .feature-card {
-                border: 2px solid var(--dark-grey);
-            }
-        }
-        
-        /* Reduced motion support */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01s !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01s !important;
-            }
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            .features {
-                flex-direction: column;
-            }
-            
-            .feature-card {
-                flex: 0 0 100%;
-            }
-            
-            .story-content {
-                flex-direction: column;
-            }
-            
-            .story-image {
-                width: 100%;
-                max-width: 100%;
-                margin: var(--space-xl) 0 0 0;
-                min-width: unset;
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 0 var(--space-md);
-            }
-            
-            nav {
-                position: fixed;
-                top: 100px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 100px);
-                background: var(--white);
-                transition: all 0.3s ease;
-                z-index: 999;
-                overflow-y: auto;
-            }
-            
-            nav.active {
-                left: 0;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                padding: var(--space-lg);
-            }
-            
-            nav ul li {
-                margin: var(--space-md) 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-                margin-right: 0;
-            }
-            
-            .logo img {
-                height: 60px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            section {
-                padding: var(--space-xl) 0;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                margin-right: 0;
-                margin-bottom: var(--space-md);
-            }
+        .count-up {
+            animation: countUp 1s ease-out forwards;
         }
     </style>
 </head>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mainNav = document.getElementById('mainNav');
-    mobileMenuBtn.addEventListener('click', function() {
-        mainNav.classList.toggle('active');
-    });
-    mainNav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', function() {
-            if (mainNav.classList.contains('active')) {
-                mainNav.classList.remove('active');
-            }
-        });
-    });
-});
-</script>
-<body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <img src="checcafavicon.png" alt="CHECCA Logo" loading="lazy">
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-[#2F4858] text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <i class="fas fa-building mr-2 text-[#F9A825]"></i>
+                <span>Urban<span class="text-[#F9A825]">Edge</span></span>
             </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-[#F9A825] transition">Home</a>
+                <a href="#services" class="hover:text-[#F9A825] transition">Services</a>
+                <a href="#projects" class="hover:text-[#F9A825] transition">Projects</a>
+                <a href="#about" class="hover:text-[#F9A825] transition">About</a>
+                <a href="#contact" class="hover:text-[#F9A825] transition">Contact</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="hamburger focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
         </div>
-    </header>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div id="menu" class="absolute hidden bg-[#2F4858] w-full px-6 pb-6 pt-2 shadow-lg">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="hover:text-[#F9A825] transition border-b border-[#607D8B] pb-2">Home</a>
+                    <a href="#services" class="hover:text-[#F9A825] transition border-b border-[#607D8B] pb-2">Services</a>
+                    <a href="#projects" class="hover:text-[#F9A825] transition border-b border-[#607D8B] pb-2">Projects</a>
+                    <a href="#about" class="hover:text-[#F9A825] transition border-b border-[#607D8B] pb-2">About</a>
+                    <a href="#contact" class="hover:text-[#F9A825] transition pb-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Your Space with Expert Craftsmanship</h1>
-                <p class="lead-text">Custom cabinetry, premium countertops, and reliable home repairs in Johannesburg and Pretoria. Quality guaranteed with 5-year workmanship warranty.</p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-phone-alt"></i> Get a Free Quote
-                    </a>
-                    <a href="https://wa.me/27123456789?text=Hi%20CHECCA,%20I'd%20like%20to%20inquire%20about%20your%20services" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
+    <section id="home" class="hero-image flex items-center justify-center text-white pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Building Tomorrow's Landscapes</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Innovative construction solutions for residential, commercial, and infrastructure projects with uncompromising quality.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-[#F9A825] hover:bg-[#e09922] text-[#2F4858] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Get a Quote</a>
+                <a href="#projects" class="border-2 border-white hover:bg-white hover:text-[#2F4858] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Our Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16 shadow-md">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2F4858] mb-2" id="projects-count">0</div>
+                    <div class="text-[#607D8B] uppercase text-sm font-semibold">Projects Completed</div>
+                </div>
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2F4858] mb-2" id="years-count">0</div>
+                    <div class="text-[#607D8B] uppercase text-sm font-semibold">Years Experience</div>
+                </div>
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2F4858] mb-2" id="clients-count">0</div>
+                    <div class="text-[#607D8B] uppercase text-sm font-semibold">Satisfied Clients</div>
+                </div>
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2F4858] mb-2" id="team-count">0</div>
+                    <div class="text-[#607D8B] uppercase text-sm font-semibold">Expert Team</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section class="our-story" id="about">
-        <div class="container">
-            <h2 class="text-center animate">Our Story</h2>
-            <div class="story-content animate">
-                <div class="story-text">
-                    <p>CHECCA Home Interiors & Maintenance is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
-                    
-                    <p class="story-highlight">We believe every home deserves attention to detail — and that's exactly what we provide.</p>
-                    
-                    <p>Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
-                </div>
-                <div class="story-image">
-                    <img src="assets/checca2.png" alt="CHECCA team working" loading="lazy">
-                </div>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2F4858] mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-[#F9A825] mx-auto"></div>
+                <p class="mt-6 text-[#607D8B] max-w-2xl mx-auto">We offer comprehensive construction services tailored to meet the unique needs of each project, ensuring quality and efficiency at every stage.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us" id="why-checca">
-    <div class="container">
-        <h2 class="text-center animate">Why Choose CHECCA?</h2>
-        <div class="features">
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-tools"></i></div>
-                <h3>Skilled Craftsmanship</h3>
-                <p>Our team brings expertise and attention to detail to every project.</p>
-            </div>
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
-                <h3>Custom-Fit Solutions</h3>
-                <p>Everything we build or fix is tailored for your space.</p>
-            </div>
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Integrity</h3>
-                <p>We do the right thing—even when no one is watching.</p>
-            </div>
-            <div class="feature-card animate">
-                <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                <h3>Affordable Pricing</h3>
-                <p>No surprises. Just honest value.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section with Icons -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="text-center">Our Services</h2>
-            <div class="services-grid">
-                <!-- Built-in Cabinets Service -->
-                <div class="service-card">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="service-icon">
-                        <i class="fas fa-couch"></i>
+                        <i class="fas fa-home"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>Custom-built Cabinetry</h3>
-                        <p>Storage that fits your life — wardrobes, kitchens, media walls and office units, made to measure.</p>
-                    </div>
+                    <h3 class="text-xl font-bold text-[#2F4858] mb-4">Residential Construction</h3>
+                    <p class="text-[#607D8B]">From custom homes to multi-family developments, we create living spaces that combine functionality with aesthetic appeal.</p>
                 </div>
                 
-                <!-- Kitchen Countertops Service -->
-                <div class="service-card">
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="service-icon">
-                        <i class="fas fa-border-style"></i>
+                        <i class="fas fa-city"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>Durable Countertops</h3>
-                        <p>Granite, quartz and marble finishes — precision templating and expert installation.</p>
-                    </div>
+                    <h3 class="text-xl font-bold text-[#2F4858] mb-4">Commercial Buildings</h3>
+                    <p class="text-[#607D8B]">Office complexes, retail spaces, and hospitality venues built with precision to meet business needs and exceed expectations.</p>
                 </div>
                 
-                <!-- Home Repairs & Maintenance Service -->
-                <div class="service-card">
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <div class="service-content">
-                        <h3>General Maintenance</h3>
-                        <p>Reliable repairs — plumbing, carpentry, electrical and general maintenance.</p>
+                    <h3 class="text-xl font-bold text-[#2F4858] mb-4">Renovations & Fit-Outs</h3>
+                    <p class="text-[#607D8B]">Transforming existing spaces with innovative design solutions and quality craftsmanship to revitalize properties.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-road"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-[#2F4858] mb-4">Civil & Infrastructure</h3>
+                    <p class="text-[#607D8B]">Roads, bridges, and utility projects executed with technical expertise and adherence to regulatory standards.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#2F4858] mb-4">Project Management</h3>
+                    <p class="text-[#607D8B]">Comprehensive oversight from conception to completion, ensuring projects are delivered on time and within budget.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#2F4858] mb-4">Sustainable Solutions</h3>
+                    <p class="text-[#607D8B]">Eco-friendly construction practices and materials to reduce environmental impact while maintaining quality.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="text-center animate">Our Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Kitchen Transformation" class="portfolio-img" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Kitchen Transformation</h3>
-                        <p>A complete kitchen makeover in Soweto with custom cabinets and quartz countertops.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2F4858] mb-4">Our Projects</h2>
+                <div class="w-20 h-1 bg-[#F9A825] mx-auto"></div>
+                <p class="mt-6 text-[#607D8B] max-w-2xl mx-auto">Explore our portfolio of completed projects that showcase our commitment to quality and innovation.</p>
+            </div>
+            
+            <!-- Project Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-l-lg border border-[#607D8B] hover:bg-[#2F4858] hover:text-white transition" data-filter="all">
+                        All Projects
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border-t border-b border-[#607D8B] hover:bg-[#2F4858] hover:text-white transition" data-filter="residential">
+                        Residential
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border border-[#607D8B] hover:bg-[#2F4858] hover:text-white transition" data-filter="commercial">
+                        Commercial
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-r-lg border border-[#607D8B] hover:bg-[#2F4858] hover:text-white transition" data-filter="infrastructure">
+                        Infrastructure
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card residential bg-white rounded-lg overflow-hidden shadow-md" data-category="residential">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Modern Residential Complex" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2F4858] bg-[#F5F5F5] rounded-full mb-2">Residential</span>
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-2">Hillside Villas</h3>
+                        <p class="text-[#607D8B] mb-4">Luxury gated community with 20 contemporary villas featuring sustainable design elements.</p>
+                        <div class="flex justify-between text-sm text-[#607D8B]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Cape Town</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2022</span>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Wardrobe" class="portfolio-img" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Custom Wardrobe</h3>
-                        <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
+                
+                <!-- Project 2 -->
+                <div class="project-card commercial bg-white rounded-lg overflow-hidden shadow-md" data-category="commercial">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Office Complex" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2F4858] bg-[#F5F5F5] rounded-full mb-2">Commercial</span>
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-2">Nexus Business Park</h3>
+                        <p class="text-[#607D8B] mb-4">State-of-the-art office complex with green building certification and smart technology integration.</p>
+                        <div class="flex justify-between text-sm text-[#607D8B]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Johannesburg</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2021</span>
+                        </div>
                     </div>
                 </div>
-                      </div>
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Custom Wardrobe" class="portfolio-img" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Custom Wardrobe</h3>
-                        <p>Built-in wardrobe in Sandton with sliding doors and custom shelving.</p>
+                
+                <!-- Project 3 -->
+                <div class="project-card infrastructure bg-white rounded-lg overflow-hidden shadow-md" data-category="infrastructure">
+                    <div class="h-48 overflow-hidden">
+                        <img src="N1_Expansion.png" alt="Bridge Construction" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2F4858] bg-[#F5F5F5] rounded-full mb-2">Infrastructure</span>
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-2">N1 Highway Expansion</h3>
+                        <p class="text-[#607D8B] mb-4">15km highway expansion project with innovative traffic management solutions.</p>
+                        <div class="flex justify-between text-sm text-[#607D8B]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Pretoria</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2020</span>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-item animate">
-                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bathroom Renovation" class="portfolio-img" loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3>Bathroom Renovation</h3>
-                        <p>Complete bathroom overhaul with new tiling, fixtures, and cabinetry.</p>
+                
+                <!-- Project 4 -->
+                <div class="project-card residential bg-white rounded-lg overflow-hidden shadow-md" data-category="residential">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Apartment Building" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2F4858] bg-[#F5F5F5] rounded-full mb-2">Residential</span>
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-2">Marina Heights</h3>
+                        <p class="text-[#607D8B] mb-4">Waterfront apartment complex with premium finishes and panoramic ocean views.</p>
+                        <div class="flex justify-between text-sm text-[#607D8B]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Durban</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card commercial bg-white rounded-lg overflow-hidden shadow-md" data-category="commercial">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Shopping Mall" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2F4858] bg-[#F5F5F5] rounded-full mb-2">Commercial</span>
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-2"> Summerfield Shopping Centre </h3>
+                        <p class="text-[#607D8B] mb-4">Mixed-use retail and entertainment center with innovative architectural features.</p>
+                        <div class="flex justify-between text-sm text-[#607D8B]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Port Elizabeth</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2019</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card infrastructure bg-white rounded-lg overflow-hidden shadow-md" data-category="infrastructure">
+                    <div class="h-48 overflow-hidden">
+                        <img src="bridgge.png" alt="Bridge Construction" class="w-full h-full object-cover transition duration-500 hover:scale-110"> 
+                    </div>
+                    <div class="p-6"> 
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2F4858] bg-[#F5F5F5] rounded-full mb-2">Infrastructure</span>
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-2">Riverbend Bridge</h3>
+                        <p class="text-[#607D8B] mb-4">Pedestrian and cycle bridge with innovative design connecting two city districts.</p>
+                        <div class="flex justify-between text-sm text-[#607D8B]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Bloemfontein</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-[#2F4858] hover:bg-[#1a3645] text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#2F4858] mb-6">About UrbanEdge Construction</h2>
+                    <div class="w-20 h-1 bg-[#F9A825] mb-6"></div>
+                    <p class="text-[#607D8B] mb-6">CHECCA Home Interiors & Maintenance is a proudly local business offering expert home improvement services. From custom-built cabinetry to countertop installations and general maintenance, we are committed to delivering high-quality work that fits your space, budget, and style.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-3">Our Mission</h3>
+                        <p class="text-[#607D8B]">Founded in Johannesburg, our team of skilled craftsmen brings decades of combined experience to every project. We take pride in our South African heritage and approach each job with the care and dedication it deserves.</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-[#2F4858] mb-3">Our Values</h3>
+                        <ul class="space-y-2 text-[#607D8B]">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-[#F9A825] mr-2 mt-1"></i>
+                                <span>Integrity in all our business dealings</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-[#F9A825] mr-2 mt-1"></i>
+                                <span>Skilled Craftsmanship</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-[#F9A825] mr-2 mt-1"></i>
+                                <span>Custom-Fit Solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-[#F9A825] mr-2 mt-1"></i>
+                                <span>Sustainable practices</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-[#F9A825] mr-2 mt-1"></i>
+                                <span>Client satisfaction as our top priority</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-white px-4 py-2 rounded shadow-sm">
+                            <img src="CIDB 9GB.png" alt="CIDB Logo" class="w-8 h-8 mr-2">
+                            <span class="text-sm font-medium text-[#2F4858]">CIDB 9GB</span>
+                        </div>
+                        <div class="flex items-center bg-white px-4 py-2 rounded shadow-sm">
+                            <img src="NHBRC Certified.png" alt="NHBRC Logo" class="w-8 h-8 mr-2">
+                            <span class="text-sm font-medium text-[#2F4858]">NHBRC Certified</span>
+                        </div>
+                        <div class="flex items-center bg-white px-4 py-2 rounded shadow-sm"> 
+                            <img src="Green Star SA.png" alt="Green Star Logo" class="w-8 h-8 mr-2">
+                            <span class="text-sm font-medium text-[#2F4858]">Green Star SA</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                        <h3 class="text-2xl font-bold text-[#2F4858] mb-4">Our Team</h3>
+                        <p class="text-[#607D8B] mb-6">Our team of over 150 professionals includes experienced project managers, skilled tradespeople, engineers, and support staff dedicated to delivering excellence on every project.</p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2F4858] mb-2">15+</div>
+                                <div class="text-sm text-[#607D8B]">Project Managers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2F4858] mb-2">50+</div>
+                                <div class="text-sm text-[#607D8B]">Engineers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2F4858] mb-2">80+</div>
+                                <div class="text-sm text-[#607D8B]">Skilled Trades</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2F4858] mb-2">100%</div>
+                                <div class="text-sm text-[#607D8B]">Safety Certified</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1240,327 +455,470 @@ document.addEventListener("DOMContentLoaded", function() {
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2 class="text-center animate">What Our Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial animate">
-                    <div class="testimonial-text">
-                        Checca revamped our kitchen beautifully and fixed our leaky bathroom too! Fast and friendly service with attention to detail.
+    <section class="py-20 bg-[#2F4858] text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+                <div class="w-20 h-1 bg-[#F9A825] mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto opacity-90">What our clients say about working with UrbanEdge Construction.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#3a5668] p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <p class="italic mb-6">"Checca revamped our kitchen beautifully and fixed our leaky bathroom too! Fast and friendly service with attention to detail. "</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">John Smith</h4>
+                            <p class="text-sm opacity-80">CEO, TechSolutions</p>
+                        </div>
                     </div>
-                    <div class="testimonial-author">Thandi, Johannesburg</div>
                 </div>
-                <div class="testimonial animate" style="display: none;">
-                    <div class="testimonial-text">
-                        The team at CHECCA transformed our outdated kitchen into a modern, functional space. They were professional, on time, and within budget.
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-[#3a5668] p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <p class="italic mb-6">"I've used CHECCA for multiple projects and they never disappoint. Quality workmanship and honest pricing every time. "</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm opacity-80">Property Developer</p>
+                        </div>
                     </div>
-                    <div class="testimonial-author">James, Pretoria</div>
                 </div>
-                <div class="testimonial animate" style="display: none;">
-                    <div class="testimonial-text">
-                        I've used CHECCA for multiple projects and they never disappoint. Quality workmanship and honest pricing every time.
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-[#3a5668] p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
                     </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                    <p class="italic mb-6">"I've used CHECCA for multiple projects and they never disappoint. Quality workmanship and honest pricing every time."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="David Wilson" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">David Wilson</h4>
+                            <p class="text-sm opacity-80">Municipal Engineer</p>
+                        </div>
                     </div>
-                    <div class="testimonial-author">Nomsa, Soweto</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact-form-section" id="contact">
-        <div class="container">
-            <h2 class="text-center animate">Get in Touch</h2>
-            <div class="contact-grid animate">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <ul class="contact-methods">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Johannesburg, South Africa</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+27 12 345 6789</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>info@checcaprojects.co.za</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon-Fri: 8AM - 5PM</span>
-                        </li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form class="modern-form">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder=" " required>
-                            <label for="name">Full Name</label>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2F4858] mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-[#F9A825] mx-auto"></div>
+                <p class="mt-6 text-[#607D8B] max-w-2xl mx-auto">Get in touch to discuss your next construction project or request a quote.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-[#2F4858] mb-1">Name*</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-[#607D8B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F9A825] focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-[#2F4858] mb-1">Email*</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-[#607D8B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F9A825] focus:border-transparent">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder=" " required>
-                            <label for="email">Email Address</label>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-[#2F4858] mb-1">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-[#607D8B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F9A825] focus:border-transparent">
                         </div>
-                        <div class="form-group">
-                            <select id="service" required>
-                                <option value=""> </option>
-                                <option value="cabinetry">Custom Cabinetry</option>
-                                <option value="countertops">Countertops</option>
-                                <option value="maintenance">Maintenance</option>
-                                <option value="other">Other Service</option>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-[#2F4858] mb-1">Subject*</label>
+                            <select id="subject" name="subject" required class="w-full px-4 py-3 border border-[#607D8B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F9A825] focus:border-transparent">
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="residential">Residential Construction</option>
+                                <option value="commercial">Commercial Construction</option>
+                                <option value="infrastructure">Infrastructure Projects</option>
+                                <option value="renovations">Renovations & Fit-Outs</option>
+                                <option value="other">Other Inquiry</option>
                             </select>
-                            <label for="service">Service Needed</label>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" placeholder=" " required></textarea>
-                            <label for="message">Project Details</label>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-[#2F4858] mb-1">Message*</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-[#607D8B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F9A825] focus:border-transparent"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
+                        
+                        <div>
+                            <button type="submit" class="bg-[#F9A825] hover:bg-[#e09922] text-[#2F4858] font-bold py-3 px-8 rounded-full transition duration-300 w-full">Send Message</button>
+                        </div>
                     </form>
                 </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-[#F5F5F5] p-8 rounded-lg h-full">
+                        <h3 class="text-2xl font-bold text-[#2F4858] mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-[#2F4858] text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#2F4858]">Head Office</h4>
+                                    <p class="text-[#607D8B]">456 Alexander Avenue<br>Sandton, Johannesburg<br>2196</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[#2F4858] text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#2F4858]">Phone</h4>
+                                    <p class="text-[#607D8B]">+27 11 123 4567</p>
+                                    <p class="text-[#607D8B]">Emergency: +27 82 123 4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[#2F4858] text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#2F4858]">Email</h4>
+                                    <p class="text-[#607D8B]">info@urbanedge.co.za</p>
+                                    <p class="text-[#607D8B]">quotes@urbanedge.co.za</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-[#2F4858] text-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#2F4858]">Business Hours</h4>
+                                    <p class="text-[#607D8B]">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                    <p class="text-[#607D8B]">Saturday: 9:00 AM - 1:00 PM</p>
+                                    <p class="text-[#607D8B]">Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-[#2F4858] mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-[#2F4858] text-white p-3 rounded-full hover:bg-[#F9A825] hover:text-[#2F4858] transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-[#2F4858] text-white p-3 rounded-full hover:bg-[#F9A825] hover:text-[#2F4858] transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-[#2F4858] text-white p-3 rounded-full hover:bg-[#F9A825] hover:text-[#2F4858] transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-[#2F4858] text-white p-3 rounded-full hover:bg-[#F9A825] hover:text-[#2F4858] transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <div class="map-container rounded-lg overflow-hidden shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.04137975447!2d28.05392331502884!3d-26.19748398344288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1b6e5b8e3f%3A0x4b6a2a1a1e3e3e3e!2sSandton%20City!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="animate">Let's build something great.</h2>
-            <p class="animate">Get a quote or book your free consultation now.</p>
-            <div class="cta-btns animate">
-                <a href="tel:+27123456789" class="btn btn-accent"><i class="fas fa-phone"></i> Call Now</a>
-                <a href="https://wa.me/27123456789" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
-                <a href="#contact" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Schedule Appointment</a>
-            </div>
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-[#F9A825] text-[#2F4858]">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+            <p class="max-w-2xl mx-auto mb-8">Subscribe to our newsletter for project updates, construction insights, and industry news.</p>
+            
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none">
+                <button type="submit" class="bg-[#2F4858] text-white px-6 py-3 rounded-r-lg font-bold hover:bg-[#1a3645] transition">Subscribe</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>CHECCA T&P</h3>
-                    <p>Built to Last. Designed for Life.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <footer class="bg-[#2F4858] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <a href="#" class="text-2xl font-bold flex items-center mb-6">
+                        <i class="fas fa-building mr-2 text-[#F9A825]"></i>
+                        <span>Urban<span class="text-[#F9A825]">Edge</span></span>
+                    </a>
+                    <p class="text-[#607D8B] mb-4">Building excellence through innovation, quality, and professionalism.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-[#607D8B] hover:text-[#F9A825] transition">Home</a></li>
+                        <li><a href="#services" class="text-[#607D8B] hover:text-[#F9A825] transition">Services</a></li>
+                        <li><a href="#projects" class="text-[#607D8B] hover:text-[#F9A825] transition">Projects</a></li>
+                        <li><a href="#about" class="text-[#607D8B] hover:text-[#F9A825] transition">About Us</a></li>
+                        <li><a href="#contact" class="text-[#607D8B] hover:text-[#F9A825] transition">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Built-In Cabinets</a></li>
-                        <li><a href="#">Kitchen Countertops</a></li>
-                        <li><a href="#">Plumbing Repairs</a></li>
-                        <li><a href="#">Electrical Work</a></li>
-                        <li><a href="#">Painting Services</a></li>
-                        <li><a href="#">General Maintenance</a></li>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Residential Construction</a></li>
+                        <li><a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Commercial Buildings</a></li>
+                        <li><a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Renovations & Fit-Outs</a></li>
+                        <li><a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Civil & Infrastructure</a></li>
+                        <li><a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Project Management</a></li>
                     </ul>
                 </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</li>
-                        <li><i class="fas fa-phone"></i> +27 12 345 6789</li>
-                        <li><i class="fas fa-envelope"></i> info@checcaprojects.co.za</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8AM - 5PM</li>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact</h3>
+                    <ul class="space-y-3 text-[#607D8B]">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-2 mt-1 text-[#F9A825]"></i>
+                            <span>456 Alexander Avenue , Sandton, 2196</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mr-2 mt-1 text-[#F9A825]"></i>
+                            <span>+27 11 123 4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mr-2 mt-1 text-[#F9A825]"></i>
+                            <span>info@urbanedge.co.za</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 CHECCA Trading & Projects. All Rights Reserved.</p>
+            
+            <div class="border-t border-[#607D8B] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-[#607D8B] mb-4 md:mb-0">© 2023 UrbanEdge Construction. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Privacy Policy</a>
+                    <a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Terms of Service</a>
+                    <a href="#" class="text-[#607D8B] hover:text-[#F9A825] transition">Sitemap</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-[#2F4858] text-white p-3 rounded-full shadow-lg hover:bg-[#F9A825] hover:text-[#2F4858] transition hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mainNav = document.getElementById('mainNav');
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
         
-        mobileMenuBtn.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            mobileMenuBtn.setAttribute('aria-expanded', mainNav.classList.contains('active'));
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
         });
         
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mainNav a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-        
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Smooth Scrolling for Anchor Links
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
                 const targetElement = document.querySelector(targetId);
+                
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 100,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                     
-                    // Update URL without page reload
-                    history.pushState(null, null, targetId);
+                    // Close mobile menu if open
+                    if (!menu.classList.contains('hidden')) {
+                        menuBtn.classList.remove('open');
+                        menu.classList.add('hidden');
+                        menu.classList.remove('flex');
+                    }
                 }
             });
         });
         
-        // Testimonial Slider
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial');
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
         
-        function showTestimonial(index) {
-            testimonials.forEach(testimonial => {
-                testimonial.style.display = 'none';
-            });
-            
-            testimonials[index].style.display = 'block';
-        }
-        
-        function nextTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        }
-        
-        // Show first testimonial
-        showTestimonial(0);
-        
-        // Auto-rotate testimonials every 5 seconds
-        const testimonialInterval = setInterval(nextTestimonial, 5000);
-        
-        // Pause slider on hover
-        const testimonialSlider = document.querySelector('.testimonial-slider');
-        testimonialSlider.addEventListener('mouseenter', () => {
-            clearInterval(testimonialInterval);
-        });
-        
-        testimonialSlider.addEventListener('mouseleave', () => {
-            testimonialInterval = setInterval(nextTestimonial, 5000);
-        });
-        
-        // Scroll Animation
-        const animateElements = document.querySelectorAll('.animate');
-        
-        function checkScroll() {
-            animateElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('show');
-                }
-            });
-        }
-        
-        // Initial check
-        checkScroll();
-        
-        // Check on scroll with debounce
-        let isScrolling;
         window.addEventListener('scroll', () => {
-            window.clearTimeout(isScrolling);
-            isScrolling = setTimeout(checkScroll, 50);
-        }, false);
-        
-        // Lazy loading for images
-        document.addEventListener('DOMContentLoaded', function() {
-            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-            
-            const lazyLoad = (target) => {
-                const io = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.style.opacity = 1;
-                            observer.unobserve(img);
-                        }
-                    });
-                });
-                
-                io.observe(target);
-            };
-            
-            lazyImages.forEach(lazyLoad);
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
         });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Project filtering
+        const filterButtons = document.querySelectorAll('.project-filter');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('bg-[#2F4858]', 'text-white'));
+                
+                // Add active class to clicked button
+                button.classList.add('bg-[#2F4858]', 'text-white');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Animated counter for stats
+        function animateCounters() {
+            const projectsCount = document.getElementById('projects-count');
+            const yearsCount = document.getElementById('years-count');
+            const clientsCount = document.getElementById('clients-count');
+            const teamCount = document.getElementById('team-count');
+            
+            const targetProjects = 87;
+            const targetYears = 18;
+            const targetClients = 124;
+            const targetTeam = 156;
+            
+            let currentProjects = 0;
+            let currentYears = 0;
+            let currentClients = 0;
+            let currentTeam = 0;
+            
+            const increment = Math.ceil(targetProjects / 50);
+            
+            const counterInterval = setInterval(() => {
+                if (currentProjects < targetProjects) {
+                    currentProjects += increment;
+                    if (currentProjects > targetProjects) currentProjects = targetProjects;
+                    projectsCount.textContent = currentProjects;
+                }
+                
+                if (currentYears < targetYears) {
+                    currentYears += 1;
+                    yearsCount.textContent = currentYears;
+                }
+                
+                if (currentClients < targetClients) {
+                    currentClients += Math.ceil(targetClients / 50);
+                    if (currentClients > targetClients) currentClients = targetClients;
+                    clientsCount.textContent = currentClients;
+                }
+                
+                if (currentTeam < targetTeam) {
+                    currentTeam += Math.ceil(targetTeam / 50);
+                    if (currentTeam > targetTeam) currentTeam = targetTeam;
+                    teamCount.textContent = currentTeam;
+                }
+                
+                if (currentProjects >= targetProjects && 
+                    currentYears >= targetYears && 
+                    currentClients >= targetClients && 
+                    currentTeam >= targetTeam) {
+                    clearInterval(counterInterval);
+                }
+            }, 20);
+        }
+        
+        // Trigger counter animation when stats section comes into view
+        const statsSection = document.querySelector('.bg-white.py-16');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
         
         // Form submission
-        const contactForm = document.querySelector('.modern-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Here you would typically send the form data to your server
-                // For demonstration, we'll just show an alert
-                alert('Thank you for your message! We will contact you soon.');
-                this.reset();
-            });
-        }
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to a server
+            // For this demo, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been received. We'll contact you soon at ${email}.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
     </script>
 </body>
 </html>
