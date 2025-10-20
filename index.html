@@ -3,573 +3,652 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Metadata -->
-    <meta name="description" content="Checca Trading - Elevating South African living with premium interior solutions and luxury real estate offerings." />
-    <meta name="keywords" content="luxury interiors, South African design, premium real estate, high-end furniture, interior design" />
-    
-    <!-- Open Graph / Facebook -->
+    <title>Checca Projects | Premium Cabinetry & Home Interiors Johannesburg</title>
+    <meta name="description" content="Checca Projects specializes in premium kitchen cabinetry, wardrobes, and vanities — proudly crafted in Johannesburg, South Africa. Get your free design consultation today.">
+    <meta property="og:title" content="Checca Projects">
+    <meta property="og:description" content="Premium cabinetry and interior solutions crafted by local artisans in Johannesburg.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.checcatrading.co.za/">
-    <meta property="og:title" content="Checca Trading - Elevating South African Living">
-    <meta property="og:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
-    <meta property="og:image" content="https://www.checcatrading.co.za/assets/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.checcatrading.co.za/">
-    <meta property="twitter:title" content="Checca Trading - Elevating South African Living">
-    <meta property="twitter:description" content="Discover premium interior solutions and luxury real estate offerings that elevate South African living.">
-    <meta property="twitter:image" content="https://www.checcatrading.co.za/assets/twitter-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon.png">
-    
-    <title>Checca Trading - Elevating South African Living</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS -->
+    <meta property="og:url" content="https://checcaprojects.co.za">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#D4AF37',
-                        cream: '#F5F2EC',
-                        charcoal: '#1C1C1C',
-                    }
-                }
-            }
-        }
-    </script>
-    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ======================
-           Base Styles & Variables
-        ====================== */
-        :root {
-            /* Color Palette */
-            --black: #000000;
-            --gold: #D4AF37;
-            --cream: #F5F2EC;
-            --charcoal: #1C1C1C;
-            --white: #ffffff;
-            
-            /* Transitions */
-            --transition: all 0.3s ease;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--charcoal);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-color: var(--cream);
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            color: var(--charcoal);
-            letter-spacing: -0.01em;
-        }
-        
-        /* Custom styles to complement Tailwind */
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+        /* Custom CSS for elements Tailwind can't handle easily */
+        .hero-image {
+            background-image: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1556912173-46c336c7fd55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 90vh;
         }
         
-        .section-title {
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: #c9a961;
+            margin-bottom: 1rem;
+        }
+        
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+        
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
             position: relative;
-            display: inline-block;
-            margin-bottom: 3rem;
         }
         
-        .section-title:after {
-            content: '';
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
             position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
+            top: 0;
+            left: 0;
+            width: 24px;
             height: 2px;
-            background: var(--gold);
+            background: #FFFFFF;
+            transform: rotate(0);
+            transition: all 0.5s;
         }
         
-        /* Mobile menu animation */
-        .mobile-menu {
-            transition: max-height 0.3s ease-out;
-            max-height: 0;
-            overflow: hidden;
+        .hamburger-middle {
+            transform: translateY(7px);
         }
         
-        .mobile-menu.open {
-            max-height: 300px;
+        .hamburger-bottom {
+            transform: translateY(14px);
+        }
+        
+        .open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translate(6px);
+        }
+        
+        .open .hamburger-middle {
+            display: none;
+        }
+        
+        .open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(6px) translate(-6px);
+        }
+        
+        /* Animation for stats */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .count-up {
+            animation: countUp 1s ease-out forwards;
         }
     </style>
 </head>
-<body class="min-h-screen bg-white">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center">
-                    <div class="text-2xl font-bold text-gray-900">
-                        <span class="text-amber-600">CHECCA</span> Trading & Projects
-                    </div>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-amber-600 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-amber-600 transition-colors">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-amber-600 transition-colors">Services</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-amber-600 transition-colors">Portfolio</a>
-                    <a href="#contact" class="text-gray-700 hover:text-amber-600 transition-colors">Contact</a>
-                </nav>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-button" class="md:hidden p-2">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-[#2c3e50] text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <i class="fas fa-home mr-2 text-[#c9a961]"></i>
+                <span>Checca<span class="text-[#c9a961]">Projects</span></span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-[#c9a961] transition">Home</a>
+                <a href="#about" class="hover:text-[#c9a961] transition">About</a>
+                <a href="#services" class="hover:text-[#c9a961] transition">Services</a>
+                <a href="#portfolio" class="hover:text-[#c9a961] transition">Portfolio</a>
+                <a href="#contact" class="hover:text-[#c9a961] transition">Contact</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="hamburger focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
                 </button>
             </div>
         </div>
-
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-4 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Home</a>
-                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-amber-600">About</a>
-                <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Services</a>
-                <a href="#portfolio" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Portfolio</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-amber-600">Contact</a>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div id="menu" class="absolute hidden bg-[#2c3e50] w-full px-6 pb-6 pt-2 shadow-lg">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="hover:text-[#c9a961] transition border-b border-[#6c757d] pb-2">Home</a>
+                    <a href="#about" class="hover:text-[#c9a961] transition border-b border-[#6c757d] pb-2">About</a>
+                    <a href="#services" class="hover:text-[#c9a961] transition border-b border-[#6c757d] pb-2">Services</a>
+                    <a href="#portfolio" class="hover:text-[#c9a961] transition border-b border-[#6c757d] pb-2">Portfolio</a>
+                    <a href="#contact" class="hover:text-[#c9a961] transition pb-2">Contact</a>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-r from-gray-50 to-amber-50 py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                    Craftsmanship & Reliability
-                    <span class="block text-amber-600">Under One Roof</span>
-                </h1>
-                <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-                    From custom cabinetry to reliable general works, CHECCA is your trusted partner for homes and businesses across Johannesburg.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-                    <button class="bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-700 transition-colors flex items-center gap-2">
-                        <i data-lucide="home" class="w-5 h-5"></i>
-                        Explore Cabinetry
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </button>
-                    <button class="bg-gray-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-900 transition-colors flex items-center gap-2">
-                        <i data-lucide="hammer" class="w-5 h-5"></i>
-                        Explore General Works
-                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                    </button>
-                </div>
-
-                <!-- Three Column Highlights -->
-                <div class="grid md:grid-cols-3 gap-8 mt-16">
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-amber-100">
-                        <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="home" class="w-8 h-8 text-amber-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cabinetry & Interiors</h3>
-                        <p class="text-gray-600">Custom kitchens, wardrobes, and countertops crafted for modern living</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                        <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="hammer" class="w-8 h-8 text-gray-700"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">General Works & Maintenance</h3>
-                        <p class="text-gray-600">Professional plumbing, electrical, and maintenance services for businesses</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-green-100">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="award" class="w-8 h-8 text-green-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Why Choose CHECCA</h3>
-                        <p class="text-gray-600">5-year warranty, quality craftsmanship, and proudly South African</p>
-                    </div>
-                </div>
+    <section id="home" class="hero-image flex items-center justify-center text-white pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Transform Your Kitchen with Expert Cabinetry</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Custom kitchens, wardrobes & vanities — designed, built and installed by local craftsmen with a 5-year workmanship warranty</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-[#c9a961] hover:bg-[#b89955] text-[#2c3e50] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Get My Free Kitchen Design</a>
+                <a href="#portfolio" class="border-2 border-white hover:bg-white hover:text-[#2c3e50] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">See Our Work</a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Projects Carousel -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
-            
-            <div class="relative">
-                <div class="overflow-hidden rounded-2xl">
-                    <div id="slides-container" class="flex slide-transition">
-                        <!-- Slides will be dynamically inserted here -->
-                    </div>
+    <!-- Stats Section -->
+    <section class="bg-white py-16 shadow-md">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-2" id="projects-count">0</div>
+                    <div class="text-[#6c757d] uppercase text-sm font-semibold">Projects Completed</div>
                 </div>
-                
-                <button id="prev-slide" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors">
-                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                </button>
-                <button id="next-slide" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors">
-                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                </button>
-                
-                <div id="slide-indicators" class="flex justify-center mt-6 space-x-2">
-                    <!-- Indicators will be dynamically inserted here -->
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-2" id="years-count">0</div>
+                    <div class="text-[#6c757d] uppercase text-sm font-semibold">Years Experience</div>
+                </div>
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-2" id="clients-count">0</div>
+                    <div class="text-[#6c757d] uppercase text-sm font-semibold">Satisfied Clients</div>
+                </div>
+                <div class="count-up">
+                    <div class="text-4xl md:text-5xl font-bold text-[#2c3e50] mb-2" id="team-count">0</div>
+                    <div class="text-[#6c757d] uppercase text-sm font-semibold">Expert Team</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                        Craftsmanship You Can Count On
-                    </h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        CHECCA Trading & Projects combines two decades of expertise in custom cabinetry 
-                        with comprehensive general works and maintenance services. We're proudly South African, 
-                        serving homes and businesses across Johannesburg with uncompromising quality.
-                    </p>
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600"></i>
-                            <span class="text-gray-700">5-year comprehensive workmanship warranty</span>
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#2c3e50] mb-4">About Us</h2>
+                    <div class="w-20 h-1 bg-[#c9a961] mb-6"></div>
+                    <p class="text-[#6c757d] mb-6">At Checca Projects, we specialize in creating beautiful, functional spaces through expert cabinetry and interior solutions. Every kitchen, wardrobe, and vanity we craft is a testament to our commitment to quality, durability, and timeless design.</p>
+                    <p class="text-[#6c757d] mb-6">Based in Johannesburg, we're proud to serve homeowners across South Africa with personalized service, attention to detail, and workmanship you can trust for years to come.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-[#2c3e50] mb-2">5-Year Warranty</h3>
+                            <p class="text-[#6c757d]">Comprehensive workmanship guarantee on all installations</p>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600"></i>
-                            <span class="text-gray-700">Dual expertise in residential and commercial projects</span>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="service-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-[#2c3e50] mb-2">Local Craftsmen</h3>
+                            <p class="text-[#6c757d]">Proudly South African, supporting local artisans</p>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600"></i>
-                            <span class="text-gray-700">Proudly South African craftsmanship</span>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="service-icon">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-[#2c3e50] mb-2">Custom Design</h3>
+                            <p class="text-[#6c757d]">Tailored solutions for your unique space and style</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="service-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-[#2c3e50] mb-2">Premium Materials</h3>
+                            <p class="text-[#6c757d]">Quality finishes including quartz, granite, and laminate</p>
                         </div>
                     </div>
-                    <button class="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
-                        Learn More About Our Story
-                    </button>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <img 
-                        src="/assets/checca2.png" 
-                        alt="Craftsmanship"
-                        class="rounded-lg object-cover h-48"
-                    />
-                    <img 
-                        src="/assets/checca2.png" 
-                        alt="Team at work"
-                        class="rounded-lg object-cover h-48 mt-8"
-                    />
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-[#2c3e50] mb-4">Locally Crafted, Premium Quality</h3>
+                        <p class="text-[#6c757d] mb-6">Our team of skilled craftsmen brings years of experience and dedication to every project, ensuring exceptional results that stand the test of time.</p>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2c3e50] mb-2">100%</div>
+                                <div class="text-sm text-[#6c757d]">Satisfaction Guarantee</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2c3e50] mb-2">5+</div>
+                                <div class="text-sm text-[#6c757d]">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2c3e50] mb-2">200+</div>
+                                <div class="text-sm text-[#6c757d]">Projects Completed</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-[#2c3e50] mb-2">100%</div>
+                                <div class="text-sm text-[#6c757d]">Local Craftsmanship</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Our Services</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Two specialized divisions serving different needs with the same commitment to excellence
-            </p>
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2c3e50] mb-4">Our Services</h2>
+                <div class="w-20 h-1 bg-[#c9a961] mx-auto"></div>
+                <p class="mt-6 text-[#6c757d] max-w-2xl mx-auto">Comprehensive cabinetry solutions for every room in your home</p>
+            </div>
             
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Cabinetry Services -->
-                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border border-amber-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center mr-4">
-                            <i data-lucide="home" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Cabinetry & Interiors</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 overflow-hidden mb-6 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Custom Kitchens" class="w-full h-full object-cover transition duration-500 hover:scale-110">
                     </div>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Custom Kitchens</h4>
-                                <p class="text-gray-600">Bespoke cabinetry, countertops, and pantry solutions</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Bathroom Vanities</h4>
-                                <p class="text-gray-600">Moisture-resistant cabinets and storage solutions</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Bedroom Storage</h4>
-                                <p class="text-gray-600">Wardrobes, wall units, and bedside cabinets</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-amber-600 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Premium Countertops</h4>
-                                <p class="text-gray-600">Granite, quartz, laminate, and wood finishes</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="w-full bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
-                        Book a Free Design Consultation
-                    </button>
+                    <h3 class="text-xl font-bold text-[#2c3e50] mb-4">Custom Kitchens</h3>
+                    <p class="text-[#6c757d] mb-6">Transform your kitchen into the heart of your home with our bespoke design and installation services.</p>
+                    <ul class="space-y-2 text-[#6c757d] mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Full design consultation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Modern finishes & hardware</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Complete installation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Quartz & granite countertops</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-block bg-[#c9a961] hover:bg-[#b89955] text-[#2c3e50] font-bold py-2 px-6 rounded-full transition duration-300">Request Quote</a>
                 </div>
-
-                <!-- General Works Services -->
-                <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-2xl border border-gray-200">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <i data-lucide="hammer" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900">General Works & Maintenance</h3>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 overflow-hidden mb-6 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1620625515032-6c8c5d8b5c5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Wardrobes & Storage" class="w-full h-full object-cover transition duration-500 hover:scale-110">
                     </div>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Plumbing & Electrical</h4>
-                                <p class="text-gray-600">Licensed professionals for all installations and repairs</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Carpentry & Framework</h4>
-                                <p class="text-gray-600">Structural work, frames, and custom carpentry</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Billboard Installations</h4>
-                                <p class="text-gray-600">Industrial-grade billboard frame construction</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="w-5 h-5 text-gray-700 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Maintenance Contracts</h4>
-                                <p class="text-gray-600">Ongoing support for offices and institutions</p>
-                            </div>
-                        </div>
+                    <h3 class="text-xl font-bold text-[#2c3e50] mb-4">Wardrobes & Storage</h3>
+                    <p class="text-[#6c757d] mb-6">Maximize your space with elegant built-in wardrobes and custom storage solutions.</p>
+                    <ul class="space-y-2 text-[#6c757d] mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Bedroom wardrobes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Walk-in closets</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Built-in wall units</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Smart storage design</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-block bg-[#c9a961] hover:bg-[#b89955] text-[#2c3e50] font-bold py-2 px-6 rounded-full transition duration-300">Request Quote</a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="h-48 overflow-hidden mb-6 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Bathroom Vanities" class="w-full h-full object-cover transition duration-500 hover:scale-110">
                     </div>
-                    
-                    <button class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
-                        Book a Site Visit
-                    </button>
+                    <h3 class="text-xl font-bold text-[#2c3e50] mb-4">Bathroom Vanities</h3>
+                    <p class="text-[#6c757d] mb-6">Create a spa-like atmosphere with our durable and elegant bathroom vanity solutions.</p>
+                    <ul class="space-y-2 text-[#6c757d] mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Custom vanity units</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Waterproof finishes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Modern countertops</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#c9a961] mr-2 mt-1"></i>
+                            <span>Storage integration</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-block bg-[#c9a961] hover:bg-[#b89955] text-[#2c3e50] font-bold py-2 px-6 rounded-full transition duration-300">Request Quote</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Our Portfolio</h2>
-            <p class="text-center text-gray-600 mb-8">Explore our recent projects across both service areas</p>
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2c3e50] mb-4">Our Portfolio</h2>
+                <div class="w-20 h-1 bg-[#c9a961] mx-auto"></div>
+                <p class="mt-6 text-[#6c757d] max-w-2xl mx-auto">Recent projects showcasing our craftsmanship and attention to detail</p>
+            </div>
             
-            <!-- Filter Buttons -->
+            <!-- Project Filter -->
             <div class="flex justify-center mb-12">
-                <div class="inline-flex bg-white rounded-lg p-1 shadow-sm border">
-                    <button
-                        id="filter-all"
-                        class="px-6 py-2 rounded-md font-medium transition-colors bg-amber-600 text-white"
-                    >
+                <div class="inline-flex rounded-md shadow-sm" role="group">
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-l-lg border border-[#6c757d] hover:bg-[#2c3e50] hover:text-white transition" data-filter="all">
                         All Projects
                     </button>
-                    <button
-                        id="filter-cabinetry"
-                        class="px-6 py-2 rounded-md font-medium transition-colors text-gray-600 hover:text-gray-900"
-                    >
-                        Cabinetry
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border-t border-b border-[#6c757d] hover:bg-[#2c3e50] hover:text-white transition" data-filter="kitchens">
+                        Kitchens
                     </button>
-                    <button
-                        id="filter-general"
-                        class="px-6 py-2 rounded-md font-medium transition-colors text-gray-600 hover:text-gray-900"
-                    >
-                        General Works
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium border border-[#6c757d] hover:bg-[#2c3e50] hover:text-white transition" data-filter="wardrobes">
+                        Wardrobes
+                    </button>
+                    <button type="button" class="project-filter px-4 py-2 text-sm font-medium rounded-r-lg border border-[#6c757d] hover:bg-[#2c3e50] hover:text-white transition" data-filter="vanities">
+                        Vanities
                     </button>
                 </div>
             </div>
-
-            <!-- Project Grid -->
-            <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Projects will be dynamically inserted here -->
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card kitchens bg-white rounded-lg overflow-hidden shadow-md" data-category="kitchens">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Modern Quartz Kitchen" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2c3e50] bg-gray-100 rounded-full mb-2">Kitchens</span>
+                        <h3 class="text-xl font-bold text-[#2c3e50] mb-2">Modern Quartz Kitchen — Sandton</h3>
+                        <p class="text-[#6c757d] mb-4">Complete kitchen renovation with custom cabinetry</p>
+                        <div class="flex justify-between text-sm text-[#6c757d]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Sandton</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card wardrobes bg-white rounded-lg overflow-hidden shadow-md" data-category="wardrobes">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620625515032-6c8c5d8b5c5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Built-in Wardrobe" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2c3e50] bg-gray-100 rounded-full mb-2">Wardrobes</span>
+                        <h3 class="text-xl font-bold text-[#2c3e50] mb-2">Built-in Wardrobe — Roodepoort</h3>
+                        <p class="text-[#6c757d] mb-4">Elegant bedroom storage solution</p>
+                        <div class="flex justify-between text-sm text-[#6c757d]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Roodepoort</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card vanities bg-white rounded-lg overflow-hidden shadow-md" data-category="vanities">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Luxury Vanity" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2c3e50] bg-gray-100 rounded-full mb-2">Vanities</span>
+                        <h3 class="text-xl font-bold text-[#2c3e50] mb-2">Luxury Vanity — Fourways</h3>
+                        <p class="text-[#6c757d] mb-4">Contemporary bathroom transformation</p>
+                        <div class="flex justify-between text-sm text-[#6c757d]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Fourways</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card kitchens bg-white rounded-lg overflow-hidden shadow-md" data-category="kitchens">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Classic Kitchen" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2c3e50] bg-gray-100 rounded-full mb-2">Kitchens</span>
+                        <h3 class="text-xl font-bold text-[#2c3e50] mb-2">Classic Kitchen — Randburg</h3>
+                        <p class="text-[#6c757d] mb-4">Timeless design with modern functionality</p>
+                        <div class="flex justify-between text-sm text-[#6c757d]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Randburg</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2022</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card wardrobes bg-white rounded-lg overflow-hidden shadow-md" data-category="wardrobes">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1620625515032-6c8c5d8b5c5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Walk-in Closet" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2c3e50] bg-gray-100 rounded-full mb-2">Wardrobes</span>
+                        <h3 class="text-xl font-bold text-[#2c3e50] mb-2">Walk-in Closet — Midrand</h3>
+                        <p class="text-[#6c757d] mb-4">Luxurious custom storage system</p>
+                        <div class="flex justify-between text-sm text-[#6c757d]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Midrand</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2022</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card kitchens bg-white rounded-lg overflow-hidden shadow-md" data-category="kitchens">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Contemporary Kitchen" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-[#2c3e50] bg-gray-100 rounded-full mb-2">Kitchens</span>
+                        <h3 class="text-xl font-bold text-[#2c3e50] mb-2">Contemporary Kitchen — Centurion</h3>
+                        <p class="text-[#6c757d] mb-4">Sleek design with premium finishes</p>
+                        <div class="flex justify-between text-sm text-[#6c757d]">
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> Centurion</span>
+                            <span><i class="far fa-calendar-alt mr-1"></i> 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-[#2c3e50] hover:bg-[#1a252f] text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">View All Projects</a>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">What Our Clients Say</h2>
+    <section class="py-20 bg-[#2c3e50] text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <div class="w-20 h-1 bg-[#c9a961] mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto opacity-90">Trusted by homeowners across Johannesburg</p>
+            </div>
             
-            <div class="relative">
-                <div class="overflow-hidden">
-                    <div id="testimonials-container" class="flex testimonial-transition">
-                        <!-- Testimonials will be dynamically inserted here -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#34495e] p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Checca Projects transformed our outdated kitchen into a modern masterpiece. The attention to detail and quality of workmanship exceeded our expectations. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah M." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah & James M.</h4>
+                            <p class="text-sm opacity-80">Sandton</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div id="testimonial-indicators" class="flex justify-center mt-8 space-x-2">
-                    <!-- Indicators will be dynamically inserted here -->
+                <!-- Testimonial 2 -->
+                <div class="bg-[#34495e] p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"Professional service from start to finish. Our custom wardrobe is not only beautiful but incredibly functional. The team was punctual and respectful of our home."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Thandi N." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Thandi N.</h4>
+                            <p class="text-sm opacity-80">Roodepoort</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-16 bg-gradient-to-r from-amber-600 to-orange-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Start Your Project?
-            </h2>
-            <p class="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
-                Whether you're dreaming of a new kitchen or need reliable maintenance services, 
-                we're here to bring your vision to life.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-white text-amber-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors">
-                    Book a Free Cabinetry Consultation
-                </button>
-                <button class="bg-gray-800 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-900 transition-colors">
-                    Book a General Works Site Visit
-                </button>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-[#34495e] p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-6">"We couldn't be happier with our new bathroom vanity. The craftsmanship is outstanding and the 5-year warranty gives us complete peace of mind. Worth every rand!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael P." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael P.</h4>
+                            <p class="text-sm opacity-80">Fourways</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12">
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2c3e50] mb-4">Start Your Transformation</h2>
+                <div class="w-20 h-1 bg-[#c9a961] mx-auto"></div>
+                <p class="mt-6 text-[#6c757d] max-w-2xl mx-auto">Get in touch for a free consultation and quote</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Get In Touch</h2>
-                    <p class="text-lg text-gray-600 mb-8">
-                        Ready to discuss your project? Fill out the form and we'll get back to you within 24 hours.
-                    </p>
+                    <h3 class="text-2xl font-bold text-[#2c3e50] mb-4">Let's Create Something Beautiful</h3>
+                    <p class="text-[#6c757d] mb-8">Ready to transform your space? Contact us today for a free design consultation. Our team will work with you to bring your vision to life.</p>
                     
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="phone" class="w-5 h-5 text-amber-600"></i>
-                            <span class="text-gray-700">+27 11 123 4567</span>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-[#c9a961] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#2c3e50]">Location</h4>
+                                <p class="text-[#6c757d]">Johannesburg, Gauteng, South Africa</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-5 h-5 text-amber-600"></i>
-                            <span class="text-gray-700">info@checca.co.za</span>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-[#c9a961] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#2c3e50]">Phone</h4>
+                                <p class="text-[#6c757d]">+27 [Your Phone Number]</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-amber-600"></i>
-                            <span class="text-gray-700">Johannesburg, Gauteng, South Africa</span>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-[#c9a961] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#2c3e50]">Email</h4>
+                                <p class="text-[#6c757d]">info@checcaprojects.co.za</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-[#c9a961] text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[#2c3e50]">Hours</h4>
+                                <p class="text-[#6c757d]">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                <p class="text-[#6c757d]">Saturday: 9:00 AM - 2:00 PM</p>
+                                <p class="text-[#6c757d]">Sunday: Closed</p>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 class="font-semibold text-gray-900 mb-4">Service Coverage Area</h3>
-                        <p class="text-gray-600">
-                            We proudly serve Johannesburg and surrounding areas including Sandton, 
-                            Randburg, Roodepoort, and the East Rand.
-                        </p>
+                    <div class="mt-8">
+                        <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Checca%20Projects,%20I'm%20interested%20in%20learning%20more%20about%20your%20services.%20Can%20we%20schedule%20a%20consultation?" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                            Chat with a Designer
+                        </a>
                     </div>
                 </div>
                 
-                <div class="bg-white p-8 rounded-2xl shadow-sm">
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">
-                                    Name *
-                                </label>
-                                <input 
-                                    type="text" 
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                                    placeholder="Your full name"
-                                />
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">
-                                    Phone *
-                                </label>
-                                <input 
-                                    type="tel" 
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                                    placeholder="+27 11 123 4567"
-                                />
-                            </div>
+                <!-- Contact Form -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-[#2c3e50] mb-1">Full Name *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c9a961] focus:border-transparent">
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Email *
-                            </label>
-                            <input 
-                                type="email" 
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                                placeholder="your.email@example.com"
-                            />
+                            <label for="phone" class="block text-sm font-medium text-[#2c3e50] mb-1">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c9a961] focus:border-transparent">
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Service Needed *
-                            </label>
-                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
-                                <option value="">Select a service</option>
-                                <option value="cabinetry">Cabinetry & Interiors</option>
-                                <option value="general">General Works & Maintenance</option>
-                                <option value="both">Both Services</option>
+                            <label for="email" class="block text-sm font-medium text-[#2c3e50] mb-1">Email Address *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c9a961] focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="project-type" class="block text-sm font-medium text-[#2c3e50] mb-1">Type of Project *</label>
+                            <select id="project-type" name="project-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c9a961] focus:border-transparent">
+                                <option value="" disabled selected>Select a project type</option>
+                                <option value="Kitchen">Kitchen</option>
+                                <option value="Wardrobe">Wardrobe</option>
+                                <option value="Vanity">Vanity</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Project Details
-                            </label>
-                            <textarea 
-                                rows="4" 
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                                placeholder="Tell us about your project..."
-                            ></textarea>
+                            <label for="message" class="block text-sm font-medium text-[#2c3e50] mb-1">Message *</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c9a961] focus:border-transparent"></textarea>
                         </div>
                         
-                        <button 
-                            type="submit"
-                            class="w-full bg-amber-600 text-white py-4 px-6 rounded-lg text-lg font-semibold hover:bg-amber-700 transition-colors"
-                        >
-                            Send Message
-                        </button>
+                        <button type="submit" class="w-full bg-[#c9a961] hover:bg-[#b89955] text-[#2c3e50] font-bold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -577,438 +656,262 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <div class="text-2xl font-bold mb-4">
-                        <span class="text-amber-500">CHECCA</span> Trading & Projects
-                    </div>
-                    <p class="text-gray-300 mb-6 max-w-md">
-                        Your trusted partner for custom cabinetry and reliable general works. 
-                        Proudly serving Johannesburg with quality craftsmanship since 2019.
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="award" class="w-5 h-5 text-amber-500"></i>
-                            <span class="text-sm text-gray-300">5-Year Warranty</span>
+    <footer class="bg-[#1a252f] text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Checca Projects</h3>
+                    <p class="text-gray-400 mb-6">Premium cabinetry and interior solutions crafted by local artisans in Johannesburg. Transforming homes with quality, durability, and timeless design.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-shield-alt text-[#c9a961] mr-2"></i>
+                            <span>5-Year Warranty</span>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="users" class="w-5 h-5 text-amber-500"></i>
-                            <span class="text-sm text-gray-300">Family Owned</span>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-flag text-[#c9a961] mr-2"></i>
+                            <span>Proudly South African</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-400">
+                            <i class="fas fa-home text-[#c9a961] mr-2"></i>
+                            <span>Family Owned</span>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Quick Links Column -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Cabinetry Services</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Custom Kitchens</a></li>
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Bathroom Vanities</a></li>
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Bedroom Storage</a></li>
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Countertops</a></li>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Request a Quote</a></li>
                     </ul>
                 </div>
                 
+                <!-- Services Column -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">General Works</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Plumbing & Electrical</a></li>
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Carpentry & Frames</a></li>
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Billboard Installation</a></li>
-                        <li><a href="#" class="hover:text-amber-500 transition-colors">Maintenance Contracts</a></li>
+                    <h3 class="text-xl font-bold mb-4">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Custom Kitchens</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Wardrobes & Storage</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Bathroom Vanities</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Design Consultation</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Installation Services</a></li>
                     </ul>
+                </div>
+                
+                <!-- Contact Column -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-[#c9a961] mr-3 mt-1"></i>
+                            <span class="text-gray-400">Johannesburg, Gauteng</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-[#c9a961] mr-3"></i>
+                            <span class="text-gray-400">+27 [Your Phone Number]</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-[#c9a961] mr-3"></i>
+                            <span class="text-gray-400">info@checcaprojects.co.za</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-[#c9a961] mr-3"></i>
+                            <span class="text-gray-400">Mon-Fri: 8AM-5PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex space-x-4">
+                        <a href="#" class="bg-gray-700 hover:bg-[#c9a961] text-white p-2 rounded-full transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-[#c9a961] text-white p-2 rounded-full transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Checca%20Projects,%20I'm%20interested%20in%20learning%20more%20about%20your%20services.%20Can%20we%20schedule%20a%20consultation?" class="bg-gray-700 hover:bg-[#c9a961] text-white p-2 rounded-full transition duration-300">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-[#c9a961] text-white p-2 rounded-full transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-300 text-sm">
-                    © 2024 CHECCA Trading & Projects. All rights reserved.
-                </p>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-300 hover:text-amber-500 transition-colors text-sm">Privacy Policy</a>
-                    <a href="#" class="text-gray-300 hover:text-amber-500 transition-colors text-sm">Terms of Service</a>
-                    <a href="#" class="text-gray-300 hover:text-amber-500 transition-colors text-sm">Warranty Information</a>
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2025 Checca Projects. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms & Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <button class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.109"/>
-            </svg>
-        </button>
-    </div>
-
     <script>
-        // Data for the website
-        const featuredProjects = [
-            {
-                id: 1,
-                title: "Modern Kitchen Transformation",
-                category: "cabinetry",
-                image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop",
-                description: "Complete kitchen renovation with custom cabinetry and granite countertops"
-            },
-            {
-                id: 2,
-                title: "Corporate Office Maintenance",
-                category: "general",
-                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-                description: "Ongoing maintenance contract for 500+ employee office complex"
-            },
-            {
-                id: 3,
-                title: "Custom Wardrobe Solutions",
-                category: "cabinetry",
-                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-                description: "Bespoke bedroom storage with sliding doors and interior lighting"
-            },
-            {
-                id: 4,
-                title: "Billboard Frame Installation",
-                category: "general",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=600&fit=crop",
-                description: "Industrial billboard frame construction and installation"
-            }
-        ];
-
-        const testimonials = [
-            {
-                type: "homeowner",
-                text: "CHECCA transformed our kitchen beyond our dreams. The attention to detail and quality of craftsmanship is outstanding.",
-                author: "Sarah M.",
-                rating: 5,
-                project: "Kitchen Renovation"
-            },
-            {
-                type: "corporate",
-                text: "Reliable, professional, and always on time. CHECCA has been our maintenance contractor for 3 years running.",
-                author: "David K., Facilities Manager",
-                rating: 5,
-                project: "Corporate Maintenance"
-            },
-            {
-                type: "homeowner",
-                text: "The team delivered exactly what they promised. Our wardrobes are beautiful and the 5-year warranty gives us peace of mind.",
-                author: "Lisa P.",
-                rating: 5,
-                project: "Bedroom Storage"
-            }
-        ];
-
-        // State variables
-        let currentSlide = 0;
-        let currentTestimonial = 0;
-        let activeService = 'all';
-        let mobileMenuOpen = false;
-
-        // DOM Elements
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const slidesContainer = document.getElementById('slides-container');
-        const slideIndicators = document.getElementById('slide-indicators');
-        const prevSlideButton = document.getElementById('prev-slide');
-        const nextSlideButton = document.getElementById('next-slide');
-        const testimonialsContainer = document.getElementById('testimonials-container');
-        const testimonialIndicators = document.getElementById('testimonial-indicators');
-        const projectGrid = document.getElementById('project-grid');
-        const filterAllButton = document.getElementById('filter-all');
-        const filterCabinetryButton = document.getElementById('filter-cabinetry');
-        const filterGeneralButton = document.getElementById('filter-general');
-
-        // Initialize the website
-        function init() {
-            // Initialize Lucide icons
-            lucide.createIcons();
-            
-            // Render slides
-            renderSlides();
-            
-            // Render testimonials
-            renderTestimonials();
-            
-            // Render projects
-            renderProjects();
-            
-            // Set up event listeners
-            setupEventListeners();
-            
-            // Start auto slide
-            startAutoSlide();
-            
-            // Start auto testimonial
-            startAutoTestimonial();
-        }
-
-        // Render slides
-        function renderSlides() {
-            slidesContainer.innerHTML = '';
-            slideIndicators.innerHTML = '';
-            
-            featuredProjects.forEach((project, index) => {
-                // Create slide
-                const slide = document.createElement('div');
-                slide.className = 'min-w-full relative';
-                slide.innerHTML = `
-                    <div class="relative h-[500px]">
-                        <img 
-                            src="${project.image}" 
-                            alt="${project.title}" 
-                            class="w-full h-full object-cover"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
-                            <h3 class="text-2xl md:text-3xl font-bold mb-2">${project.title}</h3>
-                            <p class="text-lg mb-4">${project.description}</p>
-                            <button class="bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
-                                View Project
-                            </button>
-                        </div>
-                    </div>
-                `;
-                slidesContainer.appendChild(slide);
-                
-                // Create indicator
-                const indicator = document.createElement('button');
-                indicator.className = `w-3 h-3 rounded-full ${index === 0 ? 'bg-amber-600' : 'bg-gray-300'}`;
-                indicator.addEventListener('click', () => {
-                    goToSlide(index);
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('open');
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+        });
+        
+        // Portfolio Filtering
+        const filterButtons = document.querySelectorAll('.project-filter');
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-[#2c3e50]', 'text-white');
+                    btn.classList.add('text-[#2c3e50]', 'bg-white');
                 });
-                slideIndicators.appendChild(indicator);
-            });
-            
-            updateSlidePosition();
-        }
-
-        // Render testimonials
-        function renderTestimonials() {
-            testimonialsContainer.innerHTML = '';
-            testimonialIndicators.innerHTML = '';
-            
-            testimonials.forEach((testimonial, index) => {
-                // Create testimonial
-                const testimonialElement = document.createElement('div');
-                testimonialElement.className = 'min-w-full p-8';
-                testimonialElement.innerHTML = `
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                        <div class="flex items-center mb-4">
-                            ${renderStars(testimonial.rating)}
-                        </div>
-                        <p class="text-gray-600 text-lg italic mb-6">"${testimonial.text}"</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">${testimonial.author}</h4>
-                                <p class="text-gray-600">${testimonial.project}</p>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                testimonialsContainer.appendChild(testimonialElement);
                 
-                // Create indicator
-                const indicator = document.createElement('button');
-                indicator.className = `w-3 h-3 rounded-full ${index === 0 ? 'bg-amber-600' : 'bg-gray-300'}`;
-                indicator.addEventListener('click', () => {
-                    goToTestimonial(index);
-                });
-                testimonialIndicators.appendChild(indicator);
-            });
-            
-            updateTestimonialPosition();
-        }
-
-        // Render stars for ratings
-        function renderStars(rating) {
-            let stars = '';
-            for (let i = 0; i < 5; i++) {
-                stars += `<i data-lucide="star" class="w-5 h-5 ${i < rating ? 'fill-amber-400 text-amber-400' : 'text-gray-300'}"></i>`;
-            }
-            return stars;
-        }
-
-        // Render projects
-        function renderProjects() {
-            projectGrid.innerHTML = '';
-            
-            const filteredProjects = activeService === 'all' 
-                ? featuredProjects 
-                : featuredProjects.filter(project => project.category === activeService);
-            
-            filteredProjects.forEach(project => {
-                const projectElement = document.createElement('div');
-                projectElement.className = 'bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow';
-                projectElement.innerHTML = `
-                    <img 
-                        src="${project.image}" 
-                        alt="${project.title}" 
-                        class="w-full h-48 object-cover"
-                    />
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-3 ${project.category === 'cabinetry' ? 'bg-amber-100 text-amber-800' : 'bg-gray-100 text-gray-800'}">
-                            ${project.category === 'cabinetry' ? 'Cabinetry' : 'General Works'}
-                        </span>
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">${project.title}</h3>
-                        <p class="text-gray-600 mb-4">${project.description}</p>
-                        <button class="text-amber-600 font-semibold flex items-center gap-2">
-                            View Project
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                        </button>
-                    </div>
-                `;
-                projectGrid.appendChild(projectElement);
-            });
-            
-            // Update icons
-            setTimeout(() => lucide.createIcons(), 0);
-        }
-
-        // Set up event listeners
-        function setupEventListeners() {
-            // Mobile menu toggle
-            mobileMenuButton.addEventListener('click', toggleMobileMenu);
-            
-            // Slide navigation
-            prevSlideButton.addEventListener('click', () => navigateSlide(-1));
-            nextSlideButton.addEventListener('click', () => navigateSlide(1));
-            
-            // Project filtering
-            filterAllButton.addEventListener('click', () => setActiveService('all'));
-            filterCabinetryButton.addEventListener('click', () => setActiveService('cabinetry'));
-            filterGeneralButton.addEventListener('click', () => setActiveService('general'));
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (mobileMenuOpen) {
-                            toggleMobileMenu();
-                        }
+                // Add active class to clicked button
+                button.classList.remove('text-[#2c3e50]', 'bg-white');
+                button.classList.add('bg-[#2c3e50]', 'text-white');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
                     }
                 });
             });
-        }
-
-        // Toggle mobile menu
-        function toggleMobileMenu() {
-            mobileMenuOpen = !mobileMenuOpen;
-            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (menu.classList.contains('flex')) {
+                        menuBtn.classList.remove('open');
+                        menu.classList.remove('flex');
+                        menu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Form Validation
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // Update icon
-            const icon = mobileMenuButton.querySelector('i');
-            if (mobileMenuOpen) {
-                icon.setAttribute('data-lucide', 'x');
-            } else {
-                icon.setAttribute('data-lucide', 'menu');
+            // Basic validation
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const projectType = document.getElementById('project-type').value;
+            const message = document.getElementById('message').value;
+            
+            let isValid = true;
+            
+            // Name validation
+            if (name.length < 2) {
+                isValid = false;
+                alert('Please enter a valid name (minimum 2 characters).');
+                return;
             }
-            lucide.createIcons();
-        }
-
-        // Navigate slides
-        function navigateSlide(direction) {
-            currentSlide = (currentSlide + direction + featuredProjects.length) % featuredProjects.length;
-            updateSlidePosition();
-            resetAutoSlide();
-        }
-
-        // Go to specific slide
-        function goToSlide(index) {
-            currentSlide = index;
-            updateSlidePosition();
-            resetAutoSlide();
-        }
-
-        // Update slide position
-        function updateSlidePosition() {
-            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            // Update indicators
-            const indicators = slideIndicators.querySelectorAll('button');
-            indicators.forEach((indicator, index) => {
-                indicator.className = `w-3 h-3 rounded-full ${index === currentSlide ? 'bg-amber-600' : 'bg-gray-300'}`;
+            // Phone validation (basic South African format)
+            const phoneRegex = /^(\+27|0)[1-9][0-9]{8}$/;
+            if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+                isValid = false;
+                alert('Please enter a valid South African phone number.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                isValid = false;
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Project type validation
+            if (!projectType) {
+                isValid = false;
+                alert('Please select a project type.');
+                return;
+            }
+            
+            // Message validation
+            if (message.length < 10) {
+                isValid = false;
+                alert('Please enter a message with at least 10 characters.');
+                return;
+            }
+            
+            if (isValid) {
+                // In a real implementation, you would send the form data to a server
+                alert('Thank you for your message! We will get back to you soon.');
+                contactForm.reset();
+            }
+        });
+        
+        // Animated Counter for Stats
+        function animateCounter(elementId, targetValue, duration = 2000) {
+            const element = document.getElementById(elementId);
+            let startValue = 0;
+            const increment = targetValue / (duration / 16); // 60fps
+            
+            function updateCounter() {
+                startValue += increment;
+                if (startValue < targetValue) {
+                    element.textContent = Math.floor(startValue);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = targetValue;
+                }
+            }
+            
+            updateCounter();
+        }
+        
+        // Initialize counters when section comes into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('projects-count', 200);
+                    animateCounter('years-count', 5);
+                    animateCounter('clients-count', 180);
+                    animateCounter('team-count', 12);
+                    observer.unobserve(entry.target);
+                }
             });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.bg-white.py-16');
+        if (statsSection) {
+            observer.observe(statsSection);
         }
-
-        // Navigate testimonials
-        function navigateTestimonial(direction) {
-            currentTestimonial = (currentTestimonial + direction + testimonials.length) % testimonials.length;
-            updateTestimonialPosition();
-            resetAutoTestimonial();
-        }
-
-        // Go to specific testimonial
-        function goToTestimonial(index) {
-            currentTestimonial = index;
-            updateTestimonialPosition();
-            resetAutoTestimonial();
-        }
-
-        // Update testimonial position
-        function updateTestimonialPosition() {
-            testimonialsContainer.style.transform = `translateX(-${currentTestimonial * 100}%)`;
-            
-            // Update indicators
-            const indicators = testimonialIndicators.querySelectorAll('button');
-            indicators.forEach((indicator, index) => {
-                indicator.className = `w-3 h-3 rounded-full ${index === currentTestimonial ? 'bg-amber-600' : 'bg-gray-300'}`;
-            });
-        }
-
-        // Set active service filter
-        function setActiveService(service) {
-            activeService = service;
-            
-            // Update button styles
-            filterAllButton.className = `px-6 py-2 rounded-md font-medium transition-colors ${service === 'all' ? 'bg-amber-600 text-white' : 'text-gray-600 hover:text-gray-900'}`;
-            filterCabinetryButton.className = `px-6 py-2 rounded-md font-medium transition-colors ${service === 'cabinetry' ? 'bg-amber-600 text-white' : 'text-gray-600 hover:text-gray-900'}`;
-            filterGeneralButton.className = `px-6 py-2 rounded-md font-medium transition-colors ${service === 'general' ? 'bg-amber-600 text-white' : 'text-gray-600 hover:text-gray-900'}`;
-            
-            // Re-render projects
-            renderProjects();
-        }
-
-        // Auto slide functionality
-        let slideInterval;
-        function startAutoSlide() {
-            slideInterval = setInterval(() => {
-                navigateSlide(1);
-            }, 5000);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(slideInterval);
-            startAutoSlide();
-        }
-
-        // Auto testimonial functionality
-        let testimonialInterval;
-        function startAutoTestimonial() {
-            testimonialInterval = setInterval(() => {
-                navigateTestimonial(1);
-            }, 6000);
-        }
-
-        function resetAutoTestimonial() {
-            clearInterval(testimonialInterval);
-            startAutoTestimonial();
-        }
-
-        // Initialize the website when DOM is loaded
-        document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
 </html>
